@@ -113,25 +113,46 @@
       <!-- OBJECTS / HARDWARE (item) -->
       <listObject>
          <object xml:id="item_Hanafuda" sameAs="http://www.wikidata.org/entity/Q696306">
-            <objectIdentifier>Hanafuda playing cards</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Hanafuda playing cards</objectName>
+               <idno type="Wikidata">Q696306</idno>
+            </objectIdentifier>
          </object>
          <object xml:id="item_ArcadeCabinet" sameAs="http://www.wikidata.org/entity/Q192908">
-            <objectIdentifier>Arcade Cabinet</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Arcade Cabinet</objectName>
+               <idno type="wikidata">Q192908</idno>
+            </objectIdentifier>
          </object>
          <object xml:id="item_NES" sameAs="http://www.wikidata.org/entity/Q172742">
-            <objectIdentifier>Nintendo Entertainment System (NES)</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Nintendo Entertainment System (NES)</objectName>
+               <idno type="wikidata">Q172742</idno>
+            </objectIdentifier>
          </object>
          <object xml:id="item_GameBoy" sameAs="http://www.wikidata.org/entity/Q186437">
-            <objectIdentifier>Game Boy</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Game Boy</objectName>
+               <idno type="wikidata">Q186437</idno>
+            </objectIdentifier>
          </object>
          <object xml:id="item_NintendoDS" sameAs="http://www.wikidata.org/entity/Q170325">
-            <objectIdentifier>Nintendo DS</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Nintendo DS</objectName>
+               <idno type="wikidata">Q170325</idno>
+            </objectIdentifier>
          </object>
          <object xml:id="item_Wii" sameAs="http://www.wikidata.org/entity/Q8079">
-            <objectIdentifier>Wii</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Wii</objectName>
+               <idno type="wikidata">Q8079</idno>
+            </objectIdentifier>
          </object>
          <object xml:id="item_NintendoSwitch" sameAs="http://www.wikidata.org/entity/Q27094269">
-            <objectIdentifier>Nintendo Switch</objectIdentifier>
+            <objectIdentifier>
+               <objectName>Nintendo Switch</objectName>
+               <idno type="wikidata">Q27094269</idno>
+            </objectIdentifier>
          </object>
       </listObject>
 
@@ -165,17 +186,16 @@
 
       <!-- HISTORICAL EVENTS (event) -->
       <listEvent>
-         <event xml:id="event_Foundation1889">
+         <event xml:id="event_Foundation1889" when="1889">
             <label>Foundation of Nintendo (1889)</label>
-            <date when="1889">1889</date>
          </event>
-         <event xml:id="event_IndustrialTransformation">
+         <event xml:id="event_IndustrialTransformation" when="1980">
             <label>Industrial Transformation to Toys &amp; Video Games</label>
          </event>
       </listEvent>
 
       <!-- SEMANTIC RELATIONSHIP NETWORK (39 triples) -->
-      <relationGrp>
+      <listRelation>
          <!-- Actors and Organization -->
          <relation name="crm:P14i_performed" active="#pers_FusajiroYamauchi" passive="#event_Foundation1889"/>
          <relation name="crm:P14i_performed" active="#pers_HiroshiYamauchi" passive="#event_IndustrialTransformation"/>
@@ -228,7 +248,7 @@
          <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NintendoSwitch"/>
          <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#work_MarioBros"/>
          <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#work_TheLegendOfZelda"/>
-      </relationGrp>
+      </listRelation>
 
   </standOff>
 
