@@ -68,6 +68,66 @@
                             </div>
                         </xsl:for-each>
                     </div>
+                    <h3>Organizations</h3>
+                    <div class="grid">
+                        <xsl:for-each select="//tei:standOff/tei:listOrg/tei:org">
+                            <div class="card" id="{@xml:id}">
+                                <h3><xsl:value-of select="tei:orgName"/></h3>
+                                <p><xsl:value-of select="tei:note"/></p>
+                                <a class="badge" href="{@sameAs}" target="_blank">LOD Authority Link ↗</a>
+                            </div>
+                        </xsl:for-each>
+                    </div>
+                    <h3>Places</h3>
+                    <div class="grid">
+                        <xsl:for-each select="//tei:standOff/tei:listPlace/tei:place">
+                            <div class="card" id="{@xml:id}">
+                                <h3><xsl:value-of select="tei:placeName"/></h3>
+                                <p><xsl:value-of select="tei:note"/></p>
+                                <a class="badge" href="{@sameAs}" target="_blank">LOD Authority Link ↗</a>
+                            </div>
+                        </xsl:for-each>
+                    </div>
+                    <h3>Objects / Hardware</h3>
+                    <div class="grid">
+                        <xsl:for-each select="//tei:standOff/tei:listObject/tei:object">
+                            <div class="card" id="{@xml:id}">
+                                <h3><xsl:value-of select="tei:objectIdentifier/tei:objectName"/></h3>
+                                <p><xsl:value-of select="tei:note"/></p>
+                                <a class="badge" href="{@sameAs}" target="_blank">LOD Authority Link ↗</a>
+                            </div>
+                        </xsl:for-each>
+                    </div>
+                    <h3>Works / Software</h3>
+                    <div class="grid">
+                        <xsl:for-each select="//tei:standOff/tei:listBibl/tei:bibl">
+                            <div class="card" id="{@xml:id}">
+                                <h3><xsl:value-of select="tei:title"/></h3>
+                                <p><xsl:value-of select="tei:note"/></p>
+                                <a class="badge" href="{@sameAs}" target="_blank">LOD Authority Link ↗</a>
+                            </div>
+                        </xsl:for-each>
+                    </div>
+                    <h3>Events</h3>
+                    <div class="grid">
+                        <xsl:for-each select="//tei:standOff/tei:listEvent/tei:event">
+                            <div class="card" id="{@xml:id}">
+                                <h3><xsl:value-of select="tei:label"/></h3>
+                                <p><xsl:value-of select="tei:note"/></p>
+                                <a class="badge" href="{@sameAs}" target="_blank">LOD Authority Link ↗</a>
+                            </div>
+                        </xsl:for-each>
+                    </div>
+                    <h3>Concepts</h3>
+                    <div class="grid">
+                        <xsl:for-each select="//tei:standOff/tei:list/tei:item">
+                            <div class="card" id="{@xml:id}">
+                                <h3><xsl:value-of select="tei:term"/></h3>
+                                <p><xsl:value-of select="tei:note"/></p>
+                                <a class="badge" href="{@sameAs}" target="_blank">LOD Authority Link ↗</a>
+                            </div>
+                        </xsl:for-each>
+                    </div>
                 </section>
 
                 <!-- Sezione 3: Rete Semantica -->
@@ -78,7 +138,7 @@
                             <tr><th>Subject (Active)</th><th>Predicate (Property)</th><th>Object (Passive)</th></tr>
                         </thead>
                         <tbody>
-                            <xsl:for-each select="//tei:standOff/tei:relationGrp/tei:relation">
+                            <xsl:for-each select="//tei:standOff/tei:listRelation/tei:relation">
                                 <tr>
                                     <td><code><xsl:value-of select="@active"/></code></td>
                                     <td style="color:var(--secondary); font-weight:600;"><xsl:value-of select="@name"/></td>
