@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  
+  <!-- ================================================================= -->
+  <!-- 1. DOCUMENT AND SOURCE METADATA (<teiHeader>)                     -->
+  <!-- ================================================================= -->
+  <teiHeader>
+      <fileDesc>
+         
+         <!-- Project Title and Author -->
+         <titleStmt>
+            <title>Nintendo Entertainment Heritage</title>
+            <author>Asia Marselli</author>
+         </titleStmt>
+         
+         <!-- Academic Publication Information and Licensing -->
+         <publicationStmt>
+            <publisher>University of Bologna - Knowledge Organization Course</publisher>
+            <date when="2026">2026</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+         </publicationStmt>
+         
+         <!-- Primary Source Description (Wikipedia Page) -->
+         <sourceDesc>
+            <bibl xml:id="wiki_source">
+               <title level="a">History of Nintendo</title>
+               <publisher>Wikipedia, The Free Encyclopedia</publisher>
+               <ref target="https://en.wikipedia.org/wiki/History_of_Nintendo#2025%E2%80%93present:_Nintendo_Switch_2"/>
+            </bibl>
+         </sourceDesc>
+
+      </fileDesc>
+
+      <encodingDesc>
+         <listPrefixDef>
+            <prefixDef ident="crm" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.cidoc-crm.org/cidoc-crm/$1">
+               <p>CIDOC CRM Conceptual Reference Model Vocabulary</p>
+            </prefixDef>
+            <prefixDef ident="schema" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://schema.org/$1">
+               <p>Schema.org Vocabulary</p>
+            </prefixDef>
+            <prefixDef ident="frbroo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://iflastandards.info/ns/fr/frbr/frbroo/$1">
+               <p>FRBRoo Vocabulary for Bibliographic Modeling</p>
+            </prefixDef>
+            <prefixDef ident="dcterms" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://purl.org/dc/terms/$1">
+               <p>Dublin Core Terms Vocabulary</p>
+            </prefixDef>
+            <prefixDef ident="skos" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2004/02/skos/core#$1">
+               <p>SKOS Vocabulary (Simple Knowledge Organization System)</p>
+            </prefixDef>
+            <prefixDef ident="owl" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2002/07/owl#$1">
+               <p>OWL Web Ontology Language Vocabulary</p>
+            </prefixDef>
+            <prefixDef ident="rdf" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/1999/02/22-rdf-syntax-ns#$1">
+               <p>RDF Base Vocabulary</p>
+            </prefixDef>
+            <prefixDef ident="nintendo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://w3id.org/nintendo/$1">
+               <p>Nintendo Entertainment Heritage Project Namespace</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+  </teiHeader>
+
+   <!-- ================================================================= -->
+  <!-- 2. ENTITY CATALOGUE AND SEMANTIC NETWORK (<standOff>)             -->
+  <!-- ================================================================= -->
+  <standOff>
+      
+      <!-- PEOPLE (pers) -->
+      <listPerson>
+         <person xml:id="pers_FusajiroYamauchi" sameAs="http://www.wikidata.org/entity/Q366750">
+            <persName>Fusajiro Yamauchi</persName>
+            <note>Founder of Nintendo in 1889.</note>
+         </person>
+         <person xml:id="pers_HiroshiYamauchi" sameAs="http://www.wikidata.org/entity/Q316022">
+            <persName>Hiroshi Yamauchi</persName>
+            <note>Third president of Nintendo, leader of the industrial transformation.</note>
+         </person>
+         <person xml:id="pers_GunpeiYokoi" sameAs="http://www.wikidata.org/entity/Q366261">
+            <persName>Gunpei Yokoi</persName>
+            <note>Key Nintendo designer, creator of the Game Boy.</note>
+         </person>
+         <person xml:id="pers_ShigeruMiyamoto" sameAs="http://viaf.org/viaf/78191821">
+            <persName>Shigeru Miyamoto</persName>
+            <note>Game designer of Donkey Kong, Mario Bros., and The Legend of Zelda.</note>
+         </person>
+         <person xml:id="pers_SatoruIwata" sameAs="http://www.wikidata.org/entity/Q312939">
+            <persName>Satoru Iwata</persName>
+            <note>Fourth president of Nintendo, leader during the Wii and Nintendo DS era.</note>
+         </person>
+      </listPerson>
+
+      <!-- ORGANIZATIONS (org) -->
+      <listOrg>
+         <org xml:id="org_Nintendo" sameAs="http://www.wikidata.org/entity/Q8093">
+            <orgName>Nintendo Co., Ltd.</orgName>
+         </org>
+      </listOrg>
+
+      <!-- PLACES (place) -->
+      <listPlace>
+         <place xml:id="place_Kyoto" sameAs="http://www.geonames.org/1857910">
+            <placeName>Kyoto</placeName>
+         </place>
+         <place xml:id="place_NintendoMuseum" sameAs="http://www.wikidata.org/entity/Q107127181">
+            <placeName>Nintendo Museum</placeName>
+         </place>
+      </listPlace>
+
+      <!-- OBJECTS / HARDWARE (item) -->
+      <listObject>
+         <object xml:id="item_Hanafuda" sameAs="http://www.wikidata.org/entity/Q696306">
+            <objectIdentifier>Hanafuda playing cards</objectIdentifier>
+         </object>
+         <object xml:id="item_ArcadeCabinet" sameAs="http://www.wikidata.org/entity/Q192908">
+            <objectIdentifier>Arcade Cabinet</objectIdentifier>
+         </object>
+         <object xml:id="item_NES" sameAs="http://www.wikidata.org/entity/Q172742">
+            <objectIdentifier>Nintendo Entertainment System (NES)</objectIdentifier>
+         </object>
+         <object xml:id="item_GameBoy" sameAs="http://www.wikidata.org/entity/Q186437">
+            <objectIdentifier>Game Boy</objectIdentifier>
+         </object>
+         <object xml:id="item_NintendoDS" sameAs="http://www.wikidata.org/entity/Q170325">
+            <objectIdentifier>Nintendo DS</objectIdentifier>
+         </object>
+         <object xml:id="item_Wii" sameAs="http://www.wikidata.org/entity/Q8079">
+            <objectIdentifier>Wii</objectIdentifier>
+         </object>
+         <object xml:id="item_NintendoSwitch" sameAs="http://www.wikidata.org/entity/Q27094269">
+            <objectIdentifier>Nintendo Switch</objectIdentifier>
+         </object>
+      </listObject>
+
+      <!-- WORKS AND CHARACTERS (work & char) -->
+      <listBibl>
+         <bibl xml:id="work_DonkeyKong" sameAs="http://www.wikidata.org/entity/Q244837">
+            <title>Donkey Kong</title>
+            <date when="1981">1981</date>
+         </bibl>
+         <bibl xml:id="work_MarioBros" sameAs="http://www.wikidata.org/entity/Q610968">
+            <title>Mario Bros.</title>
+         </bibl>
+         <bibl xml:id="work_TheLegendOfZelda" sameAs="http://www.wikidata.org/entity/Q12397">
+            <title>The Legend of Zelda</title>
+         </bibl>
+         <bibl xml:id="work_Pokemon" sameAs="http://www.wikidata.org/entity/Q864">
+            <title>Pokémon</title>
+         </bibl>
+         <bibl xml:id="char_Jumpman" sameAs="http://www.wikidata.org/entity/Q610968">
+            <title>Jumpman</title>
+            <note>Fictional character precursor to Mario.</note>
+         </bibl>
+      </listBibl>
+
+      <!-- CONCEPTS AND TAXONOMIES (concept) -->
+      <list type="concepts">
+         <item xml:id="concept_VideoGamePreservation" sameAs="http://id.loc.gov/authorities/subjects/sh2015001602">
+            <term>Video Game Preservation</term>
+         </item>
+      </list>
+
+      <!-- HISTORICAL EVENTS (event) -->
+      <listEvent>
+         <event xml:id="event_Foundation1889">
+            <label>Foundation of Nintendo (1889)</label>
+            <date when="1889">1889</date>
+         </event>
+         <event xml:id="event_IndustrialTransformation">
+            <label>Industrial Transformation to Toys &amp; Video Games</label>
+         </event>
+      </listEvent>
+
+      <!-- SEMANTIC RELATIONSHIP NETWORK (39 triples) -->
+      <relationGrp>
+         <!-- Actors and Organization -->
+         <relation name="crm:P14i_performed" active="#pers_FusajiroYamauchi" passive="#event_Foundation1889"/>
+         <relation name="crm:P14i_performed" active="#pers_HiroshiYamauchi" passive="#event_IndustrialTransformation"/>
+         <relation name="schema:leader" active="#pers_SatoruIwata" passive="#org_Nintendo"/>
+         <relation name="schema:worksFor" active="#pers_GunpeiYokoi" passive="#org_Nintendo"/>
+         <relation name="schema:worksFor" active="#pers_ShigeruMiyamoto" passive="#org_Nintendo"/>
+         
+         <!-- Creation and Design -->
+         <relation name="schema:designer" active="#pers_GunpeiYokoi" passive="#item_GameBoy"/>
+         <relation name="frbroo:R17_created" active="#pers_ShigeruMiyamoto" passive="#work_DonkeyKong"/>
+         <relation name="frbroo:R17_created" active="#pers_ShigeruMiyamoto" passive="#work_MarioBros"/>
+         <relation name="frbroo:R17_created" active="#pers_ShigeruMiyamoto" passive="#work_TheLegendOfZelda"/>
+         
+         <!-- Production and Publishing -->
+         <relation name="crm:P108_has_produced" active="#event_Foundation1889" passive="#org_Nintendo"/>
+         <relation name="crm:P118_had_target" active="#event_IndustrialTransformation" passive="#org_Nintendo"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_Hanafuda"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_ArcadeCabinet"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_NES"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_GameBoy"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_NintendoDS"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_Wii"/>
+         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_NintendoSwitch"/>
+         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_DonkeyKong"/>
+         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_MarioBros"/>
+         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_TheLegendOfZelda"/>
+         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_Pokemon"/>
+         
+         <!-- Software, Hardware, and Characters -->
+         <relation name="frbroo:R3_is_realised_in" active="#work_DonkeyKong" passive="#item_ArcadeCabinet"/>
+         <relation name="frbroo:R3_is_realised_in" active="#work_MarioBros" passive="#item_NES"/>
+         <relation name="frbroo:R3_is_realised_in" active="#work_TheLegendOfZelda" passive="#item_NES"/>
+         <relation name="frbroo:R3_is_realised_in" active="#work_Pokemon" passive="#item_GameBoy"/>
+         <relation name="frbroo:R14i_is_incorporated_in" active="#char_Jumpman" passive="#work_DonkeyKong"/>
+         <relation name="dcterms:isReplacedBy" active="#char_Jumpman" passive="#work_MarioBros"/>
+         
+         <!-- Space, Funding, and Preservation -->
+         <relation name="crm:P74_has_current_or_former_residence" active="#org_Nintendo" passive="#place_Kyoto"/>
+         <relation name="schema:funder" active="#org_Nintendo" passive="#place_NintendoMuseum"/>
+         <relation name="schema:location" active="#place_NintendoMuseum" passive="#place_Kyoto"/>
+         <relation name="dcterms:subject" active="#place_NintendoMuseum" passive="#concept_VideoGamePreservation"/>
+         
+         <!-- Museum Preservation -->
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_Hanafuda"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_ArcadeCabinet"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NES"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_GameBoy"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NintendoDS"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_Wii"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NintendoSwitch"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#work_MarioBros"/>
+         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#work_TheLegendOfZelda"/>
+      </relationGrp>
+
+  </standOff>
+
+  <!-- ================================================================= -->
+  <!-- 3. ANNOTATED SOURCE TEXT (<text>)                                 -->
+  <!-- ================================================================= -->
+  <text>
+      <body>
+         
+         <!-- LEAD SECTION -->
+         <div type="section" n="lead">
+            <head>Lead Section</head>
+            <p>
+               The history of <orgName ref="#org_Nintendo">Nintendo</orgName>, a Japanese video game company based in <placeName ref="#place_Kyoto">Kyoto</placeName>, starts in <date when="1889">1889</date> when <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> founded <quote>"Yamauchi Nintendo"</quote>, a producer of <rs type="object" ref="#item_Hanafuda">hanafuda playing cards</rs>. His successor <persName ref="#pers_HiroshiYamauchi">Hiroshi Yamauchi</persName> had <orgName ref="#org_Nintendo">Nintendo</orgName> producing toys and video games.
+            </p>
+            <p>
+               <persName ref="#pers_ShigeruMiyamoto">Shigeru Miyamoto</persName> designed <title ref="#work_DonkeyKong">Donkey Kong</title> (<date when="1981">1981</date>) for <rs type="object" ref="#item_ArcadeCabinet">arcades</rs>: <orgName ref="#org_Nintendo">Nintendo</orgName>'s first international hit game, and origin of the company's mascot, <rs type="character" ref="#char_Jumpman">Mario</rs>. After the American video game crash of <date when="1983">1983</date>, <orgName ref="#org_Nintendo">Nintendo</orgName> released their Japanese Famicom home console as the <rs type="object" ref="#item_NES">Nintendo Entertainment System (NES)</rs> in <date when="1985">1985</date>. <persName ref="#pers_ShigeruMiyamoto">Miyamoto</persName>'s innovative titles, <title ref="#work_MarioBros">Super Mario Bros.</title> and <title ref="#work_TheLegendOfZelda">The Legend of Zelda</title> (<date when="1987">1987</date>), greatly influenced gaming. The <rs type="object" ref="#item_GameBoy">Game Boy</rs> handheld console (<date when="1989">1989</date>) was extraordinarily successful, alongside the <title ref="#work_Pokemon">Pokémon</title> media franchise.
+            </p>
+            <p>
+               In <date when="2002">2002</date>, <persName ref="#pers_SatoruIwata">Satoru Iwata</persName> became president, leading development of the <rs type="object" ref="#item_NintendoDS">Nintendo DS</rs> handheld (<date when="2004">2004</date>) and the <rs type="object" ref="#item_Wii">Wii</rs> home console (<date when="2006">2006</date>). Before dying in <date when="2015">2015</date>, <persName ref="#pers_SatoruIwata">Iwata</persName> led development of the successful <rs type="object" ref="#item_NintendoSwitch">Nintendo Switch</rs> (<date when="2017">2017</date>). Today, Nintendo's historical heritage is preserved at the <placeName ref="#place_NintendoMuseum">Nintendo Museum</placeName> (opened in <date when="2024">2024</date>) in <placeName ref="#place_Kyoto">Kyoto</placeName>, dedicated to <term ref="#concept_VideoGamePreservation">video game preservation</term>.
+            </p>
+         </div>
+
+         <!-- SECTION: 1889–1949: HANAFUDA CARDS -->
+         <div type="section" n="1889-1949">
+            <head>1889–1949: Hanafuda cards</head>
+            <p>
+               <orgName ref="#org_Nintendo">Nintendo</orgName> was founded as Yamauchi Nintendo by <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> on September 23, <date when="1889">1889</date>. Based in <placeName ref="#place_Kyoto">Kyoto, Japan</placeName>, the business produced and marketed <rs type="object" ref="#item_Hanafuda">hanafuda</rs>, a type of Japanese playing card. During the era of <date from="1889" to="1929">1889–1929</date>, the company expanded card production. In 1929, <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> retired and allowed his adopted son-in-law to take over.
+            </p>
+            <p>
+               In the period of <date from="1949" to="2002">1949–2002</date>, under <persName ref="#pers_HiroshiYamauchi">Hiroshi Yamauchi</persName>, <orgName ref="#org_Nintendo">Nintendo</orgName> transformed from a playing card manufacturer into a global video game giant, before <persName ref="#pers_SatoruIwata">Satoru Iwata</persName> took leadership in <date from="2002" to="2015">2002–2015</date>.
+            </p>
+         </div>
+
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,122 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix nintendo: <https://w3id.org/nintendo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nintendo:char_Jumpman frbroo:R14i_is_incorporated_in nintendo:work_DonkeyKong ;
+    dcterms:isReplacedBy nintendo:work_MarioBros ;
+    dcterms:title "Jumpman"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q610968> .
+
+nintendo:pers_FusajiroYamauchi rdfs:label "Fusajiro Yamauchi"@en ;
+    crm:P14i_performed nintendo:event_Foundation1889 ;
+    owl:sameAs <http://www.wikidata.org/entity/Q366750> .
+
+nintendo:pers_GunpeiYokoi rdfs:label "Gunpei Yokoi"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q366261> ;
+    schema:designer nintendo:item_GameBoy ;
+    schema:worksFor nintendo:org_Nintendo .
+
+nintendo:pers_HiroshiYamauchi rdfs:label "Hiroshi Yamauchi"@en ;
+    crm:P14i_performed nintendo:event_IndustrialTransformation ;
+    owl:sameAs <http://www.wikidata.org/entity/Q316022> .
+
+nintendo:pers_SatoruIwata rdfs:label "Satoru Iwata"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q312939> ;
+    schema:leader nintendo:org_Nintendo .
+
+nintendo:pers_ShigeruMiyamoto rdfs:label "Shigeru Miyamoto"@en ;
+    frbroo:R17_created nintendo:work_DonkeyKong,
+        nintendo:work_MarioBros,
+        nintendo:work_TheLegendOfZelda ;
+    owl:sameAs <http://viaf.org/viaf/78191821> ;
+    schema:worksFor nintendo:org_Nintendo .
+
+nintendo:wiki_source dcterms:title "History of Nintendo"@en .
+
+nintendo:concept_VideoGamePreservation owl:sameAs <http://id.loc.gov/authorities/subjects/sh2015001602> ;
+    skos:prefLabel "Video Game Preservation"@en .
+
+nintendo:event_Foundation1889 rdfs:label "Foundation of Nintendo (1889)"@en ;
+    dcterms:date "1889"^^xsd:gYear ;
+    crm:P108_has_produced nintendo:org_Nintendo .
+
+nintendo:event_IndustrialTransformation rdfs:label "Industrial Transformation to Toys & Video Games"@en ;
+    crm:P118_had_target nintendo:org_Nintendo .
+
+nintendo:place_NintendoMuseum rdfs:label "Nintendo Museum"@en ;
+    dcterms:subject nintendo:concept_VideoGamePreservation ;
+    crm:P55_has_current_location nintendo:item_ArcadeCabinet,
+        nintendo:item_GameBoy,
+        nintendo:item_Hanafuda,
+        nintendo:item_NES,
+        nintendo:item_NintendoDS,
+        nintendo:item_NintendoSwitch,
+        nintendo:item_Wii,
+        nintendo:work_MarioBros,
+        nintendo:work_TheLegendOfZelda ;
+    owl:sameAs <http://www.wikidata.org/entity/Q107127181> ;
+    schema:location nintendo:place_Kyoto .
+
+nintendo:work_Pokemon frbroo:R3_is_realised_in nintendo:item_GameBoy ;
+    dcterms:title "Pokémon"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q864> .
+
+nintendo:item_Hanafuda rdfs:label "Hanafuda playing cards"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q696306> .
+
+nintendo:item_NintendoDS rdfs:label "Nintendo DS"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q170325> .
+
+nintendo:item_NintendoSwitch rdfs:label "Nintendo Switch"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q27094269> .
+
+nintendo:item_Wii rdfs:label "Wii"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q8079> .
+
+nintendo:place_Kyoto rdfs:label "Kyoto"@en ;
+    owl:sameAs <http://www.geonames.org/1857910> .
+
+nintendo:item_ArcadeCabinet rdfs:label "Arcade Cabinet"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q192908> .
+
+nintendo:work_DonkeyKong frbroo:R3_is_realised_in nintendo:item_ArcadeCabinet ;
+    dcterms:date "1981"^^xsd:gYear ;
+    dcterms:title "Donkey Kong"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q244837> .
+
+nintendo:work_TheLegendOfZelda frbroo:R3_is_realised_in nintendo:item_NES ;
+    dcterms:title "The Legend of Zelda"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q12397> .
+
+nintendo:item_GameBoy rdfs:label "Game Boy"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q186437> .
+
+nintendo:item_NES rdfs:label "Nintendo Entertainment System (NES)"@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q172742> .
+
+nintendo:work_MarioBros frbroo:R3_is_realised_in nintendo:item_NES ;
+    dcterms:title "Mario Bros."@en ;
+    owl:sameAs <http://www.wikidata.org/entity/Q610968> .
+
+nintendo:org_Nintendo rdfs:label "Nintendo Co., Ltd."@en ;
+    dcterms:publisher nintendo:work_DonkeyKong,
+        nintendo:work_MarioBros,
+        nintendo:work_Pokemon,
+        nintendo:work_TheLegendOfZelda ;
+    crm:P108_has_produced nintendo:item_ArcadeCabinet,
+        nintendo:item_GameBoy,
+        nintendo:item_Hanafuda,
+        nintendo:item_NES,
+        nintendo:item_NintendoDS,
+        nintendo:item_NintendoSwitch,
+        nintendo:item_Wii ;
+    crm:P74_has_current_or_former_residence nintendo:place_Kyoto ;
+    owl:sameAs <http://www.wikidata.org/entity/Q8093> ;
+    schema:funder nintendo:place_NintendoMuseum .
+
