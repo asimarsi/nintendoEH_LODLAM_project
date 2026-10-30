@@ -137,44 +137,28 @@
                <objectName>Nintendo Entertainment System (NES)</objectName>
                <idno type="wikidata">Q172742</idno>
             </objectIdentifier>
-            <history>
-               <origin>
-                  <origDate when="1985">1985</origDate>
-               </origin>
-            </history>
+            <note><date when="1983">1983</date></note>
          </object>
          <object xml:id="item_GameBoy" type="portable_console" sameAs="https://www.wikidata.org/wiki/Q186437">
             <objectIdentifier>
                <objectName>Game Boy</objectName>
                <idno type="wikidata">Q186437</idno>
             </objectIdentifier>
-            <history>
-               <origin>
-                  <origDate when="1989">1989</origDate>
-               </origin>
-            </history>
+            <note><date when="1989">1989</date></note>
          </object>
          <object xml:id="item_NintendoDS" type="portable_console" sameAs="https://www.wikidata.org/wiki/Q170323">
             <objectIdentifier>
                <objectName>Nintendo DS</objectName>
                <idno type="wikidata">Q170323</idno>
             </objectIdentifier>
-            <history>
-               <origin>
-                  <origDate when="2005">2005</origDate>
-               </origin>
-            </history>
+            <note><date when="2005">2005</date></note>
          </object>
          <object xml:id="item_Wii" type="home_console" sameAs="https://www.wikidata.org/wiki/Q8079">
             <objectIdentifier>
                <objectName>Wii</objectName>
                <idno type="wikidata">Q8079</idno>
             </objectIdentifier>
-            <history>
-               <origin>
-                  <origDate when="2006">2006</origDate>
-               </origin>
-            </history>
+            <note><date when="2006">2006</date></note>
          </object>
          <object xml:id="item_NintendoSwitch" type="hybrid_console" sameAs="https://www.wikidata.org/wiki/Q19610114">
             <objectIdentifier>
@@ -193,23 +177,23 @@
       <listBibl>
          <bibl xml:id="work_DonkeyKong" type="video_game" sameAs="https://www.wikidata.org/wiki/Q12384">
             <title>Donkey Kong</title>
-            <date when="1981">1981</date>
+            <note><date when="1981">1981</date></note>
          </bibl>
          <bibl xml:id="work_MarioBros" type="video_game" sameAs="https://www.wikidata.org/wiki/Q126187572">
             <title>Mario Bros.</title>
-            <date when="1983">1983</date>
+            <note><date when="1983">1983</date></note>
          </bibl>
          <bibl xml:id="work_TheLegendOfZelda" type="video_game" sameAs="https://www.wikidata.org/wiki/Q12395">
             <title>The Legend of Zelda</title>
-            <date when="1986">1986</date>
+            <note><date when="1986">1986</date></note>
          </bibl>
          <bibl xml:id="work_Pokemon" type="video_game" sameAs="https://www.wikidata.org/wiki/Q864">
             <title>Pokémon</title>
-            <date when="1996">1996</date>
+            <note><date when="1996">1996</date></note>
          </bibl>
          <bibl xml:id="char_Jumpman" type="fictional_character" sameAs="https://www.wikidata.org/wiki/Q2737362">
             <title>Jumpman</title>
-            <note>Fictional character precursor to Mario.</note>
+            <note>Fictional character precursor to Mario.(1981)</note>
          </bibl>
       </listBibl>
 
