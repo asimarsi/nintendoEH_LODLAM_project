@@ -25,10 +25,10 @@
          
          <!-- Primary Source Description (Wikipedia Page) -->
          <sourceDesc>
-            <bibl xml:id="wiki_source">
+            <bibl xml:id="wiki_source" type="primary_source">
                <title level="a">History of Nintendo</title>
                <publisher>Wikipedia, The Free Encyclopedia</publisher>
-               <ref target="https://en.wikipedia.org/wiki/History_of_Nintendo#2025%E2%80%93present:_Nintendo_Switch_2"/>
+               <ref target="https://en.wikipedia.org/wiki/History_of_Nintendo"/>
             </bibl>
          </sourceDesc>
 
@@ -71,107 +71,147 @@
       
       <!-- PEOPLE (pers) -->
       <listPerson>
-         <person xml:id="pers_FusajiroYamauchi" sameAs="http://www.wikidata.org/entity/Q366750">
+         <person xml:id="pers_FusajiroYamauchi" role="founder" sameAs="https://www.wikidata.org/wiki/Q456052">
             <persName>Fusajiro Yamauchi</persName>
             <note>Founder of Nintendo in 1889.</note>
+            <affiliation ref="#org_Nintendo" from="1889" to="1929">Founder and President (1889–1929)</affiliation>
          </person>
-         <person xml:id="pers_HiroshiYamauchi" sameAs="http://www.wikidata.org/entity/Q316022">
+         <person xml:id="pers_HiroshiYamauchi" role="president" sameAs="http://viaf.org/viaf/50145003625161340874">
             <persName>Hiroshi Yamauchi</persName>
             <note>Third president of Nintendo, leader of the industrial transformation.</note>
+            <affiliation ref="#org_Nintendo" from="1929" to="1989">President (1929–1989)</affiliation>
          </person>
-         <person xml:id="pers_GunpeiYokoi" sameAs="http://www.wikidata.org/entity/Q366261">
+         <person xml:id="pers_GunpeiYokoi" role="designer" sameAs="http://viaf.org/viaf/171017199">
             <persName>Gunpei Yokoi</persName>
             <note>Key Nintendo designer, creator of the Game Boy.</note>
+            <affiliation ref="#org_Nintendo" from="1989" to="1996">Game and Hardware Designer(1989–1996)</affiliation>
          </person>
-         <person xml:id="pers_ShigeruMiyamoto" sameAs="http://viaf.org/viaf/78191821">
+         <person xml:id="pers_ShigeruMiyamoto" role="designer" sameAs="http://viaf.org/viaf/78191821">
             <persName>Shigeru Miyamoto</persName>
             <note>Game designer of Donkey Kong, Mario Bros., and The Legend of Zelda.</note>
+            <affiliation ref="#org_Nintendo" from="1977">Game Designer and Representative Director (1977–present)</affiliation>
          </person>
-         <person xml:id="pers_SatoruIwata" sameAs="http://www.wikidata.org/entity/Q312939">
+         <person xml:id="pers_SatoruIwata" role="president" sameAs="http://viaf.org/viaf/258571878">
             <persName>Satoru Iwata</persName>
             <note>Fourth president of Nintendo, leader during the Wii and Nintendo DS era.</note>
+            <affiliation ref="#org_Nintendo" from="2002" to="2015">President (2002–2015)</affiliation>
          </person>
       </listPerson>
 
       <!-- ORGANIZATIONS (org) -->
       <listOrg>
-         <org xml:id="org_Nintendo" sameAs="http://www.wikidata.org/entity/Q8093">
+         <org xml:id="org_Nintendo" role="company" sameAs="https://www.wikidata.org/wiki/Q8093">
             <orgName>Nintendo Co., Ltd.</orgName>
+            <note><date type="foundation" when="1889-09-23">September 23, 1889</date></note>
          </org>
       </listOrg>
 
       <!-- PLACES (place) -->
       <listPlace>
-         <place xml:id="place_Kyoto" sameAs="http://www.geonames.org/1857910">
+         <place xml:id="place_Kyoto" type="city" sameAs="http://www.geonames.org/1857910">
             <placeName>Kyoto</placeName>
          </place>
-         <place xml:id="place_NintendoMuseum" sameAs="http://www.wikidata.org/entity/Q107127181">
+         <place xml:id="place_NintendoMuseum" type="museum" sameAs="https://www.wikidata.org/wiki/Q123124346">
             <placeName>Nintendo Museum</placeName>
+            <note><date type="opening" when="2024">2024</date></note>
          </place>
       </listPlace>
 
       <!-- OBJECTS / HARDWARE (item) -->
       <listObject>
-         <object xml:id="item_Hanafuda" sameAs="http://www.wikidata.org/entity/Q696306">
+         <object xml:id="item_Hanafuda" type="playing_cards" sameAs="https://www.wikidata.org/wiki/Q697641">
             <objectIdentifier>
                <objectName>Hanafuda playing cards</objectName>
-               <idno type="Wikidata">Q696306</idno>
+               <idno type="Wikidata">Q697641</idno>
             </objectIdentifier>
+            <history>
+               <origin>
+                  <origDate when="1889">1889</origDate>
+               </origin>
+            </history>
          </object>
-         <object xml:id="item_ArcadeCabinet" sameAs="http://www.wikidata.org/entity/Q192908">
+         <object xml:id="item_ArcadeCabinet" type="arcade_machine" sameAs="https://www.wikidata.org/wiki/Q1349717">
             <objectIdentifier>
                <objectName>Arcade Cabinet</objectName>
-               <idno type="wikidata">Q192908</idno>
+               <idno type="wikidata">Q1349717</idno>
             </objectIdentifier>
          </object>
-         <object xml:id="item_NES" sameAs="http://www.wikidata.org/entity/Q172742">
+         <object xml:id="item_NES" type="home_console" sameAs="https://www.wikidata.org/wiki/Q172742">
             <objectIdentifier>
                <objectName>Nintendo Entertainment System (NES)</objectName>
                <idno type="wikidata">Q172742</idno>
             </objectIdentifier>
+            <history>
+               <origin>
+                  <origDate when="1985">1985</origDate>
+               </origin>
+            </history>
          </object>
-         <object xml:id="item_GameBoy" sameAs="http://www.wikidata.org/entity/Q186437">
+         <object xml:id="item_GameBoy" type="portable_console" sameAs="https://www.wikidata.org/wiki/Q186437">
             <objectIdentifier>
                <objectName>Game Boy</objectName>
                <idno type="wikidata">Q186437</idno>
             </objectIdentifier>
+            <history>
+               <origin>
+                  <origDate when="1989">1989</origDate>
+               </origin>
+            </history>
          </object>
-         <object xml:id="item_NintendoDS" sameAs="http://www.wikidata.org/entity/Q170325">
+         <object xml:id="item_NintendoDS" type="portable_console" sameAs="https://www.wikidata.org/wiki/Q170323">
             <objectIdentifier>
                <objectName>Nintendo DS</objectName>
-               <idno type="wikidata">Q170325</idno>
+               <idno type="wikidata">Q170323</idno>
             </objectIdentifier>
+            <history>
+               <origin>
+                  <origDate when="2005">2005</origDate>
+               </origin>
+            </history>
          </object>
-         <object xml:id="item_Wii" sameAs="http://www.wikidata.org/entity/Q8079">
+         <object xml:id="item_Wii" type="home_console" sameAs="https://www.wikidata.org/wiki/Q8079">
             <objectIdentifier>
                <objectName>Wii</objectName>
                <idno type="wikidata">Q8079</idno>
             </objectIdentifier>
+            <history>
+               <origin>
+                  <origDate when="2006">2006</origDate>
+               </origin>
+            </history>
          </object>
-         <object xml:id="item_NintendoSwitch" sameAs="http://www.wikidata.org/entity/Q27094269">
+         <object xml:id="item_NintendoSwitch" type="hybrid_console" sameAs="https://www.wikidata.org/wiki/Q19610114">
             <objectIdentifier>
                <objectName>Nintendo Switch</objectName>
-               <idno type="wikidata">Q27094269</idno>
+               <idno type="wikidata">Q19610114</idno>
             </objectIdentifier>
+            <history>
+               <origin>
+                  <origDate when="2017">2017</origDate>
+               </origin>
+            </history>
          </object>
       </listObject>
 
       <!-- WORKS AND CHARACTERS (work & char) -->
       <listBibl>
-         <bibl xml:id="work_DonkeyKong" sameAs="http://www.wikidata.org/entity/Q244837">
+         <bibl xml:id="work_DonkeyKong" type="video_game" sameAs="https://www.wikidata.org/wiki/Q12384">
             <title>Donkey Kong</title>
             <date when="1981">1981</date>
          </bibl>
-         <bibl xml:id="work_MarioBros" sameAs="http://www.wikidata.org/entity/Q610968">
+         <bibl xml:id="work_MarioBros" type="video_game" sameAs="https://www.wikidata.org/wiki/Q126187572">
             <title>Mario Bros.</title>
+            <date when="1983">1983</date>
          </bibl>
-         <bibl xml:id="work_TheLegendOfZelda" sameAs="http://www.wikidata.org/entity/Q12397">
+         <bibl xml:id="work_TheLegendOfZelda" type="video_game" sameAs="https://www.wikidata.org/wiki/Q12395">
             <title>The Legend of Zelda</title>
+            <date when="1986">1986</date>
          </bibl>
-         <bibl xml:id="work_Pokemon" sameAs="http://www.wikidata.org/entity/Q864">
+         <bibl xml:id="work_Pokemon" type="video_game" sameAs="https://www.wikidata.org/wiki/Q864">
             <title>Pokémon</title>
+            <date when="1996">1996</date>
          </bibl>
-         <bibl xml:id="char_Jumpman" sameAs="http://www.wikidata.org/entity/Q610968">
+         <bibl xml:id="char_Jumpman" type="fictional_character" sameAs="https://www.wikidata.org/wiki/Q2737362">
             <title>Jumpman</title>
             <note>Fictional character precursor to Mario.</note>
          </bibl>
@@ -179,17 +219,17 @@
 
       <!-- CONCEPTS AND TAXONOMIES (concept) -->
       <list type="concepts">
-         <item xml:id="concept_VideoGamePreservation" sameAs="http://id.loc.gov/authorities/subjects/sh2015001602">
+         <item xml:id="concept_VideoGamePreservation" sameAs="https://www.wikidata.org/wiki/Q56153456">
             <term>Video Game Preservation</term>
          </item>
       </list>
 
       <!-- HISTORICAL EVENTS (event) -->
       <listEvent>
-         <event xml:id="event_Foundation1889" when="1889">
+         <event xml:id="event_Foundation1889" when="1889" type="founding">
             <label>Foundation of Nintendo (1889)</label>
          </event>
-         <event xml:id="event_IndustrialTransformation" when="1980">
+         <event xml:id="event_IndustrialTransformation" when="1980" type="industrial_transformation">
             <label>Industrial Transformation to Toys &amp; Video Games</label>
          </event>
       </listEvent>
