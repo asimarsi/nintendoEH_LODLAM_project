@@ -88,7 +88,7 @@
          </person>
          <person xml:id="pers_ShigeruMiyamoto" role="designer" sameAs="http://viaf.org/viaf/78191821">
             <persName>Shigeru Miyamoto</persName>
-            <note>Game designer of Donkey Kong, Mario Bros., and The Legend of Zelda.</note>
+            <note>Game designer of Donkey Kong, Mario Bros. and The Legend of Zelda.</note>
             <affiliation ref="#org_Nintendo" from="1977">Game Designer and Representative Director (1977–present)</affiliation>
          </person>
          <person xml:id="pers_SatoruIwata" role="president" sameAs="http://viaf.org/viaf/258571878">
@@ -124,11 +124,7 @@
                <objectName>Hanafuda playing cards</objectName>
                <idno type="Wikidata">Q697641</idno>
             </objectIdentifier>
-            <history>
-               <origin>
-                  <origDate when="1889">1889</origDate>
-               </origin>
-            </history>
+            <note><date when="1889">1889</date></note>
          </object>
          <object xml:id="item_ArcadeCabinet" type="arcade_machine" sameAs="https://www.wikidata.org/wiki/Q1349717">
             <objectIdentifier>
