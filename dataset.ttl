@@ -6,9 +6,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 nintendo:char_Jumpman dcterms:title "Jumpman"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q610968> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q2737362> .
 
-nintendo:concept_VideoGamePreservation owl:sameAs <http://id.loc.gov/authorities/subjects/sh2015001602> ;
+nintendo:concept_VideoGamePreservation owl:sameAs <https://www.wikidata.org/wiki/Q56153456> ;
     skos:prefLabel "Video Game Preservation"@en .
 
 nintendo:event_Foundation1889 rdfs:label "Foundation of Nintendo (1889)"@en .
@@ -16,40 +16,40 @@ nintendo:event_Foundation1889 rdfs:label "Foundation of Nintendo (1889)"@en .
 nintendo:event_IndustrialTransformation rdfs:label "Industrial Transformation to Toys & Video Games"@en .
 
 nintendo:item_ArcadeCabinet rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q192908> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q1349717> .
 
 nintendo:item_GameBoy rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q186437> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q186437> .
 
 nintendo:item_Hanafuda rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q696306> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q697641> .
 
 nintendo:item_NES rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q172742> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q172742> .
 
 nintendo:item_NintendoDS rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q170325> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q170323> .
 
 nintendo:item_NintendoSwitch rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q27094269> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q19610114> .
 
 nintendo:item_Wii rdfs:label ""@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q8079> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q8079> .
 
 nintendo:org_Nintendo rdfs:label "Nintendo Co., Ltd."@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q8093> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q8093> .
 
 nintendo:pers_FusajiroYamauchi rdfs:label "Fusajiro Yamauchi"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q366750> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q456052> .
 
 nintendo:pers_GunpeiYokoi rdfs:label "Gunpei Yokoi"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q366261> .
+    owl:sameAs <http://viaf.org/viaf/171017199> .
 
 nintendo:pers_HiroshiYamauchi rdfs:label "Hiroshi Yamauchi"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q316022> .
+    owl:sameAs <http://viaf.org/viaf/50145003625161340874> .
 
 nintendo:pers_SatoruIwata rdfs:label "Satoru Iwata"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q312939> .
+    owl:sameAs <http://viaf.org/viaf/258571878> .
 
 nintendo:pers_ShigeruMiyamoto rdfs:label "Shigeru Miyamoto"@en ;
     owl:sameAs <http://viaf.org/viaf/78191821> .
@@ -58,20 +58,23 @@ nintendo:place_Kyoto rdfs:label "Kyoto"@en ;
     owl:sameAs <http://www.geonames.org/1857910> .
 
 nintendo:place_NintendoMuseum rdfs:label "Nintendo Museum"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q107127181> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q123124346> .
 
 nintendo:wiki_source dcterms:title "History of Nintendo"@en .
 
 nintendo:work_DonkeyKong dcterms:date "1981"^^xsd:gYear ;
     dcterms:title "Donkey Kong"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q244837> .
+    owl:sameAs <https://www.wikidata.org/wiki/Q12384> .
 
-nintendo:work_MarioBros dcterms:title "Mario Bros."@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q610968> .
+nintendo:work_MarioBros dcterms:date "1983"^^xsd:gYear ;
+    dcterms:title "Mario Bros."@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q126187572> .
 
-nintendo:work_Pokemon dcterms:title "Pokémon"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q864> .
+nintendo:work_Pokemon dcterms:date "1996"^^xsd:gYear ;
+    dcterms:title "Pokémon"@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q864> .
 
-nintendo:work_TheLegendOfZelda dcterms:title "The Legend of Zelda"@en ;
-    owl:sameAs <http://www.wikidata.org/entity/Q12397> .
+nintendo:work_TheLegendOfZelda dcterms:date "1986"^^xsd:gYear ;
+    dcterms:title "The Legend of Zelda"@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q12395> .
 
