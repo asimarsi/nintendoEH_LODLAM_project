@@ -165,11 +165,7 @@
                <objectName>Nintendo Switch</objectName>
                <idno type="wikidata">Q19610114</idno>
             </objectIdentifier>
-            <history>
-               <origin>
-                  <origDate when="2017">2017</origDate>
-               </origin>
-            </history>
+            <note><date when="2017">2017</date></note>
          </object>
       </listObject>
 
