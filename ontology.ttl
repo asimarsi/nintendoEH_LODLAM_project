@@ -1,0 +1,25 @@
+# 1. PREFIXES: existing vocabularies and the local project namespace.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix neh: <https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# 2. ONTOLOGY METADATA: identify this small project vocabulary.
+<https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl>
+    a owl:Ontology ;
+    dcterms:title "Nintendo Entertainment Heritage project vocabulary"@en ;
+    dcterms:creator "Asia Marselli" ;
+    rdfs:comment "A minimal local vocabulary used alongside CIDOC CRM, FRBRoo, Schema.org, SKOS and Dublin Core Terms in the project dataset."@en .
+
+# 3. LOCAL PROPERTY: connect a game work to a fictional character it features.
+# Domain and range classify the subject and object of this property.
+# They do not impose a closed-world validation rule.
+neh:featuresCharacter
+    a owl:ObjectProperty ;
+    rdfs:label "features character"@en ;
+    rdfs:comment "Relates a game work to a fictional character appearing in it. Used here to connect Donkey Kong (1981) and Mario Bros. (1983) to Mario."@en ;
+    rdfs:domain frbroo:F1_Work ;
+    rdfs:range crm:E28_Conceptual_Object ;
+    rdfs:isDefinedBy <https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl> .

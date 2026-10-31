@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nintendo: <https://asimarsi.github.io/nintendoEH_LODLAM_project/dataset.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+nintendo:game_PokemonTCG rdfs:label "Pokémon Trading Card Game"@en ;
+    dcterms:isPartOf nintendo:franchise_Pokemon ;
+    dcterms:type nintendo:concept_CollectibleCardGame .
+
+nintendo:type_Hanafuda rdfs:label "Hanafuda"@en ;
+    skos:broader nintendo:concept_PlayingCards .
+
+nintendo:concept_CollectibleCardGame rdfs:label "Collectible card game"@en ;
+    skos:broader nintendo:concept_CardGame .
+
+nintendo:concept_PlayingCards rdfs:label "Playing cards"@en ;
+    skos:related nintendo:concept_CardGame .
+
+nintendo:franchise_Pokemon rdfs:label "Pokémon"@en .
+
+nintendo:concept_CardGame rdfs:label "Card game"@en .
+

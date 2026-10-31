@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Nintendo Entertainment Heritage: a student project connecting people, games, cards and places through TEI and Linked Open Data.">
+<meta name="theme-color" content="#E60012">
+<title>Nintendo Entertainment Heritage · Asia Marselli</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a><div class="reading-progress" aria-hidden="true"><span></span></div>
+<header class="site-header"><a class="brand" href="#top" aria-label="Nintendo Entertainment Heritage home"><span class="brand-mark" aria-hidden="true">N<span>EH</span></span><span>NINTENDO<br><b>ENTERTAINMENT HERITAGE</b></span></a><nav class="top-nav" aria-label="Main navigation"><a href="#project">Project</a><a href="#entities">Entities</a><a href="#theoretical">Models</a><a href="#tei">Encoding</a><a href="#visualizations">RDF</a></nav><a class="repo-link" href="https://github.com/asimarsi/nintendoEH_LODLAM_project" target="_blank" rel="noopener">Repository <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">☰</button><nav id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#project"><span>01</span> The project</a><a href="#sources"><span>02</span> Sources</a><a href="#entities"><span>03</span> Entities</a><a href="#theoretical"><span>04</span> Theoretical model</a><a href="#conceptual"><span>05</span> Conceptual model</a><a href="#tei"><span>06</span> TEI encoding</a><a href="#html"><span>07</span> TEI → HTML</a><a href="#rdf"><span>08</span> TEI → RDF</a><a href="#visualizations"><span>09</span> RDF views</a><a href="#conclusions"><span>10</span> Conclusions</a></nav></header><main id="main"><section id="top" class="hero"><div class="hero-copy">
+<p class="eyebrow"><span class="status-dot"></span> AN EXPLORATION OF CONNECTED HERITAGE</p>
+<h1>Nintendo<br>Entertainment<br><span>Heritage.</span>
+</h1>
+<p class="hero-description">From playing cards to connected worlds.<br>Exploring continuity and change through people, products and forms of play.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#project">Explore the project <span aria-hidden="true">↓</span></a><a class="button button-outline" href="#visualizations">Follow the connections <span aria-hidden="true">↗</span></a>
+</div>
+<div class="hero-byline">
+<span class="avatar">AM</span><span><strong>Asia Marselli</strong><br>Information Science and Cultural Heritage · 2025–2026</span>
+</div>
+</div>
+<div class="hero-art" aria-label="Nintendo Game Boy, from the selected console models">
+<div class="art-grid"></div>
+<span class="art-cross cross-one" aria-hidden="true">+</span><div class="art-orbit" aria-hidden="true"></div>
+<span class="pixel-label label-top">1989 / PORTABLE PLAY</span><img class="hero-console" src="assets/entities/game-boy.jpg" alt="Original Game Boy console" fetchpriority="high"><div class="artifact-tag">
+<span class="tiny-square"></span><span>ONE OBJECT.<br><b>MANY CONNECTIONS.</b></span><span class="tag-arrow" aria-hidden="true">↗</span>
+</div>
+<span class="art-cross cross-two" aria-hidden="true">+</span><a class="hero-image-credit" href="#image-credits">Image sources &amp; credits ↗</a>
+</div></section>
+<div class="project-stats" aria-label="Project at a glance">
+<div>
+<b>22</b><span>Main entities</span>
+</div>
+<div>
+<b>12</b><span>Supporting records</span>
+</div>
+<div>
+<b>71</b><span>Explicit statements</span>
+</div>
+<div>
+<b>330</b><span>RDF triples</span>
+</div>
+</div>
+<div class="reading-layout">
+<aside class="reading-nav"><p class="eyebrow">PROJECT GUIDE</p>
+<nav aria-label="Section navigation"><a href="#project"><span>01</span> The project</a><a href="#sources"><span>02</span> Sources</a><a href="#entities"><span>03</span> Entities</a><a href="#theoretical"><span>04</span> Theoretical model</a><a href="#conceptual"><span>05</span> Conceptual model</a><a href="#tei"><span>06</span> TEI encoding</a><a href="#html"><span>07</span> TEI → HTML</a><a href="#rdf"><span>08</span> TEI → RDF</a><a href="#visualizations"><span>09</span> RDF views</a><a href="#conclusions"><span>10</span> Conclusions</a></nav><span class="guide-footer">READ · CONNECT · EXPLORE</span></aside><div class="report">
+<!-- SECTION PROJECT: The Project --><section class="report-section" id="project"><div class="section-heading">
+<span class="section-number" aria-hidden="true">01</span><div>
+<p class="eyebrow">THE STARTING POINT</p>
+<h2>The Project</h2>
+</div>
+</div>
+<p class="lead"><strong>Nintendo Entertainment Heritage</strong> explores how Nintendo has developed different forms of entertainment, from traditional playing cards to video games and consoles. It connects products, people, characters and places to explore continuity and change in the company’s history.</p>
+<h3>Why I chose this topic</h3>
+<p>I chose Nintendo because I wanted to look beyond individual games and consoles and explore the connections between different forms of entertainment. Two connections shaped my selection: the relationship between Donkey Kong, Mario and the name Jumpman, and the comparison between Nintendo’s origins in Hanafuda cards and physical card play within the Pokémon franchise. These interests helped me define the project’s focus, select the entities and review how their relationships should be represented.</p>
+<aside class="research-question"><p class="eyebrow">THE RESEARCH QUESTION</p>
+<h3>How can the connections between Nintendo’s products, people, characters and places help us understand continuity and change in its entertainment history?</h3>
+<div class="research-paths">
+<p><span class="pixel-label">PATH 01 / CHARACTER CONTINUITY</span>How do Donkey Kong and Mario Bros. connect through Mario and the name Jumpman?</p>
+<p><span class="pixel-label">PATH 02 / FORMS OF PLAY</span>What does comparing Hanafuda and Pokémon Trading Card Game reveal about physical card play within Nintendo’s entertainment history?</p>
+</div>
+<p class="research-note">The comparison between Hanafuda and Pokémon Trading Card Game is a thematic interpretation. It does not imply that Pokémon cards developed directly from Hanafuda.</p></aside>
+<h3>From interpretation to structured data</h3>
+<p>The project uses 22 main entities, supported by additional records for names, categories, places and events. Selected historical passages are annotated using TEI, a standard for encoding texts in XML. The catalogue and its relationships are then exported as RDF: statements that connect resources through clearly identified properties. The models and visualizations allow readers to examine these connections, consult the evidence and understand the choices behind the project.</p></section><!-- SECTION SOURCES: Domain Analysis and Source Selection --><section class="report-section" id="sources"><div class="section-heading">
+<span class="section-number" aria-hidden="true">02</span><div>
+<p class="eyebrow">DEFINING THE SCOPE</p>
+<h2>Domain Analysis and Source Selection</h2>
+</div>
+</div>
+<p>The main source is the English Wikipedia article <a href="https://en.wikipedia.org/w/index.php?title=History_of_Nintendo&amp;oldid=1382723079">History of Nintendo</a>. The project uses selected passages that document the chosen entities, provide essential context and support the two research paths.</p>
+<p>Retained passages preserve their original wording. Omissions are marked with <code>&lt;gap reason="sampling"/&gt;</code> and explained in the <code>teiHeader</code>, which also identifies the Wikipedia revision used. Only references cited in the selected passages are reproduced, keeping their original numbering.</p>
+<p>Additional sources, including publications by Nintendo and The Pokémon Company, support details such as the name Jumpman and the regional launches of Pokémon TCG. This information is documented in the catalogue, separately from the Wikipedia transcription.</p>
+<p>Twenty of the 22 main entities have annotated mentions in the selected text. <strong>Arcade cabinet</strong> is included as a contextual category, while <strong>Video game preservation</strong> is a research concept supported by additional sources. The model distinguishes characters from names, franchises from individual games, and console models from physical objects.</p>
+<a class="text-link" href="html/nintendoHE.html#evidence">Consult the supporting sources<span aria-hidden="true"> ↗</span></a></section><!-- SECTION ENTITIES: Selected Entities --><section class="report-section wide-section" id="entities"><div class="section-heading">
+<span class="section-number" aria-hidden="true">03</span><div>
+<p class="eyebrow">THE COLLECTION</p>
+<h2>Selected Entities</h2>
+</div>
+</div>
+<p>The selection is explored through four questions: <strong>who</strong> is involved, <strong>what</strong> forms of entertainment are represented, <strong>when</strong> developments take place, and <strong>where</strong> they occur. These questions guide the analysis; they are not four separate ontology classes. Dates and supporting events provide the time dimension across the selected entities.</p>
+<div class="entity-tools">
+<div class="filter-buttons" role="group" aria-label="Filter entities by category">
+<button class="filter-button active" data-filter="all" aria-pressed="true">All entities</button><button class="filter-button " data-filter="people" aria-pressed="false">People &amp; organisation</button><button class="filter-button " data-filter="games" aria-pressed="false">Games &amp; characters</button><button class="filter-button " data-filter="cards" aria-pressed="false">Cards &amp; arcade</button><button class="filter-button " data-filter="consoles" aria-pressed="false">Consoles</button><button class="filter-button " data-filter="heritage" aria-pressed="false">Places &amp; heritage</button>
+</div>
+<label class="search-box"><span class="sr-only">Search entity names</span><svg viewbox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M15 15L21 21" stroke="currentColor" stroke-width="2"></path></svg><input type="search" id="entity-search" placeholder="Find an entity…" autocomplete="off"></label>
+</div>
+<p id="entity-count" class="result-count" role="status" aria-live="polite">Showing 22 of 22 entities</p>
+<div class="entity-grid">
+<article class="entity-card" data-group="people" data-name="nintendo"><div class="entity-image">
+<span class="entity-index">01</span><img src="assets/entities/nintendo.jpg" alt="Nintendo headquarters building" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-nintendo" aria-label="Image credit for Nintendo">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Organisation</span><h3>Nintendo</h3>
+<p>Connects the people, products and places included in the project.</p>
+</div></article><article class="entity-card" data-group="people" data-name="fusajiro yamauchi"><div class="entity-image">
+<span class="entity-index">02</span><img src="assets/entities/fusajiro.svg" alt="Fusajiro Yamauchi — graphic identifier, not a historical portrait" loading="lazy" width="560" height="380"><span class="graphic-badge">Graphic identifier</span><a class="image-credit-link" href="#credit-fusajiro" aria-label="Image credit for Fusajiro Yamauchi">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Person</span><h3>Fusajiro Yamauchi</h3>
+<p>Represents the origins of Nintendo’s business in playing cards in 1889.</p>
+</div></article><article class="entity-card" data-group="people" data-name="hiroshi yamauchi" data-photo="hiroshi"><div class="entity-image">
+<span class="entity-index">03</span><img src="assets/entities/hiroshi.jpeg" alt="Portrait of Hiroshi Yamauchi" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-hiroshi" aria-label="Image credit for Hiroshi Yamauchi">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Person</span><h3>Hiroshi Yamauchi</h3>
+<p>Represents the company’s expansion from playing cards into other forms of entertainment.</p>
+</div></article><article class="entity-card" data-group="people" data-name="gunpei yokoi" data-photo="yokoi"><div class="entity-image">
+<span class="entity-index">04</span><img src="assets/entities/yokoi.jpg" alt="Portrait of Gunpei Yokoi" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-yokoi" aria-label="Image credit for Gunpei Yokoi">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Person</span><h3>Gunpei Yokoi</h3>
+<p>Connects product development, portable gaming and the Game Boy.</p>
+</div></article><article class="entity-card" data-group="people" data-name="shigeru miyamoto"><div class="entity-image">
+<span class="entity-index">05</span><img src="assets/entities/miyamoto.png" alt="Shigeru Miyamoto at the press conference for his appointment to the Order of Culture, 2026." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-miyamoto" aria-label="Image credit for Shigeru Miyamoto">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Person</span><h3>Shigeru Miyamoto</h3>
+<p>Connects the selected game works through his creative contributions.</p>
+</div></article><article class="entity-card" data-group="people" data-name="satoru iwata"><div class="entity-image">
+<span class="entity-index">06</span><img src="assets/entities/iwata.jpg" alt="Satoru Iwata at the Game Developers Conference in 2011 (second day)." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-iwata" aria-label="Image credit for Satoru Iwata">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Person</span><h3>Satoru Iwata</h3>
+<p>Represents a period of leadership associated with the Nintendo DS and Wii.</p>
+</div></article><article class="entity-card" data-group="games" data-name="donkey kong (1981)"><div class="entity-image">
+<span class="entity-index">07</span><img src="assets/entities/donkey-kong.jpg" alt="Donkey Kong arcade at the QuakeCon 2005, without the background" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-donkey-kong" aria-label="Image credit for Donkey Kong (1981)">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Video game work</span><h3>Donkey Kong (1981)</h3>
+<p>Features Mario and provides the context for the name Jumpman.</p>
+</div></article><article class="entity-card" data-group="games" data-name="mario bros. (1983)"><div class="entity-image">
+<span class="entity-index">08</span><img src="assets/entities/mario-bros.png" alt="Mario Bros. cabinet at PAX East 2014" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-mario-bros" aria-label="Image credit for Mario Bros. (1983)">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Video game work</span><h3>Mario Bros. (1983)</h3>
+<p>Features the same Mario character, supporting the study of continuity across games.</p>
+</div></article><article class="entity-card" data-group="games" data-name="the legend of zelda (1986)"><div class="entity-image">
+<span class="entity-index">09</span><img src="assets/entities/zelda.jpg" alt="The Legend of Zelda gold game cartridge" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-zelda" aria-label="Image credit for The Legend of Zelda (1986)">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Video game work</span><h3>The Legend of Zelda (1986)</h3>
+<p>Broadens the selection of game works and their connections to creative contributors.</p>
+</div></article><article class="entity-card" data-group="games" data-name="mario" data-photo="mario"><div class="entity-image">
+<span class="entity-index">10</span><img src="assets/entities/mario.webp" alt="Jumpman sprite used to illustrate Mario in the context of Donkey Kong" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-mario" aria-label="Image credit for Mario">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Fictional character</span><h3>Mario</h3>
+<p>Connects Donkey Kong and Mario Bros.; Jumpman is recorded as an appellation.</p>
+</div></article><article class="entity-card" data-group="games" data-name="pokémon"><div class="entity-image">
+<span class="entity-index">11</span><img src="assets/entities/pokemon.png" alt="International logo of Pokémon franchise." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-pokemon" aria-label="Image credit for Pokémon">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Media franchise</span><h3>Pokémon</h3>
+<p>Provides the wider context for Pokémon Trading Card Game.</p>
+</div></article><article class="entity-card" data-group="cards" data-name="hanafuda"><div class="entity-image">
+<span class="entity-index">12</span><img src="assets/entities/hanafuda.jpg" alt='This picture shows a typical setup of hanafuda for the game of Koi-Koi, on top a red zabuton with a peony pattern. This set-up is called "te hachi ba hachi” (8 cards in the hand, 8 cards in the field).
+The hanafuda pictured are homemade and based on a modified set of hanafuda graphics made by Louie Mantia, Jr., of which the originals are available ' loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-hanafuda" aria-label="Image credit for Hanafuda">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Playing-card category</span><h3>Hanafuda</h3>
+<p>Represents the origins of Nintendo’s card business.</p>
+</div></article><article class="entity-card" data-group="cards" data-name="pokémon trading card game"><div class="entity-image">
+<span class="entity-index">13</span><img src="assets/entities/pokemon-tcg.jpg" alt="Pokemon card collection" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-pokemon-tcg" aria-label="Image credit for Pokémon Trading Card Game">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Physical card game</span><h3>Pokémon Trading Card Game</h3>
+<p>Supports the thematic comparison between traditional cards and later card play within a media franchise.</p>
+</div></article><article class="entity-card" data-group="cards" data-name="arcade cabinet"><div class="entity-image">
+<span class="entity-index">14</span><img src="assets/entities/arcade.jpg" alt="Pessoas a jogar fliperama no Diretório Central dos Estudantes do campus II do Centro Federal de Educação Tecnológica de Minas Gerais, em Belo Horizonte, Brasil." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-arcade" aria-label="Image credit for Arcade cabinet">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Hardware category</span><h3>Arcade cabinet</h3>
+<p>Provides context for arcade entertainment without identifying an individual physical machine.</p>
+</div></article><article class="entity-card" data-group="consoles" data-name="nintendo entertainment system"><div class="entity-image">
+<span class="entity-index">15</span><img src="assets/entities/nes.jpg" alt="Nintendo NES (Nintendo Entertainment System) Console with controller" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-nes" aria-label="Image credit for Nintendo Entertainment System">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Home console model</span><h3>Nintendo Entertainment System</h3>
+<p>Represents Nintendo’s expansion into the home console market.</p>
+</div></article><article class="entity-card" data-group="consoles" data-name="game boy"><div class="entity-image">
+<span class="entity-index">16</span><img src="assets/entities/game-boy.jpg" alt="The Nintendo Game Boy, a handheld gaming console released in 1989.  The relatively simple and monochrome Game Boy faced off against multiple handhelds and dominated the portable gaming market for almost a decade.  This system has a 4.19 MHz CPU, a 4-shade LCD and ran off of 4 AA batteries.  It was a very long-running system, only seeing a minor upg" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-game-boy" aria-label="Image credit for Game Boy">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Portable console model</span><h3>Game Boy</h3>
+<p>Represents portable gaming and the contribution of Gunpei Yokoi.</p>
+</div></article><article class="entity-card" data-group="consoles" data-name="nintendo ds"><div class="entity-image">
+<span class="entity-index">17</span><img src="assets/entities/ds.jpg" alt='An original Nintendo DS "Fat" in blue.' loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-ds" aria-label="Image credit for Nintendo DS">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Portable console model</span><h3>Nintendo DS</h3>
+<p>Represents play through a dual-screen system with touch input.</p>
+</div></article><article class="entity-card" data-group="consoles" data-name="wii"><div class="entity-image">
+<span class="entity-index">18</span><img src="assets/entities/wii.jpg" alt="The Wii console by Nintendo.  Featured with the Wiimote." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-wii" aria-label="Image credit for Wii">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Home console model</span><h3>Wii</h3>
+<p>Represents motion-controlled play and Nintendo’s effort to reach a wider audience.</p>
+</div></article><article class="entity-card" data-group="consoles" data-name="nintendo switch"><div class="entity-image">
+<span class="entity-index">19</span><img src="assets/entities/switch.jpg" alt="The Nintendo Switch, a hybrid portable/home console released by Nintendo in 2017. It is shown here in the portable mode, with the controllers (neon red &amp;amp; blue) attached to the sides of the main unit." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-switch" aria-label="Image credit for Nintendo Switch">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Hybrid console model</span><h3>Nintendo Switch</h3>
+<p>Connects portable and home console play within one system.</p>
+</div></article><article class="entity-card" data-group="heritage" data-name="kyoto"><div class="entity-image">
+<span class="entity-index">20</span><img src="assets/entities/kyoto.jpg" alt="Ninenzaka, pedestrian paved street, with paper umbrellas on a storefront and a couple walking, wearing a yukata. 3 Chome, Higashiyama-ku, Kyoto, Japan." loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-kyoto" aria-label="Image credit for Kyoto">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Place</span><h3>Kyoto</h3>
+<p>Provides the geographical context for Nintendo’s origins and company history.</p>
+</div></article><article class="entity-card" data-group="heritage" data-name="nintendo museum"><div class="entity-image">
+<span class="entity-index">21</span><img src="assets/entities/museum.jpg" alt="Nintendo Museum" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-museum" aria-label="Image credit for Nintendo Museum">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Museum site</span><h3>Nintendo Museum</h3>
+<p>Represents the presentation of Nintendo’s history at the museum site in Uji.</p>
+</div></article><article class="entity-card" data-group="heritage" data-name="video game preservation" data-photo="preservation"><div class="entity-image">
+<span class="entity-index">22</span><img src="assets/entities/preservation.jpg" alt="Collection of video games and consoles illustrating video game preservation" loading="lazy" width="560" height="380"><a class="image-credit-link" href="#credit-preservation" aria-label="Image credit for Video game preservation">↗</a>
+</div>
+<div class="entity-content">
+<span class="entity-category">Research concept</span><h3>Video game preservation</h3>
+<p>Provides a perspective for discussing how video game heritage can be documented and preserved.</p>
+</div></article>
+</div>
+<p class="empty-state" hidden>No entities match your search. Try another name or category.</p>
+<aside class="support-note"><span class="pixel-label">+12 SUPPORTING RECORDS</span><h3>Making the connections precise</h3>
+<p>Twelve supporting records make the relationships more precise. They include the name <strong>Jumpman</strong>; <strong>Uji, Japan and the United States</strong>; three categories describing cards and card games; four events covering Nintendo’s business origins, the museum opening and the regional card-game launches; and the project document itself.</p>
+<p>These records support the 22 main entities. They help distinguish names, places, categories and events without expanding the main selection.</p></aside></section><!-- SECTION THEORETICAL: Theoretical Model --><section class="report-section" id="theoretical"><div class="section-heading">
+<span class="section-number" aria-hidden="true">04</span><div>
+<p class="eyebrow">CONNECTIONS IN ORDINARY LANGUAGE</p>
+<h2>Theoretical Model</h2>
+</div>
+</div>
+<p>The theoretical model describes the selected resources and their connections in ordinary language. It provides the basis for the conceptual model and the RDF dataset.</p>
+<p>One overview brings the main connections together. Three detail diagrams focus on people and products, character continuity, and forms of card play.</p>
+<h3>People, Games and Console Models</h3>
+<p>People connect Nintendo’s products across different periods. The model records selected contributions to game works and console development, as well as employment relationships with Nintendo. It also connects the console models to their manufacturer.</p>
+<p>These relationships distinguish the organisation from the people involved. A contribution does not imply that one person created a product alone.</p>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/01_people_forms_of_play.svg" target="_blank" rel="noopener" aria-label="Open People, Games and Console Models at full size"><img src="assets/graphs/01_people_forms_of_play.svg" alt="People, Games and Console Models" loading="lazy"></a></div>
+<figcaption><span>People, Games and Console Models</span><a class="text-link" href="assets/graphs/01_people_forms_of_play.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption><p class="figure-note">Grouped names share the displayed relationship; repeated Nintendo boxes refer to the same organisation.</p></figure><h3>Mario across Donkey Kong and Mario Bros.</h3>
+<p>Donkey Kong (1981) and Mario Bros. (1983) feature the same character, Mario. Jumpman is represented as an appellation of Mario, with Donkey Kong providing its documented context.</p>
+<p>This distinction allows the model to express continuity across the games without creating a second character for the name Jumpman.</p>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/02_mario_jumpman_works.svg" target="_blank" rel="noopener" aria-label="Open Mario across Donkey Kong and Mario Bros. at full size"><img src="assets/graphs/02_mario_jumpman_works.svg" alt="Mario across Donkey Kong and Mario Bros." loading="lazy"></a></div>
+<figcaption><span>Mario across Donkey Kong and Mario Bros.</span><a class="text-link" href="assets/graphs/02_mario_jumpman_works.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption></figure><h3>From Hanafuda to Pokémon TCG</h3>
+<p>Hanafuda and Pokémon Trading Card Game represent different forms of physical card play. The model connects them through categories: Hanafuda belongs to Playing cards, while Pokémon TCG is classified as a Collectible card game, a narrower category of Card game. Playing cards and Card game are related concepts.</p>
+<p>Pokémon TCG is also connected to the wider Pokémon franchise. Together, these relationships support the thematic comparison introduced in the research question.</p>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/03_cards_franchises_memory.svg" target="_blank" rel="noopener" aria-label="Open From Hanafuda to Pokémon TCG at full size"><img src="assets/graphs/03_cards_franchises_memory.svg" alt="From Hanafuda to Pokémon TCG" loading="lazy"></a></div>
+<figcaption><span>From Hanafuda to Pokémon TCG</span><a class="text-link" href="assets/graphs/03_cards_franchises_memory.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption></figure><h3>Overview</h3>
+<p>The overview places these paths within a wider historical and geographical context. It includes Nintendo’s business origins, selected events and places, and the museum site in Uji. Video game preservation is represented as a subject of the project, rather than as an activity automatically attributed to the museum.</p>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/00_overview.svg" target="_blank" rel="noopener" aria-label="Open The evolution of Nintendo entertainment at full size"><img src="assets/graphs/00_overview.svg" alt="The evolution of Nintendo entertainment" loading="lazy"></a></div>
+<figcaption><span>The evolution of Nintendo entertainment</span><a class="text-link" href="assets/graphs/00_overview.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption><p class="figure-note">A thematic summary; the detail diagrams expand the selected paths.</p></figure></section><!-- SECTION CONCEPTUAL: Conceptual Model --><section class="report-section" id="conceptual"><div class="section-heading">
+<span class="section-number" aria-hidden="true">05</span><div>
+<p class="eyebrow">FROM IDEAS TO A SHARED VOCABULARY</p>
+<h2>Conceptual Model</h2>
+</div>
+</div>
+<p>The conceptual model translates the relationships described in ordinary language into classes and properties from shared vocabularies. A <strong>class</strong> identifies a category of resource, while a <strong>property</strong> expresses a relationship.</p>
+<p>The diagrams were created in yEd using the Graffoo palette. One overview presents the model, while three detail diagrams focus on the main research paths. They show classes; the concrete resources and their connections appear in the RDF visualizations.</p>
+<h3>Reusing Existing Vocabularies</h3>
+<div class="table-scroll"><table>
+<thead><tr>
+<th scope="col">Vocabulary</th>
+<th scope="col">Use in the project</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>CIDOC CRM</strong></td>
+<td>People, organisation, places, activities, appellations and conceptual objects</td>
+</tr>
+<tr>
+<td><strong>FRBRoo</strong></td>
+<td>Video games represented as works</td>
+</tr>
+<tr>
+<td><strong>Schema.org</strong></td>
+<td>Console models, the card game, events and selected relationships</td>
+</tr>
+<tr>
+<td><strong>SKOS</strong></td>
+<td>Categories and relationships between concepts</td>
+</tr>
+<tr>
+<td><strong>Dublin Core Terms</strong></td>
+<td>Contributions, subjects and other descriptive relationships</td>
+</tr>
+</tbody>
+</table></div>
+<p>Some choices require a distinction between a resource and its representation. Consoles are commercial models rather than individual physical specimens. Jumpman is an appellation of Mario. The Nintendo Museum record represents the site, while preservation is a subject explored by the project.</p>
+<p>The diagrams show how properties are used in this dataset. They do not redefine the general meaning of the reused vocabularies. The two regional card-game launches are classified as both CIDOC CRM activities and Schema.org events; this does not establish a subclass relationship between those classes.</p>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/conceptual_overview.svg" target="_blank" rel="noopener" aria-label="Open Conceptual model overview — from the yEd source at full size"><img src="assets/graphs/conceptual_overview.svg" alt="Conceptual model overview — from the yEd source" loading="lazy"></a></div>
+<figcaption><span>Conceptual model overview — from the yEd source</span><a class="text-link" href="assets/graphs/conceptual_overview.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption></figure><a class="text-link" href="assets/graphs/conceptual_model_overview.graphml">Download the editable GraphML<span aria-hidden="true"> ↗</span></a><div class="conceptual-graphs">
+<div class="conceptual-detail">
+<h3>People, Games and Console Models</h3>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/conceptual_model_people_products.svg" target="_blank" rel="noopener" aria-label="Open People, Games and Console Models conceptual model at full size"><img src="assets/graphs/conceptual_model_people_products.svg" alt="People, Games and Console Models — conceptual class diagram" loading="lazy"></a></div>
+<figcaption><span>People, Games and Console Models — Conceptual Model</span><a class="text-link" href="assets/graphs/conceptual_model_people_products.svg" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure><a class="text-link" href="assets/graphs/conceptual_model_people_products.graphml" download>Download the editable GraphML ↗</a>
+</div>
+<div class="conceptual-detail">
+<h3>Mario across Donkey Kong and Mario Bros.</h3>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/conceptual_model_mario.svg" target="_blank" rel="noopener" aria-label="Open Mario across Donkey Kong and Mario Bros. conceptual model at full size"><img src="assets/graphs/conceptual_model_mario.svg" alt="Mario across Donkey Kong and Mario Bros. — conceptual class diagram" loading="lazy"></a></div>
+<figcaption><span>Mario across Donkey Kong and Mario Bros. — Conceptual Model</span><a class="text-link" href="assets/graphs/conceptual_model_mario.svg" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure><a class="text-link" href="assets/graphs/conceptual_model_mario.graphml" download>Download the editable GraphML ↗</a>
+</div>
+<div class="conceptual-detail">
+<h3>From Hanafuda to Pokémon TCG</h3>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/conceptual_model_cards.svg" target="_blank" rel="noopener" aria-label="Open From Hanafuda to Pokémon TCG conceptual model at full size"><img src="assets/graphs/conceptual_model_cards.svg" alt="From Hanafuda to Pokémon TCG — conceptual class diagram" loading="lazy"></a></div>
+<figcaption><span>From Hanafuda to Pokémon TCG — Conceptual Model</span><a class="text-link" href="assets/graphs/conceptual_model_cards.svg" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure><a class="text-link" href="assets/graphs/conceptual_model_cards.graphml" download>Download the editable GraphML ↗</a>
+</div>
+</div>
+<h3>A Small Local Vocabulary</h3>
+<p>The project defines one local property: <strong><code>neh:featuresCharacter</code></strong>. It connects a game work to a fictional character appearing in it.</p>
+<p>Its domain is <code>frbroo:F1_Work</code> and its range is <code>crm:E28_Conceptual_Object</code>. In this project, it links Donkey Kong and Mario Bros. to Mario. These declarations classify the resources connected by the property; they are not validation rules.</p>
+<p>The property is documented in <a href="ontology.ttl">ontology.ttl</a>. All other classes and properties are reused from existing vocabularies.</p></section><!-- SECTION TEI: TEI Encoding --><section class="report-section" id="tei"><div class="section-heading">
+<span class="section-number" aria-hidden="true">06</span><div>
+<p class="eyebrow">TEXT WITH STRUCTURE</p>
+<h2>TEI Encoding</h2>
+</div>
+</div>
+<p>The selected source text is encoded in XML using <strong>TEI</strong>, a standard for describing texts and their features. The file brings together the source, its annotations and a catalogue of the resources used in the project.</p>
+<h3>Document Structure</h3>
+<div class="table-scroll"><table>
+<thead><tr>
+<th scope="col">Section</th>
+<th scope="col">Content</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>teiHeader</code></td>
+<td>Document information, source identification and encoding rules</td>
+</tr>
+<tr>
+<td><code>standOff</code></td>
+<td>Entity catalogue, supporting sources and explicit relationships</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>Selected Wikipedia passages and the references they cite</td>
+</tr>
+</tbody>
+</table></div>
+<p>Comments divide the code into readable sections. The catalogue is kept separate from the source text, allowing additional information to be documented without changing Wikipedia’s wording.</p>
+<h3>Encoding Examples</h3>
+<p>Expand a category to inspect its record. Some attributes and notes are omitted for readability; these extracts use the TEI namespace declared in the full file.</p>
+<div class="encoding-examples">
+<details><summary>Person</summary><pre><code>&lt;person n="main" xml:id="pers_ShigeruMiyamoto" source="#wiki_source"&gt;
+  &lt;persName&gt;Shigeru Miyamoto&lt;/persName&gt;
+  &lt;affiliation ref="#org_Nintendo" from="1977-04" source="#src_N11"&gt;Employee&lt;/affiliation&gt;
+&lt;/person&gt;</code></pre>
+<p>The record identifies Miyamoto and documents his employment at Nintendo. The date retains month-level precision.</p></details><details><summary>Organisation</summary><pre><code>&lt;org n="main" xml:id="org_Nintendo" source="#src_N27 #wiki_source"&gt;
+  &lt;orgName&gt;Nintendo&lt;/orgName&gt;
+&lt;/org&gt;</code></pre>
+<p>Nintendo has its own record, separate from the people who founded or worked for the company.</p></details><details><summary>Place</summary><pre><code>&lt;place n="main" xml:id="place_Kyoto" source="#wiki_source"&gt;
+  &lt;placeName&gt;Kyoto&lt;/placeName&gt;
+&lt;/place&gt;</code></pre>
+<p>Different mentions of Kyoto refer to the same place record.</p></details><details><summary>Video game work</summary><pre><code>&lt;bibl n="main" xml:id="work_DonkeyKong" source="#src_N02 #src_N07 #src_N21"&gt;
+  &lt;title&gt;Donkey Kong (1981)&lt;/title&gt;
+  &lt;date type="first_release" when="1981" source="#src_N29"&gt;1981&lt;/date&gt;
+&lt;/bibl&gt;</code></pre>
+<p>The game is described as a work; the date identifies its original arcade release.</p></details><details><summary>Console model</summary><pre><code>&lt;item n="main" xml:id="model_GameBoy" source="#src_N20"&gt;
+  &lt;label&gt;Game Boy&lt;/label&gt;
+  &lt;note type="release" source="#src_N20"&gt;Japan launch: &lt;date when="1989-04-21"&gt;1989-04-21&lt;/date&gt;
+  &lt;/note&gt;
+&lt;/item&gt;</code></pre>
+<p>The record describes a commercial model. Its release note keeps the territory together with the date.</p></details><details><summary>Fictional character</summary><pre><code>&lt;item n="main" xml:id="char_Mario" source="#wiki_source #src_N01"&gt;
+  &lt;label&gt;Mario&lt;/label&gt;
+&lt;/item&gt;</code></pre>
+<p>Mario is recorded once, allowing different games and names to connect to the same character.</p></details><details><summary>Media franchise</summary><pre><code>&lt;item n="main" xml:id="franchise_Pokemon" source="#src_P03 #src_P02"&gt;
+  &lt;label&gt;Pokémon&lt;/label&gt;
+&lt;/item&gt;</code></pre>
+<p>This record represents the franchise rather than an individual video game or card game.</p></details><details><summary>Physical card game</summary><pre><code>&lt;item n="main" xml:id="game_PokemonTCG" source="#src_P03 #src_P04"&gt;
+  &lt;label&gt;Pokémon Trading Card Game&lt;/label&gt;
+&lt;/item&gt;</code></pre>
+<p>A separate record allows the physical card game to be connected to the franchise.</p></details><details><summary>Concept or category</summary><pre><code>&lt;item n="main" xml:id="type_Hanafuda" source="#wiki_source"&gt;
+  &lt;label&gt;Hanafuda&lt;/label&gt;
+&lt;/item&gt;</code></pre>
+<p>Hanafuda is a category of playing cards, rather than an individual deck.</p></details><details><summary>Supporting event</summary><pre><code>&lt;event n="support" xml:id="event_MuseumOpening" source="#src_N25 #src_N26" when="2024-10-02"&gt;
+  &lt;label&gt;Museum opening&lt;/label&gt;
+&lt;/event&gt;</code></pre>
+<p>The event has its own date and evidence, distinct from the museum site.</p></details>
+</div>
+<h3>How Classification Works</h3>
+<p>Several categories share the generic TEI structure <code>item</code>. Their ontology classes are declared separately in <code>listRelation</code>.</p>
+<pre><code>&lt;relation active="#model_GameBoy"
+          name="rdf:type"
+          passive="schema:ProductModel"/&gt;</code></pre>
+<p>This classifies Game Boy as a product model. The TEI element organises the record; the classification states what kind of resource it represents.</p>
+<h3>From a Text Mention to a Relationship</h3>
+<ol class="steps">
+<li>
+<h4>A mention points to a record</h4>
+<pre><code>&lt;rs type="fictional_character" ref="#char_Mario"&gt;Mario&lt;/rs&gt;</code></pre>
+</li>
+<li>
+<h4>The catalogue identifies the resource</h4>
+<pre><code>&lt;item n="main" xml:id="char_Mario"
+      source="#wiki_source #src_N01"&gt;
+  &lt;label&gt;Mario&lt;/label&gt;
+&lt;/item&gt;</code></pre>
+</li>
+<li>
+<h4>A relationship connects it to a work</h4>
+<pre><code>&lt;relation active="#work_DonkeyKong"
+          name="neh:featuresCharacter"
+          passive="#char_Mario"/&gt;</code></pre>
+</li>
+</ol>
+<p>The shared identifier connects the text, the catalogue and the relationship. Dates are annotated selectively when they help explain the chosen resources and their history.</p>
+<h3>Checking the File</h3>
+<p>The XML was validated against the TEI All schema. Further checks confirmed that identifiers are unique and internal references resolve correctly. The selected passages were compared with the previous transcription to ensure that their wording was preserved.</p>
+<p>These checks confirm the technical consistency of the file. Historical claims and modelling choices require a separate review of their supporting evidence.</p>
+<a class="text-link" href="nintendoHE.xml">View the TEI file<span aria-hidden="true"> ↗</span></a></section><!-- SECTION HTML: From TEI to HTML --><section class="report-section compact-section" id="html"><div class="section-heading">
+<span class="section-number" aria-hidden="true">07</span><div>
+<p class="eyebrow">A READABLE EDITION</p>
+<h2>From TEI to HTML</h2>
+</div>
+</div>
+<p>The XML/TEI file was transformed into an HTML page using an XSLT stylesheet and a Python script. The script uses the <code>lxml</code> library to apply the stylesheet, which was adapted to display the project’s annotated text and catalogue.</p>
+<div class="action-links">
+<a class="button button-primary" href="html/nintendoHE.html">Explore the HTML page<span aria-hidden="true"> ↗</span></a><a class="text-link" href="html/nintendoHE.html" download>Download the HTML source<span aria-hidden="true"> ↗</span></a><a class="text-link" href="transform.xslt">View the XSLT stylesheet<span aria-hidden="true"> ↗</span></a><a class="text-link" href="transform.py">View the Python script<span aria-hidden="true"> ↗</span></a>
+</div></section><!-- SECTION RDF: From TEI to RDF --><section class="report-section" id="rdf"><div class="section-heading">
+<span class="section-number" aria-hidden="true">08</span><div>
+<p class="eyebrow">A NETWORK OF STATEMENTS</p>
+<h2>From TEI to RDF</h2>
+</div>
+</div>
+<p>The TEI catalogue was exported as RDF using a Python script and the <code>rdflib</code> library. RDF represents information as triples: a subject, a property and an object.</p>
+<div class="triple-example" aria-label="Example RDF statement">
+<span><small>SUBJECT</small>Donkey Kong</span><b aria-hidden="true">→</b><span><small>PROPERTY</small>features character</span><b aria-hidden="true">→</b><span><small>OBJECT</small>Mario</span>
+</div>
+<p>The script reads the resource URI base and vocabulary prefixes from the TEI header. It extracts the explicit relationships, classifications, labels, references and selected dates. Dated roles and regional console launches are preserved as readable descriptions.</p>
+<p>The resulting <code>dataset.ttl</code> contains <strong>330 triples</strong>, including all 71 explicit relationship statements from the TEI. External authority references are expressed as <code>rdfs:seeAlso</code>, without automatically asserting that the linked resources are identical.</p>
+<div class="action-links">
+<a class="button button-blue" href="dataset.ttl">View the RDF dataset<span aria-hidden="true"> ↗</span></a><a class="text-link" href="tei_to_rdf.py">View the Python script<span aria-hidden="true"> ↗</span></a><a class="text-link" href="ontology.ttl">View the project ontology<span aria-hidden="true"> ↗</span></a>
+</div></section><!-- SECTION VISUALIZATIONS: RDF Visualizations --><section class="report-section" id="visualizations"><div class="section-heading">
+<span class="section-number" aria-hidden="true">09</span><div>
+<p class="eyebrow">EXPLORE THE NETWORK</p>
+<h2>RDF Visualizations</h2>
+</div>
+</div>
+<p>The dataset was visualized using <a href="https://www.ldf.fi/service/rdf-grapher">RDF Grapher</a>. The complete graph includes all 330 triples and is available as a separate SVG.</p>
+<p>Three smaller views make the connections easier to explore: an overview and two details focusing on Mario/Jumpman and Hanafuda–Pokémon TCG.</p>
+<p>These views contain only triples selected from the full dataset. They retain links between catalogue records and their labels, while omitting classifications, dates, descriptions and documentary references. The original dataset remains unchanged.</p>
+<figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/rdf_overview.svg" target="_blank" rel="noopener" aria-label="Open RDF overview at full size"><img src="assets/graphs/rdf_overview.svg" alt="RDF overview" loading="lazy"></a></div>
+<figcaption><span>RDF overview</span><a class="text-link" href="assets/graphs/rdf_overview.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption><p class="figure-note">Includes the 22 main entities and 12 supporting records. Records without connections to other catalogue resources appear separately.</p></figure><figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/rdf_mario_jumpman.svg" target="_blank" rel="noopener" aria-label="Open Mario and Jumpman at full size"><img src="assets/graphs/rdf_mario_jumpman.svg" alt="Mario and Jumpman" loading="lazy"></a></div>
+<figcaption><span>Mario and Jumpman</span><a class="text-link" href="assets/graphs/rdf_mario_jumpman.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption></figure><figure class="graph-figure"><div class="graph-frame"><a href="assets/graphs/rdf_hanafuda_pokemon.svg" target="_blank" rel="noopener" aria-label="Open Hanafuda and Pokémon TCG at full size"><img src="assets/graphs/rdf_hanafuda_pokemon.svg" alt="Hanafuda and Pokémon TCG" loading="lazy"></a></div>
+<figcaption><span>Hanafuda and Pokémon TCG</span><a class="text-link" href="assets/graphs/rdf_hanafuda_pokemon.svg">Open full size<span aria-hidden="true"> ↗</span></a></figcaption></figure><h3>Complete Graph and Reproducibility</h3>
+<div class="action-links">
+<a class="text-link" href="assets/graphs/rdf-grapher.svg">Open the complete RDF graph<span aria-hidden="true"> ↗</span></a><a class="text-link" href="visualization_extracts.zip" download>Download the visualization extracts<span aria-hidden="true"> ↗</span></a><a class="text-link" href="prepare_rdf_views.py">View the extraction script<span aria-hidden="true"> ↗</span></a>
+</div></section><!-- SECTION CONCLUSIONS: Conclusions and Downloads --><section class="report-section" id="conclusions"><div class="section-heading">
+<span class="section-number" aria-hidden="true">10</span><div>
+<p class="eyebrow">WHAT THE CONNECTIONS SHOW</p>
+<h2>Conclusions and Downloads</h2>
+</div>
+</div>
+<p>The project brings together a selected part of Nintendo’s history as connected, documented resources. It shows character continuity through Mario and Jumpman, and supports a comparison of physical card play across different periods.</p>
+<p>The result is a structured interpretation, not a complete history of Nintendo. The selection and modelling choices shape what the graphs can show. Technical validation checks the files; it does not replace the assessment of historical evidence.</p>
+<p>The RDF export keeps some contextual information as readable descriptions. Future work could represent these details more precisely, extend the source selection and investigate preservation practices using specific evidence.</p>
+<div class="download-grid">
+<a class="download-card" href="nintendoHE.xml" download>TEI source · XML<span aria-hidden="true"> ↗</span></a><a class="download-card" href="dataset.ttl" download>RDF dataset · Turtle<span aria-hidden="true"> ↗</span></a><a class="download-card" href="ontology.ttl" download>Project vocabulary · Turtle<span aria-hidden="true"> ↗</span></a><a class="download-card" href="transform.xslt" download>HTML stylesheet · XSLT<span aria-hidden="true"> ↗</span></a><a class="download-card" href="tei_to_rdf.py" download>RDF exporter · Python<span aria-hidden="true"> ↗</span></a><a class="download-card" href="visualization_extracts.zip" download>Visualization extracts · ZIP<span aria-hidden="true"> ↗</span></a>
+</div>
+<h3>Sources and Acknowledgements</h3>
+<p>The Wikipedia text is attributed to its contributors under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The fixed revision and additional evidence are documented in the TEI and its <a href="html/nintendoHE.html#evidence">HTML catalogue</a>. Image credits are listed below; each image retains its own licence.</p>
+<p>The project was developed with AI assistance for code, wording, diagrams and technical checks. The research focus, selection of entities and interpretative choices were developed and reviewed throughout the work.</p>
+<p>This is an independent student project for Information Science and Cultural Heritage, University of Bologna, academic year 2025–2026. Nintendo and the other names shown remain associated with their respective owners; the project is not affiliated with Nintendo.</p>
+<details id="image-credits" class="credits-details"><summary>Image Sources and Credits</summary><p>Photographs may show a specimen, cartridge or setting used to illustrate a catalogue resource. Graphic identifiers are not historical portraits. Wikimedia captions and licences can be checked at the linked source pages.</p>
+<div class="credit-entry" id="credit-nintendo">
+<h4>Nintendo</h4>
+<p>DVMG · CC BY 3.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Nintendo_Headquarters_-_panoramio.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-fusajiro">
+<h4>Fusajiro Yamauchi</h4>
+<p>Graphic prepared for this project · Original graphic identifier. Original project graphic; not a documentary photograph.</p>
+</div>
+<div class="credit-entry" id="credit-hiroshi">
+<h4>Hiroshi Yamauchi</h4>
+<p>Image supplied for this project. Original source and licence were not provided with the upload.</p>
+</div>
+<div class="credit-entry" id="credit-yokoi">
+<h4>Gunpei Yokoi</h4>
+<p>Image supplied for this project. The image carries a Famitsu.com credit. Original source and licence were not provided with the upload.</p>
+</div>
+<div class="credit-entry" id="credit-miyamoto">
+<h4>Shigeru Miyamoto</h4>
+<p>AbelDionis · CC BY-SA 4.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Miyamoto2026.png">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-iwata">
+<h4>Satoru Iwata</h4>
+<p>Official GDC · CC BY 2.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Satoru_Iwata_GDC_2011_(cropped).jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-donkey-kong">
+<h4>Donkey Kong (1981)</h4>
+<p>Joshua Driggs (ZapWizard) (take photo), bayo (remove the background) · CC BY-SA 2.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Donkey_Kong_arcade.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-mario-bros">
+<h4>Mario Bros. (1983)</h4>
+<p>Nick S. · CC BY-SA 4.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Mario_Bros._cabinet_at_PAX_East_2014.png">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-zelda">
+<h4>The Legend of Zelda (1986)</h4>
+<p>Dave or Atox · CC BY 2.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:The_Legend_of_Zelda_-_Golden_Catridge.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-mario">
+<h4>Mario</h4>
+<p>Image supplied for this project. Jumpman sprite illustrating the historical name of Mario. Original source and licence were not provided with the upload.</p>
+</div>
+<div class="credit-entry" id="credit-pokemon">
+<h4>Pokémon</h4>
+<p>Pokémon, Nintendo/Creatures Inc./Game Freak Inc. · Public domain. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-hanafuda">
+<h4>Hanafuda</h4>
+<p>Marcus Richert · CC BY 2.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Hanafuda_Koi-Koi_Setup_1.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-pokemon-tcg">
+<h4>Pokémon Trading Card Game</h4>
+<p>Jarek Tuszyński · CC BY-SA 4.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Pokemon_collection.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-arcade">
+<h4>Arcade cabinet</h4>
+<p>Andrevruas · CC BY-SA 3.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Fliperama.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-nes">
+<h4>Nintendo Entertainment System</h4>
+<p>JCD1981NL · CC BY 3.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Wikipedia_NES_PAL.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-game-boy">
+<h4>Game Boy</h4>
+<p>Evan-Amos · Public domain. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-ds">
+<h4>Nintendo DS</h4>
+<p>Evan-Amos · Public domain. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Nintendo-DS-Fat-Blue.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-wii">
+<h4>Wii</h4>
+<p>Evan-Amos · Public domain. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Wii-console.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-switch">
+<h4>Nintendo Switch</h4>
+<p>Evan-Amos · Public domain. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-kyoto">
+<h4>Kyoto</h4>
+<p>Basile Morin · CC BY-SA 4.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Pedestrian_road_with_pavements,_paper_umbrellas_and_people_in_yukata,_Higashiyama-ku,_Kyoto,_Japan.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-museum">
+<h4>Nintendo Museum</h4>
+<p>Nagomijirap · CC BY-SA 4.0. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Nintendo_Museum_Entrance.jpg">Source and attribution<span aria-hidden="true"> ↗</span></a></p>
+</div>
+<div class="credit-entry" id="credit-preservation">
+<h4>Video game preservation</h4>
+<p>Image supplied for this project. Original source and licence were not provided with the upload.</p>
+</div></details></section>
+</div>
+</div></main><footer class="site-footer"><a class="footer-title" href="#top">Nintendo<br><span>Entertainment Heritage.</span></a><div>
+<p>Asia Marselli · ISCH 2025–2026</p>
+<a href="https://github.com/asimarsi/nintendoEH_LODLAM_project">Project repository ↗</a><p class="footer-note">From a history of play to a network of connections.</p>
+</div>
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a></footer>
+</body>
+</html>

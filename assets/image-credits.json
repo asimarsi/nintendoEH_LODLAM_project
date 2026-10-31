@@ -1,0 +1,216 @@
+[
+  {
+    "id": "nintendo",
+    "path": "assets/entities/nintendo.jpg",
+    "file": "Nintendo Headquarters - panoramio.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Nintendo_Headquarters_-_panoramio.jpg",
+    "artist": "DVMG",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "caption": "Nintendo Headquarters in Kyoto (2010). Building design by Yoshimura Architects in 2000.\n\u4eac\u90fd\u5e02\u5357\u533a\n2006\u5e742\u670818\u65e5\u306b\u6295\u7a3f\u8005\u304c\u64ae\u5f71\nHead Quarters of Nintendo, Minami-ku, Kyoto, Japan."
+  },
+  {
+    "id": "fusajiro",
+    "path": "assets/entities/fusajiro.svg",
+    "file": "Project graphic",
+    "artist": "Graphic prepared for this project",
+    "license": "Original graphic identifier",
+    "caption": "Graphic identifier; not a historical portrait."
+  },
+  {
+    "id": "hiroshi",
+    "path": "assets/entities/hiroshi.jpeg",
+    "file": "Hiroshi Yamauchi(1).jpeg",
+    "artist": "Not supplied",
+    "license": "Not supplied with upload",
+    "provenance": "User-provided image",
+    "caption": "Portrait of Hiroshi Yamauchi"
+  },
+  {
+    "id": "yokoi",
+    "path": "assets/entities/yokoi.jpg",
+    "file": "Gunpei Yokoi.jpg",
+    "artist": "Not supplied",
+    "license": "Not supplied with upload",
+    "provenance": "User-provided image",
+    "caption": "Portrait of Gunpei Yokoi"
+  },
+  {
+    "id": "miyamoto",
+    "path": "assets/entities/miyamoto.png",
+    "file": "Miyamoto2026.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Miyamoto2026.png",
+    "artist": "AbelDionis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Shigeru Miyamoto at the press conference for his appointment to the Order of Culture, 2026."
+  },
+  {
+    "id": "iwata",
+    "path": "assets/entities/iwata.jpg",
+    "file": "Satoru Iwata GDC 2011 (cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Satoru_Iwata_GDC_2011_(cropped).jpg",
+    "artist": "Official GDC",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "caption": "Satoru Iwata at the Game Developers Conference in 2011 (second day)."
+  },
+  {
+    "id": "donkey-kong",
+    "path": "assets/entities/donkey-kong.jpg",
+    "file": "Donkey Kong arcade.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Donkey_Kong_arcade.jpg",
+    "artist": "Joshua Driggs (ZapWizard) (take photo), bayo (remove the background)",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "caption": "Donkey Kong arcade at the QuakeCon 2005, without the background"
+  },
+  {
+    "id": "mario-bros",
+    "path": "assets/entities/mario-bros.png",
+    "file": "Mario Bros. cabinet at PAX East 2014.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Mario_Bros._cabinet_at_PAX_East_2014.png",
+    "artist": "Nick S.",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Mario Bros. cabinet at PAX East 2014"
+  },
+  {
+    "id": "zelda",
+    "path": "assets/entities/zelda.jpg",
+    "file": "The Legend of Zelda - Golden Catridge.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Legend_of_Zelda_-_Golden_Catridge.jpg",
+    "artist": "Dave or Atox",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "caption": "Golden \"The Legend of Zelda\" NES cartridge.\n\nLight box with Vivitar 285-HV 1/4 from the right."
+  },
+  {
+    "id": "mario",
+    "path": "assets/entities/mario.webp",
+    "file": "Jumpman.webp",
+    "artist": "Not supplied",
+    "license": "Not supplied with upload",
+    "provenance": "User-provided image",
+    "caption": "Jumpman sprite used to illustrate Mario in the context of Donkey Kong"
+  },
+  {
+    "id": "pokemon",
+    "path": "assets/entities/pokemon.png",
+    "file": "International Pok\u00e9mon logo.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg",
+    "artist": "Pok\u00e9mon, Nintendo/Creatures Inc./Game Freak Inc.",
+    "license": "Public domain",
+    "license_url": "",
+    "caption": "International logo of Pok\u00e9mon franchise."
+  },
+  {
+    "id": "hanafuda",
+    "path": "assets/entities/hanafuda.jpg",
+    "file": "Hanafuda Koi-Koi Setup 1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanafuda_Koi-Koi_Setup_1.jpg",
+    "artist": "Marcus Richert",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "caption": "This picture shows a typical setup of hanafuda for the game of Koi-Koi, on top a red zabuton with a peony pattern. This set-up is called \"te hachi ba hachi\u201d (8 cards in the hand, 8 cards in the field).\nThe hanafuda pictured are homemade and based on a modified set of hanafuda graphics made by Louie Mantia, Jr., of which the originals are available "
+  },
+  {
+    "id": "pokemon-tcg",
+    "path": "assets/entities/pokemon-tcg.jpg",
+    "file": "Pokemon collection.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Pokemon_collection.jpg",
+    "artist": "Jarek Tuszy\u0144ski",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Pokemon card collection"
+  },
+  {
+    "id": "arcade",
+    "path": "assets/entities/arcade.jpg",
+    "file": "Fliperama.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Fliperama.jpg",
+    "artist": "Andrevruas",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "caption": "Pessoas a jogar fliperama no Diret\u00f3rio Central dos Estudantes do campus II do Centro Federal de Educa\u00e7\u00e3o Tecnol\u00f3gica de Minas Gerais, em Belo Horizonte, Brasil."
+  },
+  {
+    "id": "nes",
+    "path": "assets/entities/nes.jpg",
+    "file": "Wikipedia NES PAL.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_NES_PAL.jpg",
+    "artist": "JCD1981NL",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "caption": "Nintendo NES (Nintendo Entertainment System) Console with controller"
+  },
+  {
+    "id": "game-boy",
+    "path": "assets/entities/game-boy.jpg",
+    "file": "Game-Boy-FL.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "license_url": "",
+    "caption": "The Nintendo Game Boy, a handheld gaming console released in 1989.  The relatively simple and monochrome Game Boy faced off against multiple handhelds and dominated the portable gaming market for almost a decade.  This system has a 4.19 MHz CPU, a 4-shade LCD and ran off of 4 AA batteries.  It was a very long-running system, only seeing a minor upg"
+  },
+  {
+    "id": "ds",
+    "path": "assets/entities/ds.jpg",
+    "file": "Nintendo-DS-Fat-Blue.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Nintendo-DS-Fat-Blue.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "license_url": "",
+    "caption": "An original Nintendo DS \"Fat\" in blue."
+  },
+  {
+    "id": "wii",
+    "path": "assets/entities/wii.jpg",
+    "file": "Wii-console.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wii-console.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "license_url": "",
+    "caption": "The Wii console by Nintendo.  Featured with the Wiimote."
+  },
+  {
+    "id": "switch",
+    "path": "assets/entities/switch.jpg",
+    "file": "Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "license_url": "",
+    "caption": "The Nintendo Switch, a hybrid portable/home console released by Nintendo in 2017. It is shown here in the portable mode, with the controllers (neon red &amp; blue) attached to the sides of the main unit."
+  },
+  {
+    "id": "kyoto",
+    "path": "assets/entities/kyoto.jpg",
+    "file": "Pedestrian road with pavements, paper umbrellas and people in yukata, Higashiyama-ku, Kyoto, Japan.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Pedestrian_road_with_pavements,_paper_umbrellas_and_people_in_yukata,_Higashiyama-ku,_Kyoto,_Japan.jpg",
+    "artist": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Ninenzaka, pedestrian paved street, with paper umbrellas on a storefront and a couple walking, wearing a yukata. 3 Chome, Higashiyama-ku, Kyoto, Japan."
+  },
+  {
+    "id": "museum",
+    "path": "assets/entities/museum.jpg",
+    "file": "Nintendo Museum Entrance.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Nintendo_Museum_Entrance.jpg",
+    "artist": "Nagomijirap",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Nintendo Museum"
+  },
+  {
+    "id": "preservation",
+    "path": "assets/entities/preservation.jpg",
+    "file": "Video game preservation.jpg",
+    "artist": "Not supplied",
+    "license": "Not supplied with upload",
+    "provenance": "User-provided image",
+    "caption": "Collection of video games and consoles illustrating video game preservation"
+  }
+]

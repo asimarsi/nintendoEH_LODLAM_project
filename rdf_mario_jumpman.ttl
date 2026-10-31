@@ -1,0 +1,18 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix neh: <https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl#> .
+@prefix nintendo: <https://asimarsi.github.io/nintendoEH_LODLAM_project/dataset.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+nintendo:work_MarioBros rdfs:label "Mario Bros. (1983)"@en ;
+    neh:featuresCharacter nintendo:char_Mario .
+
+nintendo:name_Jumpman rdfs:label "Jumpman"@en ;
+    dcterms:relation nintendo:work_DonkeyKong .
+
+nintendo:work_DonkeyKong rdfs:label "Donkey Kong (1981)"@en ;
+    neh:featuresCharacter nintendo:char_Mario .
+
+nintendo:char_Mario rdfs:label "Mario"@en ;
+    crm:P1_is_identified_by nintendo:name_Jumpman .
+
