@@ -1,0 +1,410 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix neh: <https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl#> .
+@prefix nintendo: <https://asimarsi.github.io/nintendoEH_LODLAM_project/dataset.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nintendo:doc_Project a crm:E31_Document ;
+    rdfs:label "Nintendo Entertainment Heritage"@en ;
+    dcterms:subject nintendo:concept_VideoGamePreservation ;
+    dcterms:title "Nintendo Entertainment Heritage"@en .
+
+nintendo:event_BusinessStart1889 a crm:E7_Activity ;
+    rdfs:label "Start of the Nintendo business"@en ;
+    dcterms:date "1889-09-23"^^xsd:date ;
+    dcterms:source nintendo:src_N08,
+        nintendo:wiki_source ;
+    crm:P14_carried_out_by nintendo:pers_FusajiroYamauchi ;
+    crm:P7_took_place_at nintendo:place_Kyoto .
+
+nintendo:event_MuseumOpening a crm:E7_Activity ;
+    rdfs:label "Museum opening"@en ;
+    dcterms:date "2024-10-02"^^xsd:date ;
+    dcterms:source nintendo:src_N25,
+        nintendo:src_N26 ;
+    crm:P7_took_place_at nintendo:place_NintendoMuseum .
+
+nintendo:event_PokemonTCGJapanLaunch1996 a crm:E7_Activity,
+        schema:Event ;
+    rdfs:label "Japan launch of Pokémon Trading Card Game"@en ;
+    dcterms:date "1996-10"^^xsd:gYearMonth ;
+    dcterms:description "Launch of the physical Pokémon Trading Card Game in Japan. The source specifies October 1996."@en ;
+    dcterms:source nintendo:src_P03 ;
+    crm:P7_took_place_at nintendo:place_Japan ;
+    schema:about nintendo:game_PokemonTCG .
+
+nintendo:event_PokemonTCGUSBaseSetLaunch1999 a crm:E7_Activity,
+        schema:Event ;
+    rdfs:label "US launch of Pokémon Card Game Base Set"@en ;
+    dcterms:date "1999-01"^^xsd:gYearMonth ;
+    dcterms:description "Launch of Pokémon Card Game Base Set in the United States. The source specifies January 1999; the event concerns this set and market."@en ;
+    dcterms:source nintendo:src_P03 ;
+    crm:P7_took_place_at nintendo:place_UnitedStates ;
+    schema:about nintendo:game_PokemonTCG .
+
+nintendo:model_GameBoy a schema:ProductModel ;
+    rdfs:label "Game Boy"@en ;
+    dcterms:contributor nintendo:pers_GunpeiYokoi ;
+    dcterms:description "Japan launch: 1989-04-21"@en ;
+    dcterms:source nintendo:src_N20 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q186437> ;
+    schema:manufacturer nintendo:org_Nintendo .
+
+nintendo:model_NES a schema:ProductModel ;
+    rdfs:label "NES"@en ;
+    dcterms:description "European launch, annual precision: 1986"@en,
+        "United States launch: 1985"@en ;
+    dcterms:source nintendo:src_N07,
+        nintendo:src_N21,
+        nintendo:src_N24 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q172742> ;
+    schema:manufacturer nintendo:org_Nintendo .
+
+nintendo:model_NintendoDS a schema:ProductModel ;
+    rdfs:label "Nintendo DS"@en ;
+    dcterms:description "European launch: 2005-03-11"@en,
+        "Japan launch: 2004-12-02"@en,
+        "United States launch: 2004-11-21"@en ;
+    dcterms:source nintendo:src_N16,
+        nintendo:src_N17 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q170323> ;
+    schema:manufacturer nintendo:org_Nintendo .
+
+nintendo:model_NintendoSwitch a schema:ProductModel ;
+    rdfs:label "Nintendo Switch"@en ;
+    dcterms:description "Initial launches in Japan, North America and Europe: 2017-03-03"@en ;
+    dcterms:source nintendo:src_N18,
+        nintendo:src_N19 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q19610114> ;
+    schema:manufacturer nintendo:org_Nintendo .
+
+nintendo:model_Wii a schema:ProductModel ;
+    rdfs:label "Wii"@en ;
+    dcterms:description "European launch: 2006-12-08"@en,
+        "Japan launch: 2006-12-02"@en,
+        "North American launch: 2006-11-19"@en ;
+    dcterms:source nintendo:src_N18 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q8079> ;
+    schema:manufacturer nintendo:org_Nintendo .
+
+nintendo:pers_HiroshiYamauchi a crm:E21_Person ;
+    rdfs:label "Hiroshi Yamauchi"@en ;
+    dcterms:description "President at org_Nintendo; from 1949; to 2002-05"@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q354768> ;
+    schema:worksFor nintendo:org_Nintendo .
+
+nintendo:pers_SatoruIwata a crm:E21_Person ;
+    rdfs:label "Satoru Iwata"@en ;
+    dcterms:description "President at org_Nintendo; from 2002-05; to 2015-07-11"@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q316013> ;
+    schema:worksFor nintendo:org_Nintendo .
+
+nintendo:src_L01 rdfs:label "Local vocabulary"@en ;
+    dcterms:title "Local vocabulary"@en .
+
+nintendo:src_N03 rdfs:label "Nintendo Gallery project (2021)"@en ;
+    dcterms:title "Nintendo Gallery project (2021)"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/release/en/2021/210602.html> .
+
+nintendo:src_N06 rdfs:label "Company chronology"@en ;
+    dcterms:title "Company chronology"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html> .
+
+nintendo:src_N09 rdfs:label "Annual Report 2003, History of Nintendo"@en ;
+    dcterms:title "Annual Report 2003, History of Nintendo"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/kessan/annual0303e.pdf> .
+
+nintendo:src_N10 rdfs:label "Earnings release of 30 May 2002, changes to directors"@en ;
+    dcterms:title "Earnings release of 30 May 2002, changes to directors"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2002/020530e.pdf> .
+
+nintendo:src_N11 rdfs:label "2018 shareholder meeting notice, Miyamoto candidate profile"@en ;
+    dcterms:title "2018 shareholder meeting notice, Miyamoto candidate profile"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2018/convocation_notice1806e.pdf> .
+
+nintendo:src_N13 rdfs:label "Iwata Asks, You’re Pretty Negative"@en ;
+    dcterms:title "Iwata Asks, You’re Pretty Negative"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/en-gb/Iwata-Asks/Super-Mario-Bros-25th-Anniversary/Vol-1-Itoi-asks-Miyamoto/2-You-re-Pretty-Negative-/2-You-re-Pretty-Negative--217256.html> .
+
+nintendo:src_N14 rdfs:label "Notification of Death and Personnel Change, 13 July 2015"@en ;
+    dcterms:title "Notification of Death and Personnel Change, 13 July 2015"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2015/150713e.pdf> .
+
+nintendo:src_N15 rdfs:label "Iwata Asks, History of Handheld Zelda, part 1"@en ;
+    dcterms:title "Iwata Asks, History of Handheld Zelda, part 1"@en ;
+    rdfs:seeAlso <https://iwataasks.nintendo.com/interviews/ds/zelda/1/0/> .
+
+nintendo:src_N29 rdfs:label "Arcade Archives Donkey Kong historical description"@en ;
+    dcterms:title "Arcade Archives Donkey Kong historical description"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/en-gb/Games/Nintendo-Switch-download-software/Arcade-Archives-DONKEY-KONG-1389973.html> .
+
+nintendo:src_N30 rdfs:label "Arcade Archives Mario Bros historical description"@en ;
+    dcterms:title "Arcade Archives Mario Bros historical description"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/en-gb/Games/Nintendo-Switch-download-software/Arcade-Archives-Mario-Bros-1276808.html> .
+
+nintendo:src_P01 rdfs:label "Pokémon TCG and its 1996 launch"@en ;
+    dcterms:title "Pokémon TCG and its 1996 launch"@en ;
+    rdfs:seeAlso <https://corporate.pokemon.co.jp/en/topics/detail/t-28/> .
+
+nintendo:src_P05 rdfs:label "Philosophy"@en ;
+    dcterms:title "Philosophy"@en ;
+    rdfs:seeAlso <https://corporate.pokemon.co.jp/en/aboutus/philosophy/> .
+
+nintendo:type_ArcadeCabinet a skos:Concept ;
+    rdfs:label "Arcade cabinet"@en ;
+    dcterms:description "Cabinet category retained for comparison. No undocumented hardware-platform relation is asserted."@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q1349717> ;
+    skos:prefLabel "Arcade cabinet"@en .
+
+nintendo:type_Hanafuda a skos:Concept ;
+    rdfs:label "Hanafuda"@en ;
+    dcterms:description "Type of traditional playing cards; no individual deck is identified."@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q697641> ;
+    skos:broader nintendo:concept_PlayingCards ;
+    skos:prefLabel "Hanafuda"@en .
+
+nintendo:work_MarioBros a frbroo:F1_Work ;
+    rdfs:label "Mario Bros. (1983)"@en ;
+    dcterms:contributor nintendo:pers_GunpeiYokoi,
+        nintendo:pers_ShigeruMiyamoto ;
+    dcterms:description "Original arcade release"@en ;
+    dcterms:issued "1983"^^xsd:gYear ;
+    dcterms:source nintendo:src_N12,
+        nintendo:src_N21 ;
+    dcterms:title "Mario Bros. (1983)"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q610968> ;
+    neh:featuresCharacter nintendo:char_Mario .
+
+nintendo:work_TheLegendOfZelda a frbroo:F1_Work ;
+    rdfs:label "The Legend of Zelda (1986)"@en ;
+    dcterms:contributor nintendo:pers_ShigeruMiyamoto ;
+    dcterms:description "First Japanese release on Family Computer Disk System"@en ;
+    dcterms:issued "1986-02-21"^^xsd:date ;
+    dcterms:source nintendo:src_N22,
+        nintendo:src_N24 ;
+    dcterms:title "The Legend of Zelda (1986)"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q12395> .
+
+nintendo:concept_CollectibleCardGame a skos:Concept ;
+    rdfs:label "Collectible card game"@en ;
+    skos:broader nintendo:concept_CardGame ;
+    skos:prefLabel "Collectible card game"@en .
+
+nintendo:concept_PlayingCards a skos:Concept ;
+    rdfs:label "Playing cards"@en ;
+    skos:prefLabel "Playing cards"@en ;
+    skos:related nintendo:concept_CardGame .
+
+nintendo:concept_VideoGamePreservation a skos:Concept ;
+    rdfs:label "Video game preservation"@en ;
+    dcterms:description "Research subject of this project; no specific preservation practice is attributed to Nintendo Museum."@en ;
+    dcterms:source nintendo:src_S01,
+        nintendo:src_S02 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q56153456>,
+        <https://library.gamehistory.org/subjects/369> ;
+    skos:prefLabel "Video game preservation"@en .
+
+nintendo:franchise_Pokemon a crm:E28_Conceptual_Object ;
+    rdfs:label "Pokémon"@en ;
+    dcterms:contributor nintendo:org_Nintendo ;
+    dcterms:description "Media franchise, distinct from an individual video game and from the physical card game."@en ;
+    dcterms:source nintendo:src_P02,
+        nintendo:src_P03 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q864> .
+
+nintendo:name_Jumpman a crm:E41_Appellation ;
+    rdfs:label "Jumpman"@en ;
+    dcterms:relation nintendo:work_DonkeyKong ;
+    dcterms:source nintendo:src_N01 .
+
+nintendo:pers_FusajiroYamauchi a crm:E21_Person ;
+    rdfs:label "Fusajiro Yamauchi"@en ;
+    dcterms:description "Started the historical Nintendo business and its initial card production in 1889."@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q456052> .
+
+nintendo:place_Japan a crm:E53_Place ;
+    rdfs:label "Japan"@en ;
+    dcterms:source nintendo:src_P03 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q17> .
+
+nintendo:place_NintendoMuseum a crm:E53_Place ;
+    rdfs:label "Nintendo Museum"@en ;
+    dcterms:description "Museum site in Uji. Its external record also describes the institution; no strict identity is asserted."@en ;
+    dcterms:source nintendo:src_N05,
+        nintendo:src_N25,
+        nintendo:src_N26 ;
+    crm:P89_falls_within nintendo:place_Uji ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q123124346> .
+
+nintendo:place_Uji a crm:E53_Place ;
+    rdfs:label "Uji"@en ;
+    dcterms:source nintendo:src_N05,
+        nintendo:src_N25 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q326956> .
+
+nintendo:place_UnitedStates a crm:E53_Place ;
+    rdfs:label "United States"@en ;
+    dcterms:source nintendo:src_P03 ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q30> .
+
+nintendo:src_N02 rdfs:label "Mario Bros. (1983)"@en ;
+    dcterms:title "Mario Bros. (1983)"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/it-it/Iwata-Chiede/25-anniversario-di-Super-Mario-Bros-/Parte-3-Gli-sviluppatori-di-Super-Mario-1-/2-Il-primo-incontro-con-Super-Mario/2-Il-primo-incontro-con-Super-Mario-222084.html> .
+
+nintendo:src_N08 rdfs:label "Corporate Company History"@en ;
+    dcterms:title "Corporate Company History"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/en/history/index.html> .
+
+nintendo:src_N12 rdfs:label "Iwata Asks, The Reason Mario Wears Overalls"@en ;
+    dcterms:title "Iwata Asks, The Reason Mario Wears Overalls"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-New-Super-Mario-Bros-Wii/Volume-1/2-The-Reason-Mario-Wears-Overalls/2-The-Reason-Mario-Wears-Overalls-210759.html> .
+
+nintendo:src_N16 rdfs:label "Quarterly results of 26 January 2005"@en ;
+    dcterms:title "Quarterly results of 26 January 2005"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2005/050126e.pdf> .
+
+nintendo:src_N17 rdfs:label "Financial Results Briefing of 26 April 2019"@en ;
+    dcterms:title "Financial Results Briefing of 26 April 2019"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2019/190426_3e.pdf> .
+
+nintendo:src_N19 rdfs:label "Switch sales exceed 10 million, 12 December 2017"@en ;
+    dcterms:title "Switch sales exceed 10 million, 12 December 2017"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/release/en/2017/171212.html> .
+
+nintendo:src_N20 rdfs:label "DS sales reach 100 million, announcement of 11 March 2009"@en ;
+    dcterms:title "DS sales reach 100 million, announcement of 11 March 2009"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/release/2009/090311.html> .
+
+nintendo:src_N22 rdfs:label "Zelda 40th anniversary, Japanese release history"@en ;
+    dcterms:title "Zelda 40th anniversary, Japanese release history"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/jp/character/zelda/history/index.html?lang=ja> .
+
+nintendo:src_N27 rdfs:label "Company Profile"@en ;
+    dcterms:title "Company Profile"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/en/outline/index.html> .
+
+nintendo:src_P02 rdfs:label "Pokémon as a franchise"@en ;
+    dcterms:title "Pokémon as a franchise"@en ;
+    rdfs:seeAlso <https://corporate.pokemon.co.jp/en/produce/> .
+
+nintendo:src_P04 rdfs:label "About Us, History Details"@en ;
+    dcterms:title "About Us, History Details"@en ;
+    rdfs:seeAlso <https://corporate.pokemon.com/en-gb/about/> .
+
+nintendo:src_S01 rdfs:label "Mission of the Video Game History Foundation"@en ;
+    dcterms:title "Mission of the Video Game History Foundation"@en ;
+    rdfs:seeAlso <https://gamehistory.org/our-mission/> .
+
+nintendo:src_S02 rdfs:label "Video game preservation subject record"@en ;
+    dcterms:title "Video game preservation subject record"@en ;
+    rdfs:seeAlso <https://library.gamehistory.org/subjects/369> .
+
+nintendo:work_DonkeyKong a frbroo:F1_Work ;
+    rdfs:label "Donkey Kong (1981)"@en ;
+    dcterms:contributor nintendo:pers_ShigeruMiyamoto ;
+    dcterms:description "Original arcade release"@en ;
+    dcterms:issued "1981"^^xsd:gYear ;
+    dcterms:source nintendo:src_N02,
+        nintendo:src_N07,
+        nintendo:src_N21 ;
+    dcterms:title "Donkey Kong (1981)"@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q12384> ;
+    neh:featuresCharacter nintendo:char_Mario .
+
+nintendo:char_Mario a crm:E28_Conceptual_Object ;
+    rdfs:label "Mario"@en ;
+    dcterms:description "One fictional character. Jumpman is documented as a name used in Donkey Kong (1981)."@en ;
+    dcterms:source nintendo:src_N01,
+        nintendo:wiki_source ;
+    crm:P1_is_identified_by nintendo:name_Jumpman ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q12379> .
+
+nintendo:concept_CardGame a skos:Concept ;
+    rdfs:label "Card game"@en ;
+    skos:prefLabel "Card game"@en .
+
+nintendo:game_PokemonTCG a schema:Game ;
+    rdfs:label "Pokémon Trading Card Game"@en ;
+    dcterms:isPartOf nintendo:franchise_Pokemon ;
+    dcterms:source nintendo:src_P03,
+        nintendo:src_P04 ;
+    dcterms:type nintendo:concept_CollectibleCardGame ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q1056309> .
+
+nintendo:pers_GunpeiYokoi a crm:E21_Person ;
+    rdfs:label "Gunpei Yokoi"@en ;
+    dcterms:description "Employee at org_Nintendo; from 1965; to 1996"@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q366261> ;
+    schema:worksFor nintendo:org_Nintendo .
+
+nintendo:place_Kyoto a crm:E53_Place ;
+    rdfs:label "Kyoto"@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q34600> .
+
+nintendo:src_N01 rdfs:label "Mario and the name Jumpman"@en ;
+    dcterms:title "Mario and the name Jumpman"@en ;
+    rdfs:seeAlso <https://www.nintendo.com/en-ca/whatsnew/wahoo-see-the-platforming-history-of-super-mario-and-even-get-a-few-fun-facts/> .
+
+nintendo:src_N05 rdfs:label "Location"@en ;
+    dcterms:title "Location"@en ;
+    rdfs:seeAlso <https://museum.nintendo.com/en/access/index.html> .
+
+nintendo:src_N07 rdfs:label "Company History"@en ;
+    dcterms:title "Company History"@en ;
+    rdfs:seeAlso <https://press.nintendo.com/CompanyHistory> .
+
+nintendo:src_N18 rdfs:label "Financial Results Briefing of 1 February 2019"@en ;
+    dcterms:title "Financial Results Briefing of 1 February 2019"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2019/190201_2e.pdf> .
+
+nintendo:src_N24 rdfs:label "Annual Report 2006, History of Nintendo"@en ;
+    dcterms:title "Annual Report 2006, History of Nintendo"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/kessan/annual0603e.pdf> .
+
+nintendo:src_N26 rdfs:label "Financial results briefing of 6 November 2024"@en ;
+    dcterms:title "Financial results briefing of 6 November 2024"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/ir/pdf/2024/241106e.pdf> .
+
+nintendo:pers_ShigeruMiyamoto a crm:E21_Person ;
+    rdfs:label "Shigeru Miyamoto"@en ;
+    dcterms:description "Employee at org_Nintendo; from 1977-04"@en ;
+    dcterms:source nintendo:wiki_source ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q12382> ;
+    schema:worksFor nintendo:org_Nintendo .
+
+nintendo:src_N21 rdfs:label "Classic Mini Famicom, 30 September 2016"@en ;
+    dcterms:title "Classic Mini Famicom, 30 September 2016"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/release/2016/160930.html> .
+
+nintendo:src_N25 rdfs:label "Museum opening announcement, 20 August 2024"@en ;
+    dcterms:title "Museum opening announcement, 20 August 2024"@en ;
+    rdfs:seeAlso <https://www.nintendo.co.jp/corporate/release/en/2024/240820.html> .
+
+nintendo:src_P03 rdfs:label "History of Pokémon"@en ;
+    dcterms:title "History of Pokémon"@en ;
+    rdfs:seeAlso <https://corporate.pokemon.co.jp/en/aboutus/history/> .
+
+nintendo:org_Nintendo a crm:E74_Group ;
+    rdfs:label "Nintendo"@en ;
+    dcterms:description "Historical business start: 1889. Incorporation of the present company: November 1947."@en ;
+    dcterms:source nintendo:src_N27,
+        nintendo:wiki_source ;
+    crm:P74_has_current_or_former_residence nintendo:place_Kyoto ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q8093> .
+
+nintendo:wiki_source rdfs:label "History of Nintendo"@en ;
+    dcterms:description "Thematic selection from the identified Wikipedia revision; see editorialDecl for selection and omission rules."@en ;
+    dcterms:title "History of Nintendo"@en ;
+    rdfs:seeAlso <https://en.wikipedia.org/w/index.php?title=History_of_Nintendo&action=history>,
+        <https://en.wikipedia.org/w/index.php?title=History_of_Nintendo&oldid=1382723079> .
+
