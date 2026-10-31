@@ -31,8 +31,8 @@ The catalogue contains **22 main entities and 12 supporting records**. The RDF d
 | `ontology.ttl` | Local project vocabulary |
 | `transform.py`, `transform.xslt` | TEI-to-HTML transformation |
 | `tei_to_rdf.py` | TEI-to-RDF transformation |
-| `rdf_*.ttl` | Selected RDF visualization extracts |
-| `visualization_extracts.zip` | Visualization extracts and their generation script |
+| `visualization_extracts/` | Three Turtle visualization extracts and their generation script |
+| `visualization_extracts.zip` | Downloadable archive of the visualization extracts and script |
 
 ## Reproducing the transformations
 
@@ -53,15 +53,17 @@ The first command generates `html/nintendoHE.html`; the `html` folder must exist
 
 The second command generates `dataset.ttl` beside the XML file.
 
-To reproduce the visualization extracts, unpack `visualization_extracts.zip` into a separate folder, then run from the project root:
+To reproduce the three visualization extracts, run from the project root:
 
 ```bash
-python3 path/to/extracted-folder/prepare_rdf_views.py dataset.ttl
+python3 visualization_extracts/prepare_rdf_views.py dataset.ttl
 ```
 
-Replace `path/to/extracted-folder` with the actual folder path. The extracts are saved beside the extraction script; the complete dataset remains unchanged.
+The extracts are saved in `visualization_extracts/`. The complete dataset remains unchanged.
 
-Use [RDF Grapher](https://www.ldf.fi/service/rdf-grapher) with Turtle input and SVG output to visualize the extracts.
+Use [RDF Grapher](https://www.ldf.fi/service/rdf-grapher) with Turtle input and SVG output to visualize the extracts. The SVG visualizations are stored in `assets/graphs/`.
+
+The ZIP archive is provided as a downloadable copy. Regenerating the extracts does not automatically update the archive or the SVG images.
 
 ## Sources and credits
 
