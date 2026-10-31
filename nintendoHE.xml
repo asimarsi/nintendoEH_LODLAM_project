@@ -1,304 +1,874 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  
-  <!-- ================================================================= -->
-  <!-- 1. DOCUMENT AND SOURCE METADATA (<teiHeader>)                     -->
-  <!-- ================================================================= -->
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <!-- ============================================================
+  1. HEADER: DOCUMENT, SOURCE AND ENCODING RULES
+  ============================================================ -->
   <teiHeader>
-      <fileDesc>
-         
-         <!-- Project Title and Author -->
-         <titleStmt>
-            <title>Nintendo Entertainment Heritage</title>
-            <author>Asia Marselli</author>
-         </titleStmt>
-         
-         <!-- Academic Publication Information and Licensing -->
-         <publicationStmt>
-            <publisher>University of Bologna - Knowledge Organization Course</publisher>
-            <date when="2026">2026</date>
-            <availability>
-               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
-            </availability>
-         </publicationStmt>
-         
-         <!-- Primary Source Description (Wikipedia Page) -->
-         <sourceDesc>
-            <bibl xml:id="wiki_source" type="primary_source">
-               <title level="a">History of Nintendo</title>
-               <publisher>Wikipedia, The Free Encyclopedia</publisher>
-               <ref target="https://en.wikipedia.org/wiki/History_of_Nintendo"/>
-            </bibl>
-         </sourceDesc>
-
-      </fileDesc>
-
-      <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="crm" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.cidoc-crm.org/cidoc-crm/$1">
-               <p>CIDOC CRM Conceptual Reference Model Vocabulary</p>
-            </prefixDef>
-            <prefixDef ident="schema" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://schema.org/$1">
-               <p>Schema.org Vocabulary</p>
-            </prefixDef>
-            <prefixDef ident="frbroo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://iflastandards.info/ns/fr/frbr/frbroo/$1">
-               <p>FRBRoo Vocabulary for Bibliographic Modeling</p>
-            </prefixDef>
-            <prefixDef ident="dcterms" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://purl.org/dc/terms/$1">
-               <p>Dublin Core Terms Vocabulary</p>
-            </prefixDef>
-            <prefixDef ident="skos" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2004/02/skos/core#$1">
-               <p>SKOS Vocabulary (Simple Knowledge Organization System)</p>
-            </prefixDef>
-            <prefixDef ident="owl" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2002/07/owl#$1">
-               <p>OWL Web Ontology Language Vocabulary</p>
-            </prefixDef>
-            <prefixDef ident="rdf" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/1999/02/22-rdf-syntax-ns#$1">
-               <p>RDF Base Vocabulary</p>
-            </prefixDef>
-            <prefixDef ident="nintendo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://w3id.org/nintendo/$1">
-               <p>Nintendo Entertainment Heritage Project Namespace</p>
-            </prefixDef>
-         </listPrefixDef>
-      </encodingDesc>
+    <fileDesc>
+      <titleStmt>
+        <title>Nintendo Entertainment Heritage</title>
+        <author xml:id="encoder_AM">Asia Marselli</author>
+        <respStmt>
+          <resp>TEI encoding and editorial responsibility</resp>
+          <name ref="#encoder_AM">Asia Marselli</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Asia Marselli</authority>
+        <date when="2026-10-31">31 October 2026</date>
+        <idno type="project_repository">https://github.com/asimarsi/nintendoEH_LODLAM_project</idno>
+        <idno type="rdf_resource_base">https://asimarsi.github.io/nintendoEH_LODLAM_project/dataset.ttl#</idno>
+        <idno type="rdf_vocabulary_base">https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl#</idno>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">The Wikipedia source text is available under the Creative Commons Attribution-ShareAlike 4.0 International licence. This TEI adaptation retains attribution to Wikipedia contributors and identifies its editorial changes. Third-party quotations retain their original attribution; no separate licence is claimed for them.</licence>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note>Unpublished student project for Information Science and Cultural Heritage, University of Bologna, academic year 2025–2026. The University is the teaching context, not the publisher.</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl type="source_text" xml:id="wiki_source">
+          <author>Wikipedia contributors</author>
+          <title level="a">History of Nintendo</title>
+          <title level="j">Wikipedia, The Free Encyclopedia</title>
+          <edition>Revision 1382723079</edition>
+          <date type="revision" when="2026-10-29T23:32:00Z">29 October 2026, 23:32 UTC</date>
+          <date type="access" when="2026-10-31">31 October 2026</date>
+          <ref target="https://en.wikipedia.org/w/index.php?title=History_of_Nintendo&amp;oldid=1382723079">Permanent link to the source revision</ref>
+          <ref target="https://en.wikipedia.org/w/index.php?title=History_of_Nintendo&amp;action=history">Revision history and contributor attribution</ref>
+          <note>Thematic selection from the identified Wikipedia revision; see editorialDecl for selection and omission rules.</note>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The project studies Nintendo entertainment through the continuity of Mario across Donkey Kong and Mario Bros., including the name Jumpman, and the comparison between Hanafuda and the Pokemon Trading Card Game.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The catalogue contains 22 main entities and 12 support records. Source mentions use ref="#identifier". Relations use active for the subject, name for the prefixed property and passive for the object; rdf:type declares classes. listPrefixDef expands prefixed identifiers. Each catalogue xml:id is appended to rdf_resource_base to form its RDF URI. Affiliation records roles and periods.</p>
+        <p>The source is a thematic selection from the fixed Wikipedia revision. Retained passages preserve original wording and citation numbers. Omitted material is marked with gap reason="sampling"; only bibliography entries cited by retained passages are reproduced. Further reading and external-link lists are omitted. Incidental references to other products remain within complete selected passages.</p>
+        <p>The source attribute identifies evidence. Notes with type="authority_reference" provide informational links for rdfs:seeAlso, not automatic identity assertions. Supplementary catalogue sources document Jumpman, regional card-game launches and preservation. Jumpman is a name of Mario; the comparison between Hanafuda and Pokemon cards is a project interpretation, not a claim of historical derivation.</p>
+        <p>Twenty main entities have annotated mentions in the selected Wikipedia text. Arcade cabinet is a contextual category identified by its external authority reference; video game preservation is a project research concept documented by supplementary sources. These two records are not presented as explicit mentions in the selected source. The museum site is distinguished from the institution, and the card-game launches retain separate dates and territories.</p>
+      </editorialDecl>
+      <listPrefixDef>
+        <prefixDef ident="rdf" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/1999/02/22-rdf-syntax-ns#$1">
+          <p>Expand rdf: identifiers to full vocabulary URIs.</p>
+        </prefixDef>
+        <prefixDef ident="crm" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.cidoc-crm.org/cidoc-crm/$1">
+          <p>Expand crm: identifiers to full vocabulary URIs.</p>
+        </prefixDef>
+        <prefixDef ident="schema" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://schema.org/$1">
+          <p>Expand schema: identifiers to full vocabulary URIs.</p>
+        </prefixDef>
+        <prefixDef ident="frbroo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://iflastandards.info/ns/fr/frbr/frbroo/$1">
+          <p>Expand frbroo: identifiers to full vocabulary URIs.</p>
+        </prefixDef>
+        <prefixDef ident="skos" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2004/02/skos/core#$1">
+          <p>Expand skos: identifiers to full vocabulary URIs.</p>
+        </prefixDef>
+        <prefixDef ident="dcterms" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://purl.org/dc/terms/$1">
+          <p>Dublin Core Terms vocabulary.</p>
+        </prefixDef>
+        <prefixDef ident="neh" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://asimarsi.github.io/nintendoEH_LODLAM_project/ontology.ttl#$1">
+          <p>Local Nintendo Entertainment Heritage vocabulary.</p>
+        </prefixDef>
+      </listPrefixDef>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+        <language ident="ja">Original Japanese names and titles within the Wikipedia source</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-31" who="#encoder_AM">Prepared an essential alternative with a compact catalogue and direct relations. The source text and its annotations are unchanged.</change>
+      <change when="2026-10-31" who="#encoder_AM">Replaced ana attributes with explicit rdf:type classification relations and declared vocabulary prefixes. Authority links are identified by their note type. Source text and annotations are unchanged.</change>
+      <change when="2026-10-31" who="#encoder_AM">Standardised relation names with declared prefixes, removed six duplicate Schema.org classifications, merged repeated notes and formatted the catalogue. Source text and annotations are unchanged.</change>
+      <change when="2026-10-31" who="#encoder_AM">Selected thematic source passages, marked omissions with gap reason="sampling", and retained only the bibliography entries cited by those passages. The catalogue of entities and relations is unchanged.</change>
+      <change when="2026-10-31" who="#encoder_AM">Separated the introduction from historical sections, restored the unchanged Mario introduction, annotated the Pokemon franchise heading and clarified source coverage for all 22 entities.</change>
+    </revisionDesc>
   </teiHeader>
-
-   <!-- ================================================================= -->
-  <!-- 2. ENTITY CATALOGUE AND SEMANTIC NETWORK (<standOff>)             -->
-  <!-- ================================================================= -->
+  <!-- ============================================================
+  2. CATALOGUE: ENTITIES AND DIRECT RELATIONS
+  xml:id identifies a record; source points to evidence;
+  n distinguishes main entities from supporting records.
+  ============================================================ -->
   <standOff>
-      
-      <!-- PEOPLE (pers) -->
-      <listPerson>
-         <person xml:id="pers_FusajiroYamauchi" role="founder" sameAs="https://www.wikidata.org/wiki/Q456052">
-            <persName>Fusajiro Yamauchi</persName>
-            <note>Founder of Nintendo in 1889.</note>
-            <affiliation ref="#org_Nintendo" from="1889" to="1929">Founder and President (1889–1929)</affiliation>
-         </person>
-         <person xml:id="pers_HiroshiYamauchi" role="president" sameAs="http://viaf.org/viaf/50145003625161340874">
-            <persName>Hiroshi Yamauchi</persName>
-            <note>Third president of Nintendo, leader of the industrial transformation.</note>
-            <affiliation ref="#org_Nintendo" from="1929" to="1989">President (1929–1989)</affiliation>
-         </person>
-         <person xml:id="pers_GunpeiYokoi" role="designer" sameAs="http://viaf.org/viaf/171017199">
-            <persName>Gunpei Yokoi</persName>
-            <note>Key Nintendo designer, creator of the Game Boy.</note>
-            <affiliation ref="#org_Nintendo" from="1989" to="1996">Game and Hardware Designer(1989–1996)</affiliation>
-         </person>
-         <person xml:id="pers_ShigeruMiyamoto" role="designer" sameAs="http://viaf.org/viaf/78191821">
-            <persName>Shigeru Miyamoto</persName>
-            <note>Game designer of Donkey Kong, Mario Bros. and The Legend of Zelda.</note>
-            <affiliation ref="#org_Nintendo" from="1977">Game Designer and Representative Director (1977–present)</affiliation>
-         </person>
-         <person xml:id="pers_SatoruIwata" role="president" sameAs="http://viaf.org/viaf/258571878">
-            <persName>Satoru Iwata</persName>
-            <note>Fourth president of Nintendo, leader during the Wii and Nintendo DS era.</note>
-            <affiliation ref="#org_Nintendo" from="2002" to="2015">President (2002–2015)</affiliation>
-         </person>
-      </listPerson>
-
-      <!-- ORGANIZATIONS (org) -->
-      <listOrg>
-         <org xml:id="org_Nintendo" role="company" sameAs="https://www.wikidata.org/wiki/Q8093">
-            <orgName>Nintendo Co., Ltd.</orgName>
-            <note><date type="foundation" when="1889-09-23">September 23, 1889</date></note>
-         </org>
-      </listOrg>
-
-      <!-- PLACES (place) -->
-      <listPlace>
-         <place xml:id="place_Kyoto" type="city" sameAs="http://www.geonames.org/1857910">
-            <placeName>Kyoto</placeName>
-         </place>
-         <place xml:id="place_NintendoMuseum" type="museum" sameAs="https://www.wikidata.org/wiki/Q123124346">
-            <placeName>Nintendo Museum</placeName>
-            <note><date type="opening" when="2024">2024</date></note>
-         </place>
-      </listPlace>
-
-      <!-- OBJECTS / HARDWARE (item) -->
-      <listObject>
-         <object xml:id="item_Hanafuda" type="playing_cards" sameAs="https://www.wikidata.org/wiki/Q697641">
-            <objectIdentifier>
-               <objectName>Hanafuda playing cards</objectName>
-               <idno type="Wikidata">Q697641</idno>
-            </objectIdentifier>
-            <note><date when="1889">1889</date></note>
-         </object>
-         <object xml:id="item_ArcadeCabinet" type="arcade_machine" sameAs="https://www.wikidata.org/wiki/Q1349717">
-            <objectIdentifier>
-               <objectName>Arcade Cabinet</objectName>
-               <idno type="wikidata">Q1349717</idno>
-            </objectIdentifier>
-         </object>
-         <object xml:id="item_NES" type="home_console" sameAs="https://www.wikidata.org/wiki/Q172742">
-            <objectIdentifier>
-               <objectName>Nintendo Entertainment System (NES)</objectName>
-               <idno type="wikidata">Q172742</idno>
-            </objectIdentifier>
-            <note><date when="1983">1983</date></note>
-         </object>
-         <object xml:id="item_GameBoy" type="portable_console" sameAs="https://www.wikidata.org/wiki/Q186437">
-            <objectIdentifier>
-               <objectName>Game Boy</objectName>
-               <idno type="wikidata">Q186437</idno>
-            </objectIdentifier>
-            <note><date when="1989">1989</date></note>
-         </object>
-         <object xml:id="item_NintendoDS" type="portable_console" sameAs="https://www.wikidata.org/wiki/Q170323">
-            <objectIdentifier>
-               <objectName>Nintendo DS</objectName>
-               <idno type="wikidata">Q170323</idno>
-            </objectIdentifier>
-            <note><date when="2005">2005</date></note>
-         </object>
-         <object xml:id="item_Wii" type="home_console" sameAs="https://www.wikidata.org/wiki/Q8079">
-            <objectIdentifier>
-               <objectName>Wii</objectName>
-               <idno type="wikidata">Q8079</idno>
-            </objectIdentifier>
-            <note><date when="2006">2006</date></note>
-         </object>
-         <object xml:id="item_NintendoSwitch" type="hybrid_console" sameAs="https://www.wikidata.org/wiki/Q19610114">
-            <objectIdentifier>
-               <objectName>Nintendo Switch</objectName>
-               <idno type="wikidata">Q19610114</idno>
-            </objectIdentifier>
-            <note><date when="2017">2017</date></note>
-         </object>
-      </listObject>
-
-      <!-- WORKS AND CHARACTERS (work & char) -->
-      <listBibl>
-         <bibl xml:id="work_DonkeyKong" type="video_game" sameAs="https://www.wikidata.org/wiki/Q12384">
-            <title>Donkey Kong</title>
-            <note><date when="1981">1981</date></note>
-         </bibl>
-         <bibl xml:id="work_MarioBros" type="video_game" sameAs="https://www.wikidata.org/wiki/Q126187572">
-            <title>Mario Bros.</title>
-            <note><date when="1983">1983</date></note>
-         </bibl>
-         <bibl xml:id="work_TheLegendOfZelda" type="video_game" sameAs="https://www.wikidata.org/wiki/Q12395">
-            <title>The Legend of Zelda</title>
-            <note><date when="1986">1986</date></note>
-         </bibl>
-         <bibl xml:id="work_Pokemon" type="video_game" sameAs="https://www.wikidata.org/wiki/Q864">
-            <title>Pokémon</title>
-            <note><date when="1996">1996</date></note>
-         </bibl>
-         <bibl xml:id="char_Jumpman" type="fictional_character" sameAs="https://www.wikidata.org/wiki/Q2737362">
-            <title>Jumpman</title>
-            <note>Fictional character precursor to Mario.(1981)</note>
-         </bibl>
-      </listBibl>
-
-      <!-- CONCEPTS AND TAXONOMIES (concept) -->
-      <list type="concepts">
-         <item xml:id="concept_VideoGamePreservation" sameAs="https://www.wikidata.org/wiki/Q56153456">
-            <term>Video Game Preservation</term>
-         </item>
-      </list>
-
-      <!-- HISTORICAL EVENTS (event) -->
-      <listEvent>
-         <event xml:id="event_Foundation1889" when="1889" type="founding">
-            <label>Foundation of Nintendo (1889)</label>
-         </event>
-         <event xml:id="event_IndustrialTransformation" when="1980" type="industrial_transformation">
-            <label>Industrial Transformation to Toys &amp; Video Games</label>
-         </event>
-      </listEvent>
-
-      <!-- SEMANTIC RELATIONSHIP NETWORK (39 triples) -->
-      <listRelation>
-         <!-- Actors and Organization -->
-         <relation name="crm:P14i_performed" active="#pers_FusajiroYamauchi" passive="#event_Foundation1889"/>
-         <relation name="crm:P14i_performed" active="#pers_HiroshiYamauchi" passive="#event_IndustrialTransformation"/>
-         <relation name="schema:leader" active="#pers_SatoruIwata" passive="#org_Nintendo"/>
-         <relation name="schema:worksFor" active="#pers_GunpeiYokoi" passive="#org_Nintendo"/>
-         <relation name="schema:worksFor" active="#pers_ShigeruMiyamoto" passive="#org_Nintendo"/>
-         
-         <!-- Creation and Design -->
-         <relation name="schema:designer" active="#pers_GunpeiYokoi" passive="#item_GameBoy"/>
-         <relation name="frbroo:R17_created" active="#pers_ShigeruMiyamoto" passive="#work_DonkeyKong"/>
-         <relation name="frbroo:R17_created" active="#pers_ShigeruMiyamoto" passive="#work_MarioBros"/>
-         <relation name="frbroo:R17_created" active="#pers_ShigeruMiyamoto" passive="#work_TheLegendOfZelda"/>
-         
-         <!-- Production and Publishing -->
-         <relation name="crm:P108_has_produced" active="#event_Foundation1889" passive="#org_Nintendo"/>
-         <relation name="crm:P118_had_target" active="#event_IndustrialTransformation" passive="#org_Nintendo"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_Hanafuda"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_ArcadeCabinet"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_NES"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_GameBoy"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_NintendoDS"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_Wii"/>
-         <relation name="crm:P108_has_produced" active="#org_Nintendo" passive="#item_NintendoSwitch"/>
-         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_DonkeyKong"/>
-         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_MarioBros"/>
-         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_TheLegendOfZelda"/>
-         <relation name="dcterms:publisher" active="#org_Nintendo" passive="#work_Pokemon"/>
-         
-         <!-- Software, Hardware, and Characters -->
-         <relation name="frbroo:R3_is_realised_in" active="#work_DonkeyKong" passive="#item_ArcadeCabinet"/>
-         <relation name="frbroo:R3_is_realised_in" active="#work_MarioBros" passive="#item_NES"/>
-         <relation name="frbroo:R3_is_realised_in" active="#work_TheLegendOfZelda" passive="#item_NES"/>
-         <relation name="frbroo:R3_is_realised_in" active="#work_Pokemon" passive="#item_GameBoy"/>
-         <relation name="frbroo:R14i_is_incorporated_in" active="#char_Jumpman" passive="#work_DonkeyKong"/>
-         <relation name="dcterms:isReplacedBy" active="#char_Jumpman" passive="#work_MarioBros"/>
-         
-         <!-- Space, Funding, and Preservation -->
-         <relation name="crm:P74_has_current_or_former_residence" active="#org_Nintendo" passive="#place_Kyoto"/>
-         <relation name="schema:funder" active="#org_Nintendo" passive="#place_NintendoMuseum"/>
-         <relation name="schema:location" active="#place_NintendoMuseum" passive="#place_Kyoto"/>
-         <relation name="dcterms:subject" active="#place_NintendoMuseum" passive="#concept_VideoGamePreservation"/>
-         
-         <!-- Museum Preservation -->
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_Hanafuda"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_ArcadeCabinet"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NES"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_GameBoy"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NintendoDS"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_Wii"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#item_NintendoSwitch"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#work_MarioBros"/>
-         <relation name="crm:P55_has_current_location" active="#place_NintendoMuseum" passive="#work_TheLegendOfZelda"/>
-      </listRelation>
-
+    <!-- 2.1 PEOPLE: names, external references and dated affiliations. -->
+    <listPerson type="people">
+      <person n="main" xml:id="pers_FusajiroYamauchi" source="#wiki_source">
+        <persName>Fusajiro Yamauchi</persName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q456052">Wikidata Q456052</ref>
+        </note>
+        <note source="#wiki_source #src_N08">Started the historical Nintendo business and its initial card production in 1889.</note>
+      </person>
+      <person n="main" xml:id="pers_HiroshiYamauchi" source="#wiki_source">
+        <persName>Hiroshi Yamauchi</persName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q354768">Wikidata Q354768</ref>
+        </note>
+        <affiliation ref="#org_Nintendo" from="1949" to="2002-05" source="#src_N09 #src_N10">President</affiliation>
+      </person>
+      <person n="main" xml:id="pers_GunpeiYokoi" source="#wiki_source">
+        <persName>Gunpei Yokoi</persName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q366261">Wikidata Q366261</ref>
+        </note>
+        <affiliation ref="#org_Nintendo" from="1965" to="1996" source="#wiki_source #src_N13">Employee</affiliation>
+      </person>
+      <person n="main" xml:id="pers_ShigeruMiyamoto" source="#wiki_source">
+        <persName>Shigeru Miyamoto</persName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q12382">Wikidata Q12382</ref>
+        </note>
+        <affiliation ref="#org_Nintendo" from="1977-04" source="#src_N11">Employee</affiliation>
+      </person>
+      <person n="main" xml:id="pers_SatoruIwata" source="#wiki_source">
+        <persName>Satoru Iwata</persName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q316013">Wikidata Q316013</ref>
+        </note>
+        <affiliation ref="#org_Nintendo" from="2002-05" to="2015-07-11" source="#src_N10 #src_N14">President</affiliation>
+      </person>
+    </listPerson>
+    <!-- 2.2 ORGANISATION: business origins and incorporation are distinct. -->
+    <listOrg type="organisations">
+      <org n="main" xml:id="org_Nintendo" source="#src_N27 #wiki_source">
+        <orgName>Nintendo</orgName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q8093">Wikidata Q8093</ref>
+        </note>
+        <note type="release" source="#src_N27 #wiki_source">Historical business start: 1889. Incorporation of the present company: <date when="1947-11">November 1947</date>.</note>
+      </org>
+    </listOrg>
+    <!-- 2.3 PLACES: Kyoto, Uji, museum site and card-game launch territories. -->
+    <listPlace type="places">
+      <place n="main" xml:id="place_Kyoto" source="#wiki_source">
+        <placeName>Kyoto</placeName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q34600">Wikidata Q34600</ref>
+        </note>
+      </place>
+      <place n="main" xml:id="place_NintendoMuseum" source="#src_N05 #src_N25 #src_N26">
+        <placeName>Nintendo Museum</placeName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q123124346">Wikidata Q123124346</ref>
+        </note>
+        <note>Museum site in Uji. Its external record also describes the institution; no strict identity is asserted.</note>
+      </place>
+      <place n="support" xml:id="place_Uji" source="#src_N05 #src_N25">
+        <placeName>Uji</placeName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q326956">Wikidata Q326956</ref>
+        </note>
+      </place>
+      <place n="support" type="country" source="#src_P03" xml:id="place_Japan">
+        <placeName>Japan</placeName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q17">Wikidata Q17</ref>
+        </note>
+      </place>
+      <place n="support" type="country" source="#src_P03" xml:id="place_UnitedStates">
+        <placeName>United States</placeName>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q30">Wikidata Q30</ref>
+        </note>
+      </place>
+    </listPlace>
+    <!-- 2.4 WORKS: the three selected games and the project document. -->
+    <listBibl type="works">
+      <bibl n="main" xml:id="work_DonkeyKong" source="#src_N02 #src_N07 #src_N21">
+        <title>Donkey Kong (1981)</title>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q12384">Wikidata Q12384</ref>
+        </note>
+        <date type="first_release" when="1981" source="#src_N29">1981</date>
+        <note>Original arcade release</note>
+      </bibl>
+      <bibl n="main" xml:id="work_MarioBros" source="#src_N12 #src_N21">
+        <title>Mario Bros. (1983)</title>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q610968">Wikidata Q610968</ref>
+        </note>
+        <date type="first_release" when="1983" source="#src_N30">1983</date>
+        <note>Original arcade release</note>
+      </bibl>
+      <bibl n="main" xml:id="work_TheLegendOfZelda" source="#src_N22 #src_N24">
+        <title>The Legend of Zelda (1986)</title>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q12395">Wikidata Q12395</ref>
+        </note>
+        <date type="first_release" when="1986-02-21" source="#src_N22">1986-02-21</date>
+        <note>First Japanese release on Family Computer Disk System</note>
+      </bibl>
+      <bibl n="support" xml:id="doc_Project">
+        <title>Nintendo Entertainment Heritage</title>
+      </bibl>
+    </listBibl>
+    <!-- 2.5 EVENTS: business start, museum opening and regional card-game launches. -->
+    <listEvent type="activities">
+      <event n="support" xml:id="event_BusinessStart1889" source="#src_N08 #wiki_source" when="1889-09-23">
+        <label>Start of the Nintendo business</label>
+      </event>
+      <event n="support" xml:id="event_MuseumOpening" source="#src_N25 #src_N26" when="2024-10-02">
+        <label>Museum opening</label>
+      </event>
+      <event n="support" type="regional_launch" when="1996-10" source="#src_P03" xml:id="event_PokemonTCGJapanLaunch1996">
+        <label>Japan launch of Pokémon Trading Card Game</label>
+        <desc>Launch of the physical Pokémon Trading Card Game in Japan. The source specifies October 1996.</desc>
+      </event>
+      <event n="support" type="regional_launch" when="1999-01" source="#src_P03" xml:id="event_PokemonTCGUSBaseSetLaunch1999">
+        <label>US launch of Pokémon Card Game Base Set</label>
+        <desc>Launch of Pokémon Card Game Base Set in the United States. The source specifies January 1999; the event concerns this set and market.</desc>
+      </event>
+    </listEvent>
+    <!-- 2.6 CHARACTER, FRANCHISE, CARD GAME AND CATEGORIES. -->
+    <list type="conceptual_entities">
+      <item n="main" xml:id="type_Hanafuda" source="#wiki_source">
+        <label>Hanafuda</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q697641">Wikidata Q697641</ref>
+        </note>
+        <note>Type of traditional playing cards; no individual deck is identified.</note>
+      </item>
+      <item n="main" xml:id="type_ArcadeCabinet">
+        <label>Arcade cabinet</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q1349717">Wikidata Q1349717</ref>
+        </note>
+        <note>Cabinet category retained for comparison. No undocumented hardware-platform relation is asserted.</note>
+      </item>
+      <item n="main" xml:id="franchise_Pokemon" source="#src_P03 #src_P02">
+        <label>Pokémon</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q864">Wikidata Q864</ref>
+        </note>
+        <note>Media franchise, distinct from an individual video game and from the physical card game.</note>
+      </item>
+      <item n="main" xml:id="char_Mario" source="#wiki_source #src_N01">
+        <label>Mario</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q12379">Wikidata Q12379</ref>
+        </note>
+        <note>One fictional character. Jumpman is documented as a name used in Donkey Kong (1981).</note>
+      </item>
+      <item n="main" xml:id="game_PokemonTCG" source="#src_P03 #src_P04">
+        <label>Pokémon Trading Card Game</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q1056309">Wikidata Q1056309</ref>
+        </note>
+      </item>
+      <item n="main" xml:id="concept_VideoGamePreservation" source="#src_S01 #src_S02">
+        <label>Video game preservation</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q56153456">Wikidata Q56153456</ref>
+        </note>
+        <note type="authority_reference">
+          <ref target="https://library.gamehistory.org/subjects/369">Video Game History Foundation Library subject</ref>
+        </note>
+        <note>Research subject of this project; no specific preservation practice is attributed to Nintendo Museum.</note>
+      </item>
+    </list>
+    <!-- 2.7 CONSOLE MODELS: not individual physical specimens. -->
+    <list type="models">
+      <item n="main" xml:id="model_NES" source="#src_N07 #src_N21 #src_N24">
+        <label>NES</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q172742">Wikidata Q172742</ref>
+        </note>
+        <note type="release" source="#src_N07 #src_N24">United States launch: <date when="1985">1985</date>
+        </note>
+        <note type="release" source="#src_N24">European launch, annual precision: <date when="1986">1986</date>
+        </note>
+      </item>
+      <item n="main" xml:id="model_GameBoy" source="#src_N20">
+        <label>Game Boy</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q186437">Wikidata Q186437</ref>
+        </note>
+        <note type="release" source="#src_N20">Japan launch: <date when="1989-04-21">1989-04-21</date>
+        </note>
+      </item>
+      <item n="main" xml:id="model_NintendoDS" source="#src_N16 #src_N17">
+        <label>Nintendo DS</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q170323">Wikidata Q170323</ref>
+        </note>
+        <note type="release" source="#src_N16">United States launch: <date when="2004-11-21">2004-11-21</date>
+        </note>
+        <note type="release" source="#src_N16">Japan launch: <date when="2004-12-02">2004-12-02</date>
+        </note>
+        <note type="release" source="#src_N17">European launch: <date when="2005-03-11">2005-03-11</date>
+        </note>
+      </item>
+      <item n="main" xml:id="model_Wii" source="#src_N18">
+        <label>Wii</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q8079">Wikidata Q8079</ref>
+        </note>
+        <note type="release" source="#src_N18">North American launch: <date when="2006-11-19">2006-11-19</date>
+        </note>
+        <note type="release" source="#src_N18">Japan launch: <date when="2006-12-02">2006-12-02</date>
+        </note>
+        <note type="release" source="#src_N18">European launch: <date when="2006-12-08">2006-12-08</date>
+        </note>
+      </item>
+      <item n="main" xml:id="model_NintendoSwitch" source="#src_N19 #src_N18">
+        <label>Nintendo Switch</label>
+        <note type="authority_reference">
+          <ref target="http://www.wikidata.org/entity/Q19610114">Wikidata Q19610114</ref>
+        </note>
+        <note type="release" source="#src_N18 #src_N19">Initial launches in Japan, North America and Europe: <date when="2017-03-03">2017-03-03</date>
+        </note>
+      </item>
+    </list>
+    <!-- 2.8 NAME AND CARD CLASSIFICATIONS used by the two research paths. -->
+    <list type="support_nodes">
+      <item n="support" xml:id="name_Jumpman">
+        <label>Jumpman</label>
+      </item>
+      <item n="support" xml:id="concept_PlayingCards">
+        <label>Playing cards</label>
+      </item>
+      <item n="support" xml:id="concept_CardGame">
+        <label>Card game</label>
+      </item>
+      <item n="support" xml:id="concept_CollectibleCardGame">
+        <label>Collectible card game</label>
+      </item>
+    </list>
+    <!-- 2.9 SOURCE RECORDS: codes used by source attributes resolve to URLs here. -->
+    <listBibl type="evidence_sources">
+      <bibl xml:id="src_N01">
+        <author>Nintendo</author>
+        <title>Mario and the name Jumpman</title>
+        <ref target="https://www.nintendo.com/en-ca/whatsnew/wahoo-see-the-platforming-history-of-super-mario-and-even-get-a-few-fun-facts/">https://www.nintendo.com/en-ca/whatsnew/wahoo-see-the-platforming-history-of-super-mario-and-even-get-a-few-fun-facts/</ref>
+      </bibl>
+      <bibl xml:id="src_N02">
+        <author>Nintendo</author>
+        <title>Mario Bros. (1983)</title>
+        <ref target="https://www.nintendo.com/it-it/Iwata-Chiede/25-anniversario-di-Super-Mario-Bros-/Parte-3-Gli-sviluppatori-di-Super-Mario-1-/2-Il-primo-incontro-con-Super-Mario/2-Il-primo-incontro-con-Super-Mario-222084.html">https://www.nintendo.com/it-it/Iwata-Chiede/25-anniversario-di-Super-Mario-Bros-/Parte-3-Gli-sviluppatori-di-Super-Mario-1-/2-Il-primo-incontro-con-Super-Mario/2-Il-primo-incontro-con-Super-Mario-222084.html</ref>
+      </bibl>
+      <bibl xml:id="src_P01">
+        <author>The Pokémon Company</author>
+        <title>Pokémon TCG and its 1996 launch</title>
+        <ref target="https://corporate.pokemon.co.jp/en/topics/detail/t-28/">https://corporate.pokemon.co.jp/en/topics/detail/t-28/</ref>
+      </bibl>
+      <bibl xml:id="src_P02">
+        <author>The Pokémon Company</author>
+        <title>Pokémon as a franchise</title>
+        <ref target="https://corporate.pokemon.co.jp/en/produce/">https://corporate.pokemon.co.jp/en/produce/</ref>
+      </bibl>
+      <bibl xml:id="src_N03">
+        <author>Nintendo</author>
+        <title>Nintendo Gallery project (2021)</title>
+        <ref target="https://www.nintendo.co.jp/corporate/release/en/2021/210602.html">https://www.nintendo.co.jp/corporate/release/en/2021/210602.html</ref>
+      </bibl>
+      <bibl xml:id="src_N05">
+        <author>Nintendo Museum</author>
+        <title>Location</title>
+        <ref target="https://museum.nintendo.com/en/access/index.html">https://museum.nintendo.com/en/access/index.html</ref>
+      </bibl>
+      <bibl xml:id="src_N06">
+        <author>Nintendo</author>
+        <title>Company chronology</title>
+        <ref target="https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html">https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html</ref>
+      </bibl>
+      <bibl xml:id="src_N07">
+        <author>Nintendo of America</author>
+        <title>Company History</title>
+        <ref target="https://press.nintendo.com/CompanyHistory">https://press.nintendo.com/CompanyHistory</ref>
+      </bibl>
+      <bibl xml:id="src_L01">
+        <author>Project</author>
+        <title>Local vocabulary</title>
+      </bibl>
+      <bibl xml:id="src_N08">
+        <author>Nintendo</author>
+        <title>Corporate Company History</title>
+        <ref target="https://www.nintendo.co.jp/corporate/en/history/index.html">https://www.nintendo.co.jp/corporate/en/history/index.html</ref>
+      </bibl>
+      <bibl xml:id="src_N09">
+        <author>Nintendo</author>
+        <title>Annual Report 2003, History of Nintendo</title>
+        <ref target="https://www.nintendo.co.jp/kessan/annual0303e.pdf">https://www.nintendo.co.jp/kessan/annual0303e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N10">
+        <author>Nintendo</author>
+        <title>Earnings release of 30 May 2002, changes to directors</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2002/020530e.pdf">https://www.nintendo.co.jp/ir/pdf/2002/020530e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N11">
+        <author>Nintendo</author>
+        <title>2018 shareholder meeting notice, Miyamoto candidate profile</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2018/convocation_notice1806e.pdf">https://www.nintendo.co.jp/ir/pdf/2018/convocation_notice1806e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N12">
+        <author>Nintendo</author>
+        <title>Iwata Asks, The Reason Mario Wears Overalls</title>
+        <ref target="https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-New-Super-Mario-Bros-Wii/Volume-1/2-The-Reason-Mario-Wears-Overalls/2-The-Reason-Mario-Wears-Overalls-210759.html">https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-New-Super-Mario-Bros-Wii/Volume-1/2-The-Reason-Mario-Wears-Overalls/2-The-Reason-Mario-Wears-Overalls-210759.html</ref>
+      </bibl>
+      <bibl xml:id="src_N13">
+        <author>Nintendo</author>
+        <title>Iwata Asks, You’re Pretty Negative</title>
+        <ref target="https://www.nintendo.com/en-gb/Iwata-Asks/Super-Mario-Bros-25th-Anniversary/Vol-1-Itoi-asks-Miyamoto/2-You-re-Pretty-Negative-/2-You-re-Pretty-Negative--217256.html">https://www.nintendo.com/en-gb/Iwata-Asks/Super-Mario-Bros-25th-Anniversary/Vol-1-Itoi-asks-Miyamoto/2-You-re-Pretty-Negative-/2-You-re-Pretty-Negative--217256.html</ref>
+      </bibl>
+      <bibl xml:id="src_N14">
+        <author>Nintendo</author>
+        <title>Notification of Death and Personnel Change, 13 July 2015</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2015/150713e.pdf">https://www.nintendo.co.jp/ir/pdf/2015/150713e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N15">
+        <author>Nintendo</author>
+        <title>Iwata Asks, History of Handheld Zelda, part 1</title>
+        <ref target="https://iwataasks.nintendo.com/interviews/ds/zelda/1/0/">https://iwataasks.nintendo.com/interviews/ds/zelda/1/0/</ref>
+      </bibl>
+      <bibl xml:id="src_N16">
+        <author>Nintendo</author>
+        <title>Quarterly results of 26 January 2005</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2005/050126e.pdf">https://www.nintendo.co.jp/ir/pdf/2005/050126e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N17">
+        <author>Nintendo</author>
+        <title>Financial Results Briefing of 26 April 2019</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2019/190426_3e.pdf">https://www.nintendo.co.jp/ir/pdf/2019/190426_3e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N18">
+        <author>Nintendo</author>
+        <title>Financial Results Briefing of 1 February 2019</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2019/190201_2e.pdf">https://www.nintendo.co.jp/ir/pdf/2019/190201_2e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N19">
+        <author>Nintendo</author>
+        <title>Switch sales exceed 10 million, 12 December 2017</title>
+        <ref target="https://www.nintendo.co.jp/corporate/release/en/2017/171212.html">https://www.nintendo.co.jp/corporate/release/en/2017/171212.html</ref>
+      </bibl>
+      <bibl xml:id="src_N20">
+        <author>Nintendo</author>
+        <title>DS sales reach 100 million, announcement of 11 March 2009</title>
+        <ref target="https://www.nintendo.co.jp/corporate/release/2009/090311.html">https://www.nintendo.co.jp/corporate/release/2009/090311.html</ref>
+      </bibl>
+      <bibl xml:id="src_N21">
+        <author>Nintendo</author>
+        <title>Classic Mini Famicom, 30 September 2016</title>
+        <ref target="https://www.nintendo.co.jp/corporate/release/2016/160930.html">https://www.nintendo.co.jp/corporate/release/2016/160930.html</ref>
+      </bibl>
+      <bibl xml:id="src_N22">
+        <author>Nintendo</author>
+        <title>Zelda 40th anniversary, Japanese release history</title>
+        <ref target="https://www.nintendo.com/jp/character/zelda/history/index.html?lang=ja">https://www.nintendo.com/jp/character/zelda/history/index.html?lang=ja</ref>
+      </bibl>
+      <bibl xml:id="src_N24">
+        <author>Nintendo</author>
+        <title>Annual Report 2006, History of Nintendo</title>
+        <ref target="https://www.nintendo.co.jp/kessan/annual0603e.pdf">https://www.nintendo.co.jp/kessan/annual0603e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_P03">
+        <author>The Pokémon Company</author>
+        <title>History of Pokémon</title>
+        <ref target="https://corporate.pokemon.co.jp/en/aboutus/history/">https://corporate.pokemon.co.jp/en/aboutus/history/</ref>
+      </bibl>
+      <bibl xml:id="src_P04">
+        <author>The Pokémon Company International</author>
+        <title>About Us, History Details</title>
+        <ref target="https://corporate.pokemon.com/en-gb/about/">https://corporate.pokemon.com/en-gb/about/</ref>
+      </bibl>
+      <bibl xml:id="src_N25">
+        <author>Nintendo</author>
+        <title>Museum opening announcement, 20 August 2024</title>
+        <ref target="https://www.nintendo.co.jp/corporate/release/en/2024/240820.html">https://www.nintendo.co.jp/corporate/release/en/2024/240820.html</ref>
+      </bibl>
+      <bibl xml:id="src_N26">
+        <author>Nintendo</author>
+        <title>Financial results briefing of 6 November 2024</title>
+        <ref target="https://www.nintendo.co.jp/ir/pdf/2024/241106e.pdf">https://www.nintendo.co.jp/ir/pdf/2024/241106e.pdf</ref>
+      </bibl>
+      <bibl xml:id="src_N27">
+        <author>Nintendo</author>
+        <title>Company Profile</title>
+        <ref target="https://www.nintendo.co.jp/corporate/en/outline/index.html">https://www.nintendo.co.jp/corporate/en/outline/index.html</ref>
+      </bibl>
+      <bibl xml:id="src_P05">
+        <author>The Pokémon Company</author>
+        <title>Philosophy</title>
+        <ref target="https://corporate.pokemon.co.jp/en/aboutus/philosophy/">https://corporate.pokemon.co.jp/en/aboutus/philosophy/</ref>
+      </bibl>
+      <bibl xml:id="src_N29">
+        <author>Nintendo</author>
+        <title>Arcade Archives Donkey Kong historical description</title>
+        <ref target="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-download-software/Arcade-Archives-DONKEY-KONG-1389973.html">Source</ref>
+      </bibl>
+      <bibl xml:id="src_N30">
+        <author>Nintendo</author>
+        <title>Arcade Archives Mario Bros historical description</title>
+        <ref target="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-download-software/Arcade-Archives-Mario-Bros-1276808.html">Source</ref>
+      </bibl>
+      <bibl xml:id="src_S01">
+        <author>Video Game History Foundation</author>
+        <title>Mission of the Video Game History Foundation</title>
+        <ref target="https://gamehistory.org/our-mission/">Source</ref>
+      </bibl>
+      <bibl xml:id="src_S02">
+        <author>Video Game History Foundation</author>
+        <title>Video game preservation subject record</title>
+        <ref target="https://library.gamehistory.org/subjects/369">Source</ref>
+      </bibl>
+    </listBibl>
+    <!-- 2.10 DIRECT RELATIONS
+  active = subject; ref = property URI; passive = object.
+  Person periods are in affiliation; dates are on their records.
+  Jumpman uses a direct Mario-to-name link and a documented work context.
+  The Game Boy contributor relation concerns design contribution. -->
+    <listRelation>
+      <!-- Entity classification: each rdf:type relation assigns an ontology class. -->
+      <relation xml:id="R_type_pers_FusajiroYamauchi_1" active="#pers_FusajiroYamauchi" name="rdf:type" passive="crm:E21_Person"/>
+      <relation xml:id="R_type_pers_HiroshiYamauchi_1" active="#pers_HiroshiYamauchi" name="rdf:type" passive="crm:E21_Person"/>
+      <relation xml:id="R_type_pers_GunpeiYokoi_1" active="#pers_GunpeiYokoi" name="rdf:type" passive="crm:E21_Person"/>
+      <relation xml:id="R_type_pers_ShigeruMiyamoto_1" active="#pers_ShigeruMiyamoto" name="rdf:type" passive="crm:E21_Person"/>
+      <relation xml:id="R_type_pers_SatoruIwata_1" active="#pers_SatoruIwata" name="rdf:type" passive="crm:E21_Person"/>
+      <relation xml:id="R_type_org_Nintendo_1" active="#org_Nintendo" name="rdf:type" passive="crm:E74_Group"/>
+      <relation xml:id="R_type_place_Kyoto_1" active="#place_Kyoto" name="rdf:type" passive="crm:E53_Place"/>
+      <relation xml:id="R_type_place_NintendoMuseum_1" active="#place_NintendoMuseum" name="rdf:type" passive="crm:E53_Place"/>
+      <relation xml:id="R_type_place_Uji_1" active="#place_Uji" name="rdf:type" passive="crm:E53_Place"/>
+      <relation xml:id="R_type_place_Japan_1" active="#place_Japan" name="rdf:type" passive="crm:E53_Place"/>
+      <relation xml:id="R_type_place_UnitedStates_1" active="#place_UnitedStates" name="rdf:type" passive="crm:E53_Place"/>
+      <relation xml:id="R_type_work_DonkeyKong_1" active="#work_DonkeyKong" name="rdf:type" passive="frbroo:F1_Work"/>
+      <relation xml:id="R_type_work_MarioBros_1" active="#work_MarioBros" name="rdf:type" passive="frbroo:F1_Work"/>
+      <relation xml:id="R_type_work_TheLegendOfZelda_1" active="#work_TheLegendOfZelda" name="rdf:type" passive="frbroo:F1_Work"/>
+      <relation xml:id="R_type_doc_Project_1" active="#doc_Project" name="rdf:type" passive="crm:E31_Document"/>
+      <relation xml:id="R_type_event_BusinessStart1889_1" active="#event_BusinessStart1889" name="rdf:type" passive="crm:E7_Activity"/>
+      <relation xml:id="R_type_event_MuseumOpening_1" active="#event_MuseumOpening" name="rdf:type" passive="crm:E7_Activity"/>
+      <relation xml:id="R_type_event_PokemonTCGJapanLaunch1996_1" active="#event_PokemonTCGJapanLaunch1996" name="rdf:type" passive="crm:E7_Activity"/>
+      <relation xml:id="R_type_event_PokemonTCGJapanLaunch1996_2" active="#event_PokemonTCGJapanLaunch1996" name="rdf:type" passive="schema:Event"/>
+      <relation xml:id="R_type_event_PokemonTCGUSBaseSetLaunch1999_1" active="#event_PokemonTCGUSBaseSetLaunch1999" name="rdf:type" passive="crm:E7_Activity"/>
+      <relation xml:id="R_type_event_PokemonTCGUSBaseSetLaunch1999_2" active="#event_PokemonTCGUSBaseSetLaunch1999" name="rdf:type" passive="schema:Event"/>
+      <relation xml:id="R_type_type_Hanafuda_1" active="#type_Hanafuda" name="rdf:type" passive="skos:Concept"/>
+      <relation xml:id="R_type_type_ArcadeCabinet_1" active="#type_ArcadeCabinet" name="rdf:type" passive="skos:Concept"/>
+      <relation xml:id="R_type_franchise_Pokemon_1" active="#franchise_Pokemon" name="rdf:type" passive="crm:E28_Conceptual_Object"/>
+      <relation xml:id="R_type_char_Mario_1" active="#char_Mario" name="rdf:type" passive="crm:E28_Conceptual_Object"/>
+      <relation xml:id="R_type_game_PokemonTCG_1" active="#game_PokemonTCG" name="rdf:type" passive="schema:Game"/>
+      <relation xml:id="R_type_concept_VideoGamePreservation_1" active="#concept_VideoGamePreservation" name="rdf:type" passive="skos:Concept"/>
+      <relation xml:id="R_type_model_NES_1" active="#model_NES" name="rdf:type" passive="schema:ProductModel"/>
+      <relation xml:id="R_type_model_GameBoy_1" active="#model_GameBoy" name="rdf:type" passive="schema:ProductModel"/>
+      <relation xml:id="R_type_model_NintendoDS_1" active="#model_NintendoDS" name="rdf:type" passive="schema:ProductModel"/>
+      <relation xml:id="R_type_model_Wii_1" active="#model_Wii" name="rdf:type" passive="schema:ProductModel"/>
+      <relation xml:id="R_type_model_NintendoSwitch_1" active="#model_NintendoSwitch" name="rdf:type" passive="schema:ProductModel"/>
+      <relation xml:id="R_type_name_Jumpman_1" active="#name_Jumpman" name="rdf:type" passive="crm:E41_Appellation"/>
+      <relation xml:id="R_type_concept_PlayingCards_1" active="#concept_PlayingCards" name="rdf:type" passive="skos:Concept"/>
+      <relation xml:id="R_type_concept_CardGame_1" active="#concept_CardGame" name="rdf:type" passive="skos:Concept"/>
+      <relation xml:id="R_type_concept_CollectibleCardGame_1" active="#concept_CollectibleCardGame" name="rdf:type" passive="skos:Concept"/>
+      <!-- BUSINESS START -->
+      <relation name="crm:P14_carried_out_by" active="#event_BusinessStart1889" passive="#pers_FusajiroYamauchi" source="#src_N08 #wiki_source" xml:id="R002">
+        </relation>
+      <relation name="crm:P7_took_place_at" active="#event_BusinessStart1889" passive="#place_Kyoto" source="#wiki_source" xml:id="R003">
+        </relation>
+      <!-- CONTRIBUTIONS -->
+      <relation name="dcterms:contributor" active="#work_DonkeyKong" passive="#pers_ShigeruMiyamoto" source="#wiki_source" xml:id="R018">
+        </relation>
+      <relation name="dcterms:contributor" active="#work_MarioBros" passive="#pers_ShigeruMiyamoto" source="#src_N12" xml:id="R019">
+        </relation>
+      <relation name="dcterms:contributor" active="#work_TheLegendOfZelda" passive="#pers_ShigeruMiyamoto" source="#src_N15 #wiki_source" xml:id="R020">
+        </relation>
+      <!-- CONSOLE MANUFACTURERS -->
+      <relation name="schema:manufacturer" active="#model_NES" passive="#org_Nintendo" source="#wiki_source #src_N06" xml:id="R021">
+        </relation>
+      <relation name="schema:manufacturer" active="#model_GameBoy" passive="#org_Nintendo" source="#wiki_source #src_N06" xml:id="R022">
+        </relation>
+      <relation name="schema:manufacturer" active="#model_NintendoDS" passive="#org_Nintendo" source="#wiki_source #src_N06" xml:id="R023">
+        </relation>
+      <relation name="schema:manufacturer" active="#model_Wii" passive="#org_Nintendo" source="#wiki_source #src_N06" xml:id="R024">
+        </relation>
+      <relation name="schema:manufacturer" active="#model_NintendoSwitch" passive="#org_Nintendo" source="#wiki_source #src_N06" xml:id="R025">
+        </relation>
+      <!-- MARIO AND JUMPMAN -->
+      <relation name="neh:featuresCharacter" active="#work_DonkeyKong" passive="#char_Mario" source="#wiki_source #src_N01" xml:id="R029">
+        </relation>
+      <relation name="neh:featuresCharacter" active="#work_MarioBros" passive="#char_Mario" source="#src_N12" xml:id="R030">
+        </relation>
+      <relation name="crm:P1_is_identified_by" active="#char_Mario" passive="#name_Jumpman" source="#src_N01" xml:id="R031">
+        </relation>
+      <relation name="dcterms:source" active="#name_Jumpman" passive="#src_N01" source="#src_N01" xml:id="R034">
+        </relation>
+      <!-- CARDS AND FRANCHISE -->
+      <relation name="dcterms:isPartOf" active="#game_PokemonTCG" passive="#franchise_Pokemon" source="#src_P01 #src_P02" xml:id="R035">
+        </relation>
+      <relation name="dcterms:type" active="#game_PokemonTCG" passive="#concept_CollectibleCardGame" source="#src_P01" xml:id="R036">
+        </relation>
+      <relation name="skos:broader" active="#concept_CollectibleCardGame" passive="#concept_CardGame" source="#src_L01" xml:id="R037">
+        </relation>
+      <relation name="skos:broader" active="#type_Hanafuda" passive="#concept_PlayingCards" source="#wiki_source" xml:id="R038">
+        </relation>
+      <relation name="skos:related" active="#concept_PlayingCards" passive="#concept_CardGame" source="#src_L01" xml:id="R039">
+        </relation>
+      <!-- MUSEUM AND RESEARCH SUBJECT -->
+      <relation name="crm:P89_falls_within" active="#place_NintendoMuseum" passive="#place_Uji" source="#src_N05" xml:id="R045">
+        </relation>
+      <relation name="crm:P7_took_place_at" active="#event_MuseumOpening" passive="#place_NintendoMuseum" source="#src_N25 #src_N26" xml:id="R046">
+        </relation>
+      <relation name="dcterms:subject" active="#doc_Project" passive="#concept_VideoGamePreservation" source="#src_L01" xml:id="R055">
+        </relation>
+      <relation name="dcterms:contributor" active="#franchise_Pokemon" passive="#org_Nintendo" source="#src_P03 #src_P05" xml:id="R058">
+        </relation>
+      <relation name="crm:P74_has_current_or_former_residence" active="#org_Nintendo" passive="#place_Kyoto" source="#src_N27" xml:id="R059">
+        </relation>
+      <relation name="dcterms:contributor" active="#work_MarioBros" passive="#pers_GunpeiYokoi" source="#src_N12" xml:id="R062">
+        </relation>
+      <!-- REGIONAL CARD-GAME LAUNCHES -->
+      <relation name="schema:about" active="#event_PokemonTCGJapanLaunch1996" passive="#game_PokemonTCG" source="#src_P03" xml:id="R072">
+        </relation>
+      <relation name="crm:P7_took_place_at" active="#event_PokemonTCGJapanLaunch1996" passive="#place_Japan" source="#src_P03" xml:id="R073">
+        </relation>
+      <relation name="schema:about" active="#event_PokemonTCGUSBaseSetLaunch1999" passive="#game_PokemonTCG" source="#src_P03" xml:id="R074">
+        </relation>
+      <relation name="crm:P7_took_place_at" active="#event_PokemonTCGUSBaseSetLaunch1999" passive="#place_UnitedStates" source="#src_P03" xml:id="R075">
+        </relation>
+      <!-- EMPLOYMENT AND DESIGN -->
+      <relation name="schema:worksFor" active="#pers_HiroshiYamauchi" passive="#org_Nintendo" source="#src_N09 #src_N10" xml:id="R079"/>
+      <relation name="schema:worksFor" active="#pers_SatoruIwata" passive="#org_Nintendo" source="#src_N14" xml:id="R080"/>
+      <relation name="schema:worksFor" active="#pers_GunpeiYokoi" passive="#org_Nintendo" source="#wiki_source" xml:id="R081"/>
+      <relation name="schema:worksFor" active="#pers_ShigeruMiyamoto" passive="#org_Nintendo" source="#src_N11" xml:id="R082"/>
+      <relation name="dcterms:contributor" active="#model_GameBoy" passive="#pers_GunpeiYokoi" source="#src_N13" xml:id="R083"/>
+      <!-- DOCUMENTED NAME CONTEXT -->
+      <relation name="dcterms:relation" active="#name_Jumpman" passive="#work_DonkeyKong" source="#src_N01" xml:id="R084"/>
+    </listRelation>
   </standOff>
-
-  <!-- ================================================================= -->
-  <!-- 3. ANNOTATED SOURCE TEXT (<text>)                                 -->
-  <!-- ================================================================= -->
-  <text>
-      <body>
-         
-         <!-- LEAD SECTION -->
-         <div type="section" n="lead">
-            <head>Lead Section</head>
-            <p>
-               The history of <orgName ref="#org_Nintendo">Nintendo</orgName>, a Japanese video game company based in <placeName ref="#place_Kyoto">Kyoto</placeName>, starts in <date when="1889">1889</date> when <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> founded <quote>"Yamauchi Nintendo"</quote>, a producer of <rs type="object" ref="#item_Hanafuda">hanafuda playing cards</rs>. His successor <persName ref="#pers_HiroshiYamauchi">Hiroshi Yamauchi</persName> had <orgName ref="#org_Nintendo">Nintendo</orgName> producing toys and video games.
-            </p>
-            <p>
-               <persName ref="#pers_ShigeruMiyamoto">Shigeru Miyamoto</persName> designed <title ref="#work_DonkeyKong">Donkey Kong</title> (<date when="1981">1981</date>) for <rs type="object" ref="#item_ArcadeCabinet">arcades</rs>: <orgName ref="#org_Nintendo">Nintendo</orgName>'s first international hit game, and origin of the company's mascot, <rs type="character" ref="#char_Jumpman">Mario</rs>. After the American video game crash of <date when="1983">1983</date>, <orgName ref="#org_Nintendo">Nintendo</orgName> released their Japanese Famicom home console as the <rs type="object" ref="#item_NES">Nintendo Entertainment System (NES)</rs> in <date when="1985">1985</date>. <persName ref="#pers_ShigeruMiyamoto">Miyamoto</persName>'s innovative titles, <title ref="#work_MarioBros">Super Mario Bros.</title> and <title ref="#work_TheLegendOfZelda">The Legend of Zelda</title> (<date when="1987">1987</date>), greatly influenced gaming. The <rs type="object" ref="#item_GameBoy">Game Boy</rs> handheld console (<date when="1989">1989</date>) was extraordinarily successful, alongside the <title ref="#work_Pokemon">Pokémon</title> media franchise.
-            </p>
-            <p>
-               In <date when="2002">2002</date>, <persName ref="#pers_SatoruIwata">Satoru Iwata</persName> became president, leading development of the <rs type="object" ref="#item_NintendoDS">Nintendo DS</rs> handheld (<date when="2004">2004</date>) and the <rs type="object" ref="#item_Wii">Wii</rs> home console (<date when="2006">2006</date>). Before dying in <date when="2015">2015</date>, <persName ref="#pers_SatoruIwata">Iwata</persName> led development of the successful <rs type="object" ref="#item_NintendoSwitch">Nintendo Switch</rs> (<date when="2017">2017</date>). Today, Nintendo's historical heritage is preserved at the <placeName ref="#place_NintendoMuseum">Nintendo Museum</placeName> (opened in <date when="2024">2024</date>) in <placeName ref="#place_Kyoto">Kyoto</placeName>, dedicated to <term ref="#concept_VideoGamePreservation">video game preservation</term>.
-            </p>
-         </div>
-
-         <!-- SECTION: 1889–1949: HANAFUDA CARDS -->
-         <div type="section" n="1889-1949">
-            <head>1889–1949: Hanafuda cards</head>
-            <p>
-               <orgName ref="#org_Nintendo">Nintendo</orgName> was founded as Yamauchi Nintendo by <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> on September 23, <date when="1889">1889</date>. Based in <placeName ref="#place_Kyoto">Kyoto, Japan</placeName>, the business produced and marketed <rs type="object" ref="#item_Hanafuda">hanafuda</rs>, a type of Japanese playing card. During the era of <date from="1889" to="1929">1889–1929</date>, the company expanded card production. In 1929, <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> retired and allowed his adopted son-in-law to take over.
-            </p>
-            <p>
-               In the period of <date from="1949" to="2002">1949–2002</date>, under <persName ref="#pers_HiroshiYamauchi">Hiroshi Yamauchi</persName>, <orgName ref="#org_Nintendo">Nintendo</orgName> transformed from a playing card manufacturer into a global video game giant, before <persName ref="#pers_SatoruIwata">Satoru Iwata</persName> took leadership in <date from="2002" to="2015">2002–2015</date>.
-            </p>
-         </div>
-
-      </body>
+  <!-- ============================================================
+  3. SOURCE TEXT: RETAINED WITHOUT CHANGES
+  Inline ref attributes link mentions to catalogue records.
+  The original section comments and bibliography are preserved.
+  ============================================================ -->
+  <text source="#wiki_source">
+    <!-- 3.1 ARTICLE BODY
+  persName, orgName, placeName, title, rs and term mark selected mentions.
+  Their ref attributes link to the stand-off catalogue. date/@when
+  normalises 17 selected source dates; ref/@target links source citations
+  to bibliography blocks. ab retains extracted source text blocks. -->
+    <body>
+      <div type="lead" xml:id="source_lead">
+        <ab xml:id="source_block_172">The history of Nintendo, a Japanese video game company based in <placeName ref="#place_Kyoto">Kyoto</placeName>, starts in 1889 when <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> founded "Yamauchi Nintendo", a producer of <term ref="#type_Hanafuda">hanafuda</term> playing cards. Sekiryo Kaneda was company president from 1929 to 1949.</ab>
+        <ab xml:id="source_block_174"><persName ref="#pers_ShigeruMiyamoto">Shigeru Miyamoto</persName> designed <title ref="#work_DonkeyKong">Donkey Kong</title> (1981) for arcades: <orgName ref="#org_Nintendo">Nintendo</orgName>'s first international hit game, and origin of the company's mascot, <rs type="fictional_character" ref="#char_Mario">Mario</rs>. After the American video game crash of 1983, <orgName ref="#org_Nintendo">Nintendo</orgName> filled a market gap there by releasing their Japanese Famicom home console (1983) as the <rs type="product_model" ref="#model_NES">Nintendo Entertainment System</rs> (<rs type="product_model" ref="#model_NES">NES</rs>) in 1985.</ab>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_179">
+        <head>1889–1949: <term ref="#type_Hanafuda">Hanafuda</term> cards</head>
+        <gap reason="sampling"/>
+        <ab xml:id="source_block_184"><orgName ref="#org_Nintendo">Nintendo</orgName> was founded as Yamauchi Nintendo (山内任天堂) by <persName ref="#pers_FusajiroYamauchi">Fusajiro Yamauchi</persName> on <date when="1889-09-23">September 23, 1889</date>,<ref type="citation" target="#source_block_708">[1]</ref><ref type="citation" target="#source_block_709">[2]</ref><ref type="citation" target="#source_block_710">[3]</ref> though it was originally named Nintendo Koppai. Based in <placeName ref="#place_Kyoto">Kyoto</placeName>, Japan, the business produced and marketed <term ref="#type_Hanafuda">hanafuda</term>, a type of Japanese playing card.</ab>
+        <ab xml:id="source_block_185">The name "<orgName ref="#org_Nintendo">Nintendo</orgName>" is commonly assumed to mean "leave luck to heaven", but there are no historical records to validate this.<ref type="citation" target="#source_block_711">[4]</ref> <term ref="#type_Hanafuda">Hanafuda</term> cards were an alternative to Western-style playing cards which were banned in Japan at the time. <orgName ref="#org_Nintendo">Nintendo</orgName>'s cards gained popularity, so Yamauchi hired assistants to mass-produce them.</ab>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_190">
+        <head>1949–1966: Disney partnership and public listing</head>
+        <gap reason="sampling"/>
+        <ab xml:id="source_block_195">In <date when="1949">1949</date>, <persName ref="#pers_HiroshiYamauchi">Hiroshi Yamauchi</persName> attended Waseda University in Tokyo. However, after his grandfather suffered a debilitating stroke, he left to take office as the president of Nintendo.<ref type="citation" target="#source_block_714">[7]</ref> In 1950, he renamed Marufuku Co. Ltd. to "Nintendo Kuruta".<ref type="citation" target="#source_block_715">[8]</ref><ref type="citation" target="#source_block_716">[9]</ref><ref type="citation" target="#source_block_717">[10]</ref> In 1953, <orgName ref="#org_Nintendo">Nintendo</orgName> became the first company in Japan to produce playing cards from plastic.<ref type="citation" target="#source_block_718">[11]</ref></ab>
+        <ab xml:id="source_block_196">In 1956, Yamauchi visited the U.S., to engage in talks with the United States Playing Card Company (USPCC), the dominant playing card manufacturer in the United States, based in Cincinnati. He was shocked to find that the world's biggest company in his business was relegated to using a small office. This was a turning point for Yamauchi, who then realized the limitations of the playing card business.</ab>
+        <ab xml:id="source_block_197">In 1958, <orgName ref="#org_Nintendo">Nintendo</orgName> made a deal with Disney to allow the use of Disney's characters on <orgName ref="#org_Nintendo">Nintendo</orgName>'s playing cards.<ref type="citation" target="#source_block_716">[9]</ref> Previously, Western playing cards were regarded as something similar to <term ref="#type_Hanafuda">hanafuda</term> and mahjong: a device for gambling. By tying playing cards to Disney and selling books explaining the different games playable with the cards, <orgName ref="#org_Nintendo">Nintendo</orgName> could sell the product to Japanese households. The tie-in was a success and the company sold at least 600,000 card packs in one year.</ab>
+        <gap reason="sampling"/>
+        <ab xml:id="source_block_203">All of Nintendo's other business ventures eventually failed. Toymaking, however, succeeded based on prior experience in the playing card business.<ref type="citation" target="#source_block_723">[16]</ref> In 1964, while Japan was experiencing an economic boom due to the Tokyo Olympics, the playing card business reached saturation. Japanese households stopped buying playing cards, and the price of Nintendo stock fell from 900 yen to 60 yen.<ref type="citation" target="#source_block_726">[19]</ref></ab>
+        <ab xml:id="source_block_204">In <date when="1965">1965</date>, <orgName ref="#org_Nintendo">Nintendo</orgName> hired <persName ref="#pers_GunpeiYokoi">Gunpei Yokoi</persName> as a Maintenance Engineer for the assembly line. However, <persName ref="#pers_GunpeiYokoi">Yokoi</persName> soon became famous for much more than his ability to repair conveyor belts.<ref type="citation" target="#source_block_727">[20]</ref></ab>
+      </div>
+      <div type="section" xml:id="source_section_205">
+        <head>1966–1972: Toy company and new ventures</head>
+        <gap reason="sampling"/>
+        <ab xml:id="source_block_210">In 1966, Yamauchi, upon visiting one of the company's <term ref="#type_Hanafuda">hanafuda</term> factories, noticed an extending arm-shaped toy, which had been made by one of its maintenance engineers, <persName ref="#pers_GunpeiYokoi">Gunpei Yokoi</persName>, for his own enjoyment. Yamauchi ordered <persName ref="#pers_GunpeiYokoi">Yokoi</persName> to develop it as a proper product for the Christmas rush. Released as the Ultra Hand, it became one of Nintendo's earliest toy blockbusters, selling over hundreds of thousands units. Seeing that <persName ref="#pers_GunpeiYokoi">Yokoi</persName> had potential, Yamauchi pulled him off assembly line work.</ab>
+        <ab xml:id="source_block_211"><persName ref="#pers_GunpeiYokoi">Yokoi</persName> was soon moved from maintenance duty to product development.</ab>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_217">
+        <head>1972–1983: Arcade, Color TV-Game, and Game &amp; Watch</head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_224">
+          <head>Entrance into video games</head>
+          <ab xml:id="source_block_227">Released in 1972, the first commercially available video game console, the Magnavox Odyssey, has a light gun accessory, the Shooting Gallery.<ref type="citation" target="#source_block_731">[24]</ref> This was the first involvement of Nintendo in video games.</ab>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_229">In 1973, its focus shifted to family-friendly arcades with the Laser Clay Shooting System,<ref type="citation" target="#source_block_733">[26]</ref> using the same light gun technology used in <orgName ref="#org_Nintendo">Nintendo</orgName>'s Kousenjuu series of toys, and set up in abandoned bowling alleys. Gaining some success, <orgName ref="#org_Nintendo">Nintendo</orgName> developed several more light gun machines for the emerging arcade scene. While the Laser Clay Shooting System ranges had to be shut down following excessive costs, <orgName ref="#org_Nintendo">Nintendo</orgName> had founded a new market.</ab>
+        </div>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_235">
+          <head><persName ref="#pers_ShigeruMiyamoto">Shigeru Miyamoto</persName> and Donkey Kong (1981)</head>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_240">In the early 1980s, <orgName ref="#org_Nintendo">Nintendo</orgName> created some of its most famous arcade games. The massively popular <title ref="#work_DonkeyKong">Donkey Kong</title> was designed by <persName ref="#pers_ShigeruMiyamoto">Shigeru Miyamoto</persName> and released in arcades in <date when="1981">1981</date>. Home releases soon followed, made by Coleco for the Atari 2600, Intellivision, and ColecoVision video game systems.</ab>
+          <ab xml:id="source_block_241">Some of Nintendo's other arcade games were ported to home consoles by third parties, including Donkey Kong Jr., and <title ref="#work_MarioBros">Mario Bros.</title> <orgName ref="#org_Nintendo">Nintendo</orgName> started to focus on the home game market. It stopped manufacturing and releasing arcade games in Japan in late 1985.<ref type="citation" target="#source_block_734">[27]</ref><ref type="citation" target="#source_block_735">[28]</ref></ab>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_250">
+        <head>1983–1989: Famicom and <rs type="product_model" ref="#model_NES">Nintendo Entertainment System</rs></head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_257">
+          <head>Famicom</head>
+          <ab xml:id="source_block_261">In 1983, <orgName ref="#org_Nintendo">Nintendo</orgName> released their first cartridge-based game console, the Family Computer or "Famicom", in Japan. More than 500,000 units were sold within two months. After a few months of favorable sales, <orgName ref="#org_Nintendo">Nintendo</orgName> received complaints that some Famicom consoles would freeze on certain games. The fault was found in a malfunctioning chip and <orgName ref="#org_Nintendo">Nintendo</orgName> decided to recall all Famicom units that were currently on store shelves.</ab>
+        </div>
+        <div type="section" xml:id="source_section_262">
+          <head><rs type="product_model" ref="#model_NES">Nintendo Entertainment System</rs> (<rs type="product_model" ref="#model_NES">NES</rs>)</head>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_272">It was renamed the "<rs type="product_model" ref="#model_NES">Nintendo Entertainment System</rs>" (<rs type="product_model" ref="#model_NES">NES</rs>), the phrase "entertainment system" intentionally used to avoid sounding like a console.<ref type="citation" target="#source_block_742">[35]</ref> Its games were referred to by <orgName ref="#org_Nintendo">Nintendo</orgName> as "game paks" [sic] instead of cartridges, and they were inserted into a "control deck" instead of a console.<ref type="citation" target="#source_block_737">[30]</ref> To look similar to contemporary entertainment devices such as VCRs and stereo systems, the <rs type="product_model" ref="#model_NES">NES</rs> had a gray, boxy design with a "futuristic aesthetic".<ref type="citation" target="#source_block_742">[35]</ref> The company created R.O.B., a robot-shaped peripheral for the console, to market it as having another aspect than the games themselves.<ref type="citation" target="#source_block_737">[30]</ref></ab>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_279"><orgName ref="#org_Nintendo">Nintendo</orgName> test marketed the <rs type="product_model" ref="#model_NES">NES</rs> in the New York City area in late <date when="1985">1985</date>. The first unit sold at the console's launch event was to an employee of an unknown competing company, who also bought all 15 of <rs type="product_model" ref="#model_NES">NES</rs>' launch titles.<ref type="citation" target="#source_block_744">[37]</ref><ref type="citation" target="#source_block_745">[38]</ref> It launched nationwide the following year.<ref type="citation" target="#source_block_741">[34]</ref></ab>
+          <gap reason="sampling"/>
+          <div type="section" xml:id="source_section_298">
+            <head>The Legend of Zelda</head>
+            <ab xml:id="source_block_301"><persName ref="#pers_ShigeruMiyamoto">Miyamoto</persName>, Tezuka, and Kondo also worked on <title ref="#work_TheLegendOfZelda">The Legend of Zelda</title> (<date when="1986">1986</date>) for the Famicom and <rs type="product_model" ref="#model_NES">NES</rs>.<ref type="citation" target="#source_block_770">[63]</ref> The game's core concept, of exploring the high fantasy setting of Hyrule, was inspired by <persName ref="#pers_ShigeruMiyamoto">Miyamoto</persName>'s experiences in the countryside near <placeName ref="#place_Kyoto">Kyoto</placeName>, his home city.</ab>
+            <ab xml:id="source_block_302">Ryan Lambie writes for Den of Geek: "He wanted to reproduce in video game form the same sense of awe and excitement he felt when he explored [the countryside's] forests and caves as a kid, to introduce the pleasure of discovering things or the anxiety of becoming lost in a maze."<ref type="citation" target="#source_block_771">[64]</ref><ref type="citation" target="#source_block_772">[65]</ref> The Legend of Zelda is an early nonlinear game, so the tasks required to complete it can be done in an order of the player's choosing.</ab>
+            <ab xml:id="source_block_303">The player, controlling Link, traverses the open world of Hyrule to find pieces of the magical Triforce artifact in order to save Princess Zelda from Ganon. Similar to role-playing video games (RPGs)—which, until then, had mostly released for PCs instead of consoles—Zelda features "monsters, dungeons, missions to complete, [and] characters to converse with".<ref type="citation" target="#source_block_771">[64]</ref></ab>
+            <gap reason="sampling"/>
+            <ab xml:id="source_block_305">The ambitious concept required more space than was available on Famicom, so, the game was released for the Famicom Disk System, a disk drive that can attach to the console and allow it to run floppy disks. Zelda's disk had a storage capacity of 112 kilobytes, far more than a standard Famicom cartridge.</ab>
+            <ab xml:id="source_block_306">The game could run on a standard <rs type="product_model" ref="#model_NES">NES</rs> cartridge when it released for that system in <date when="1987">1987</date>.<ref type="citation" target="#source_block_771">[64]</ref><ref type="citation" target="#source_block_773">[66]</ref> As Zelda required more time to complete than any previous console game, it introduced a player's ability to save their progress in a game before turning off its console, then later returning to the game from where they left off. As the save system allowed for longer games, it laid the foundation for more complex storylines within console games.<ref type="citation" target="#source_block_773">[66]</ref></ab>
+          </div>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_320">
+        <head>1989–1996: <rs type="product_model" ref="#model_GameBoy">Game Boy</rs>, Super Nintendo Entertainment System, and Virtual Boy</head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_325">
+          <head>
+            <rs type="product_model" ref="#model_GameBoy">Game Boy</rs>
+          </head>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_330">In <date when="1989">1989</date>, <orgName ref="#org_Nintendo">Nintendo</orgName> released the <rs type="product_model" ref="#model_GameBoy">Game Boy</rs>, along with the accompanying game Tetris. Due to the price, the game, and its durability (unlike the static and screen rot of the prior Microvision from Milton Bradley Company), the Game Boy line eventually amassed sales of 118 million units.<ref type="citation" target="#source_block_781">[74]</ref> Super Mario Land was released with the system, and 14 million copies were sold worldwide.</ab>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_399">
+        <head>1996–2001: Nintendo 64 and Game Boy Color</head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_404">
+          <head><rs type="franchise" ref="#franchise_Pokemon">Pokémon</rs> franchise</head>
+          <ab xml:id="source_block_407">Game Freak started in Japan in 1982 as a gaming magazine. In 1989, its co-founder, Satoshi Tajiri, turned the publication into a game development studio and made multiple games for <orgName ref="#org_Nintendo">Nintendo</orgName> and Sega consoles, including Yoshi, Mario &amp; Wario, and Pulseman. Around 1990, Tajiri came up with the idea for Pocket Monsters, a game about collecting animals and having them fight other animals.</ab>
+          <ab xml:id="source_block_408">It was inspired by his childhood memories of exploring forests and catching bugs and tadpoles inside of them. Tajiri pitched the game to <orgName ref="#org_Nintendo">Nintendo</orgName>, who hesitantly greenlit the game.</ab>
+          <ab xml:id="source_block_409">Led by Tajiri, Game Freak spent six years developing Pocket Monsters for the <rs type="product_model" ref="#model_GameBoy">Game Boy</rs>, with Tajiri being aided by <persName ref="#pers_ShigeruMiyamoto">Miyamoto</persName>.<ref type="citation" target="#source_block_815">[108]</ref> In <date when="1996">1996</date>, it released in Japan; two different variants of the game, Pocket Monsters Red and Pocket Monsters Green, were sold in stores containing slight differences but featuring the same core gameplay.</ab>
+          <ab xml:id="source_block_410">In the West, Pocket Monsters was released under the name Pokémon, the two versions renamed Pokémon Red Version and Pokémon Blue Version, respectively.<ref type="citation" target="#source_block_815">[108]</ref><ref type="citation" target="#source_block_816">[109]</ref></ab>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_412">Pokémon Red and Blue sold millions of copies worldwide. It began a prolific series of Pokémon games, which became one part of an extensive media franchise. Red and Green were adapted into an anime TV series, which premiered in Japan in 1997 and later syndicated in other countries.</ab>
+          <ab xml:id="source_block_413">In 1998, the Pokémon Center franchise of international Pokémon-themed retail stores started with the opening of Pokémon Center Tokyo, and Pokémon: The First Movie, a film based on the anime series, debuted in Japanese theaters. In <date when="1999" type="source_claim">1999</date>, the <rs type="card_game" ref="#game_PokemonTCG">Pokémon Trading Card Game</rs> franchise was launched.</ab>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_470">
+        <head>2001–2004: Game Boy Advance and GameCube</head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_492">
+          <head>Leadership changes</head>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_499">In 2000, <persName ref="#pers_SatoruIwata">Satoru Iwata</persName> resigned as the head of HAL Laboratory to lead <orgName ref="#org_Nintendo">Nintendo</orgName>'s corporate planning division.<ref type="citation" target="#source_block_810">[103]</ref> In 2002, Yamauchi surprised <persName ref="#pers_SatoruIwata">Iwata</persName> by offering him the position of Nintendo's corporate president.</ab>
+          <ab xml:id="source_block_500"><persName ref="#pers_SatoruIwata">Iwata</persName> agreed to the appointment, and he was president later that month—the first in his position to not be from the Yamauchi family.<ref type="citation" target="#source_block_810">[103]</ref><ref type="citation" target="#source_block_861">[154]</ref> Yamauchi remained on the company's board of directors until 2005, and with a 10% stake, he was <orgName ref="#org_Nintendo">Nintendo</orgName>'s largest individual shareholder until his death in 2013; that year, Forbes magazine estimated his net worth at $2.1 billion USD, making him the 13th wealthiest person in Japan.<ref type="citation" target="#source_block_862">[155]</ref><ref type="citation" target="#source_block_863">[156]</ref></ab>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_537">
+        <head>2004–2011: <rs type="product_model" ref="#model_NintendoDS">Nintendo DS</rs> and <rs type="product_model" ref="#model_Wii">Wii</rs></head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_542">
+          <head>"Revolution" console</head>
+          <ab xml:id="source_block_546">At E3 2004, <persName ref="#pers_SatoruIwata">Satoru Iwata</persName> announced the GameCube's successor, codenamed "Revolution" and ultimately released as the "<rs type="product_model" ref="#model_Wii">Wii</rs>". The Revolution started development shortly after the GameCube's launch, and was made as a "small, quiet and affordable" console, which did not prioritize graphical power. <persName ref="#pers_SatoruIwata">Iwata</persName> claimed graphics were not as important to the console as the gameplay of its titles, saying the latter would cause a "gaming revolution".<ref type="citation" target="#source_block_886">[179]</ref></ab>
+          <gap reason="sampling"/>
+        </div>
+        <div type="section" xml:id="source_section_548">
+          <head>
+            <rs type="product_model" ref="#model_NintendoDS">Nintendo DS</rs>
+          </head>
+          <ab xml:id="source_block_551">At E3 2004, <orgName ref="#org_Nintendo">Nintendo</orgName> also revealed the <rs type="product_model" ref="#model_NintendoDS">Nintendo DS</rs> handheld, saying that the system displayed games on either or both of two screens, one screen above the other; the screens can be folded closed when its user is not playing.</ab>
+          <ab xml:id="source_block_552">The <rs type="product_model" ref="#model_NintendoDS">DS</rs> was detailed to use Wi-Fi to wirelessly communicate with 15 other nearby devices, support a new 3D graphics engine, and play multiplayer modes of games they do not own through wireless connectivity, provided a nearby device is running the game.<ref type="citation" target="#source_block_887">[180]</ref> The <rs type="product_model" ref="#model_NintendoDS">DS</rs> launched in the U.S. and Japan in <date when="2004">2004</date>, and in Europe and Australia in <date when="2005">2005</date>.</ab>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_563">
+          <head><rs type="product_model" ref="#model_Wii">Wii</rs>, Game Boy Micro, and DS Lite</head>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_575"><orgName ref="#org_Nintendo">Nintendo</orgName> also announced that the Revolution would release as the "<rs type="product_model" ref="#model_Wii">Wii</rs>". The name, like the rest of the console, was intended to appeal to casual audiences, and it initially was highly controversial among <orgName ref="#org_Nintendo">Nintendo</orgName>'s fans.<ref type="citation" target="#source_block_907">[200]</ref> They revealed multiple games they would publish for it that use motion controls, including Excite Truck, Wii Sports, and Super Mario Galaxy.</ab>
+          <ab xml:id="source_block_576">Lucas Thomas wrote that these games' E3 demos showcased "effortless" and "crucially different" implementations of motion control, which helped assuage the gaming community's skepticism towards the "shocking and surprising" concept behind the <rs type="product_model" ref="#model_Wii">Wii</rs>.<ref type="citation" target="#source_block_908">[201]</ref></ab>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_582">In <date when="2006">2006</date>, <orgName ref="#org_Nintendo">Nintendo</orgName> announced launch details for its <rs type="product_model" ref="#model_Wii">Wii</rs> console, and demonstrated features of the "Wii Menu" GUI. The system was released worldwide later that year.<ref type="citation" target="#source_block_915">[208]</ref> The console sold fast and was a big breakthrough for <orgName ref="#org_Nintendo">Nintendo</orgName>,<ref type="citation" target="#source_block_916">[209]</ref> picking up the pace lost from the GameCube. Its unexpected success was attributed to the expanded demographic <orgName ref="#org_Nintendo">Nintendo</orgName> had targeted.</ab>
+          <gap reason="sampling"/>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+      <div type="section" xml:id="source_section_649">
+        <head>2017–2025: <rs type="product_model" ref="#model_NintendoSwitch">Nintendo Switch</rs></head>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_654">
+          <head>
+            <rs type="product_model" ref="#model_NintendoSwitch">Nintendo Switch</rs>
+          </head>
+          <gap reason="sampling"/>
+          <ab xml:id="source_block_659">After beginning the conceptual phase of development in 2012,<ref type="citation" target="#source_block_958">[251]</ref> <orgName ref="#org_Nintendo">Nintendo</orgName> announced in a 2015 press conference that they were developing a dedicated video game system, codenamed "NX".<ref type="citation" target="#source_block_959">[252]</ref> Fils-Aimé said in 2021 that the system was a "make or break" console for the company, as it became apparent that the Wii U's lifespan would be considerably shorter than average.<ref type="citation" target="#source_block_960">[253]</ref> In 2016, they revealed that the NX was set for a 2017 release.<ref type="citation" target="#source_block_961">[254]</ref> The NX was formally unveiled as the "<rs type="product_model" ref="#model_NintendoSwitch">Nintendo Switch</rs>" in 2016, a hybrid console able to switch between portable and home console play.<ref type="citation" target="#source_block_962">[255]</ref></ab>
+          <ab xml:id="source_block_660">The <rs type="product_model" ref="#model_NintendoSwitch">Switch</rs> was released in <date when="2017">2017</date>.<ref type="citation" target="#source_block_963">[256]</ref><ref type="citation" target="#source_block_964">[257]</ref> It launched with 15 titles, five of them exclusive to the Japanese eShop. Three of them were developed by <orgName ref="#org_Nintendo">Nintendo</orgName> and released worldwide: 1-2-Switch, Snipperclips, and The Legend of Zelda: Breath of the Wild.<ref type="citation" target="#source_block_965">[258]</ref> The latter released simultaneously on the Wii U, and was a massive critical success; it was later named the best video game of all time by multiple outlets.<ref type="citation" target="#source_block_767">[60]</ref><ref type="citation" target="#source_block_966">[259]</ref><ref type="citation" target="#source_block_867">[160]</ref></ab>
+        </div>
+        <gap reason="sampling"/>
+        <div type="section" xml:id="source_section_668">
+          <head>Attraction openings</head>
+          <ab xml:id="source_block_671">In 2020, hotel and restaurant development company Plan See Do announced their intent to refurbish the former headquarters of Marufuku Nintendo as a hotel set to open the next year,<ref type="citation" target="#source_block_974">[267]</ref> and in <date when="2021">2021</date>, <orgName ref="#org_Nintendo">Nintendo</orgName> announced that the Uji Ogura plant in which the company's playing cards were produced would be transformed into a museum titled the "<placeName type="project_name" ref="#place_NintendoMuseum" source="#src_N03">Nintendo Gallery</placeName>".<ref type="citation" target="#source_block_975">[268]</ref> In 2023, Universal Studios Hollywood in Los Angeles opened Super Nintendo World, a theme park themed around the Mario franchise.<ref type="citation" target="#source_block_976">[269]</ref> In 2025, another Super Nintendo World park opened in Universal Orlando in Florida.<ref type="citation" target="#source_block_977">[270]</ref></ab>
+        </div>
+        <gap reason="sampling"/>
+      </div>
+    </body>
+    <!--
+3.2 SOURCE BACK MATTER: the article bibliography, further reading and external links.
+This is distinct from the project evidence inventory in section 2.9.
+-->
+    <back>
+      <div type="references">
+        <head>References</head>
+        <ab xml:id="source_block_708">1. ↑ "会社概要 :: 会社情報/IR情報・採用情報 - Nintendo". Nintendo (in Japanese). Archived from the original on August 21, 2006. Retrieved August 9, 2026.</ab>
+        <ab xml:id="source_block_709">2. ↑ "任天堂株式会社：会社の沿革". 任天堂ホームページ (in Japanese). Retrieved September 27, 2019.</ab>
+        <ab xml:id="source_block_710">3. ↑ "Nintendo Trademark". Kotaku. December 5, 2009. Archived from the original on October 29, 2010.</ab>
+        <ab xml:id="source_block_711">4. ↑ ""Nintendo" Might Not Mean What You Think". Gizmodo. Archived from the original on May 25, 2013. Retrieved May 8, 2013.</ab>
+        <ab xml:id="source_block_714">7. ↑ "Profile: Hiroshi Yamauchi". N-Sider.com. Archived from the original on September 19, 2015. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_715">8. ↑ "Securities Report" (PDF) (in Japanese). Nintendo. Retrieved April 13, 2022.</ab>
+        <ab xml:id="source_block_716">9. 1 2 3 "Nintendo History Lesson". N-Sider.com. Archived from the original on May 5, 2018. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_717">10. 1 2 3 4 "Company History". Nintendo.co.jp. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_718">11. ↑ Kohler, Chris (September 23, 2010). "Sept. 23, 1889: Success Is in the Cards for Nintendo". Wired.com. Wired. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_723">16. 1 2 Kohler, Chris (September 19, 2013). "Hiroshi Yamauchi, man who built Nintendo's gaming empire, dies at 85". Wired. Retrieved February 15, 2022.</ab>
+        <ab xml:id="source_block_726">19. ↑ Daniels, Peter W.; Ho, K.C.; Hutton, Thomas A. (April 27, 2012). New Economic Spaces in Asian Cities: From Industrial Restructuring to the Cultural Turn. Taylor &amp; Francis. p. 97. ISBN 9781135272593.</ab>
+        <ab xml:id="source_block_727">20. 1 2 Pollack, Andrew (October 9, 1997). "Gunpei Yokoi, Chief Designer Of Game Boy, Is Dead at 56". The New York Times. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_731">24. ↑ The Ten Greatest Years in Gaming Archived April 19, 2008, at the Wayback Machine, Edge June 27, 2006, Accessed March 1, 2009</ab>
+        <ab xml:id="source_block_733">26. 1 2 "Nintendo: Company History". Archived from the original on February 5, 1998. Retrieved December 18, 2014.</ab>
+        <ab xml:id="source_block_734">27. ↑ "Coin-Op "Super Mario" Will Shop To Overseas" (PDF). Amusement Press. March 1, 1986. Retrieved June 20, 2022.</ab>
+        <ab xml:id="source_block_735">28. ↑ ""Fami-Com" Exceeds 10M. Its Boom Is Continuing" (PDF). Amusement Press. May 1, 1987. Retrieved June 20, 2022.</ab>
+        <ab xml:id="source_block_737">30. 1 2 3 4 5 6 7 8 9 10 Cunningham, Andrew (December 9, 2021). "The NES: How it began, worked, and saved an industry". Ars Technica. Retrieved May 30, 2025.</ab>
+        <ab xml:id="source_block_741">34. 1 2 Cifaldi, Frank (February 27, 2017). "The NES Launch Collection". Video Game History Foundation. Retrieved December 28, 2025.</ab>
+        <ab xml:id="source_block_742">35. 1 2 3 4 Institution, Smithsonian. "Nintendo Entertainment System Video Game Console". Smithsonian Institution. Retrieved May 30, 2025.</ab>
+        <ab xml:id="source_block_744">37. ↑ "Nobody Knows When the Hell Super Mario Bros. Was Released". Kotaku. March 29, 2012. Retrieved May 30, 2025.</ab>
+        <ab xml:id="source_block_745">38. 1 2 Plante, Chris (September 14, 2015). "When was Super Mario Bros. released in the US? Nobody knows!". The Verge. Retrieved May 30, 2025.</ab>
+        <ab xml:id="source_block_767">60. 1 2 3 I. G. N. Staff (December 31, 2021). "The Top 100 Video Games of All Time". IGN. Retrieved June 13, 2025.</ab>
+        <ab xml:id="source_block_770">63. ↑ Life, Nintendo (April 30, 2024). ""It's Fun, So It's Okay!" - Celebrating Takashi Tezuka's Astonishing 40-Year Nintendo Career". Nintendo Life. Retrieved December 14, 2025.</ab>
+        <ab xml:id="source_block_771">64. 1 2 3 Lambie, Ryan (February 21, 2019). "The Legend of Zelda: The Birth of Nintendo's Epic Fantasy Series". Den of Geek. Retrieved May 17, 2025.</ab>
+        <ab xml:id="source_block_772">65. ↑ "'Zelda: Echoes Of Wisdom' Riffs On 'Tears Of The Kingdom's Best Ideas". Inverse. September 4, 2024. Retrieved May 30, 2025.</ab>
+        <ab xml:id="source_block_773">66. 1 2 "The Legend of Zelda | Game Design, Features &amp; Impact | Britannica". www.britannica.com. April 13, 2025. Retrieved May 17, 2025.</ab>
+        <ab xml:id="source_block_781">74. 1 2 "Hardware and Software Sales Units". Nintendo.co.jp. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_810">103. 1 2 3 4 Robinson, Martin (July 13, 2015). "Satoru Iwata: a gentle revolutionary". Eurogamer.net. Retrieved April 9, 2025.</ab>
+        <ab xml:id="source_block_815">108. 1 2 3 "Pokémon Day: From Pocket Monsters, to TCG and Pokémon GO". BBC Newsround. February 27, 2021. Retrieved May 14, 2025.</ab>
+        <ab xml:id="source_block_816">109. 1 2 "History". The Pokémon Company. Retrieved May 14, 2025.</ab>
+        <ab xml:id="source_block_861">154. ↑ Walker, Trey (May 24, 2002). "E3 2002: Yamauchi steps down". GameSpot. Retrieved December 17, 2014.</ab>
+        <ab xml:id="source_block_862">155. ↑ Serafin, Tatiana. "Billionaire Nintendo Changemaker Hiroshi Yamauchi Dies". Forbes. Retrieved April 9, 2025.</ab>
+        <ab xml:id="source_block_863">156. ↑ Tabuchi, Hiroko (September 19, 2013). "Hiroshi Yamauchi, Who Steered Nintendo to Dominance, Dies at 85". The New York Times. ISSN 0362-4331. Retrieved April 9, 2025.</ab>
+        <ab xml:id="source_block_867">160. 1 2 "The 50 Greatest Video Games of All Time". Rolling Stone. January 6, 2025. Retrieved February 21, 2025.</ab>
+        <ab xml:id="source_block_886">179. ↑ Casamassina, Matt (September 12, 2005). "IGNcube's Nintendo "Revolution" FAQ". IGN. Retrieved December 13, 2024.</ab>
+        <ab xml:id="source_block_887">180. ↑ "Nintendo DS: more communicator than console?". Archived from the original on January 12, 2025. Retrieved February 21, 2025.</ab>
+        <ab xml:id="source_block_907">200. ↑ "Nintendo drops Revolution, renames next gen console Wii - Apr. 27, 2006". money.cnn.com. Archived from the original on June 28, 2025. Retrieved February 21, 2025.</ab>
+        <ab xml:id="source_block_908">201. ↑ Thomas, Lucas M. (May 17, 2011). "Nintendo's History at E3: 2006". IGN. Retrieved March 14, 2025.</ab>
+        <ab xml:id="source_block_915">208. ↑ "Wii European launch details announced". GamesIndustry.biz. September 15, 2006. Retrieved December 18, 2014.</ab>
+        <ab xml:id="source_block_916">209. ↑ "Nintendo Predicts Holiday Wii Shortage - Yahoo! News". archive.ph. October 17, 2007.`{{cite web}}`: CS1 maint: deprecated archival service (link)</ab>
+        <ab xml:id="source_block_958">251. ↑ Hester, Blake (December 26, 2017). "How the Polarization Of Video Games Spurred the Creation of the Switch". Glixel. Penske Media Corporation. Archived from the original on December 26, 2017. Retrieved December 26, 2017.</ab>
+        <ab xml:id="source_block_959">252. ↑ Yin-Poole, Wesley (March 17, 2015). "Nintendo NX is "new hardware with a brand new concept"". Eurogamer. Gamer Network. Archived from the original on October 20, 2016. Retrieved November 30, 2022.</ab>
+        <ab xml:id="source_block_960">253. ↑ Nunneley, Stephany (January 30, 2021). "Reggie: Switch was a "make or break product" for Nintendo that "luckily was a hit"". VG247. Gamer Network. Archived from the original on July 1, 2022. Retrieved January 30, 2021.</ab>
+        <ab xml:id="source_block_961">254. ↑ Reilly, Luke (April 27, 2016). "Nintendo NX Will Launch In March 2017". IGN. Ziff Davis. Archived from the original on April 28, 2016. Retrieved April 27, 2016.</ab>
+        <ab xml:id="source_block_962">255. ↑ Souppouris, Aaron (October 20, 2016). "'Switch' is Nintendo's next game console". Engadget. AOL Inc. Archived from the original on October 20, 2016. Retrieved October 20, 2016.</ab>
+        <ab xml:id="source_block_963">256. ↑ Choudhury, Saheli Roy (January 13, 2017). "Nintendo Switch to launch globally on March 3, to cost $300 in the US". CNBC. NBCUniversal Television and Streaming. Archived from the original on January 14, 2017. Retrieved December 13, 2022.</ab>
+        <ab xml:id="source_block_964">257. ↑ Reynolds, Matthew (January 13, 2017). "Nintendo Switch — games list confirmed so far, launch titles and everything we know about the hardware". Eurogamer. Gamer Network. Archived from the original on January 14, 2017. Retrieved January 13, 2017.</ab>
+        <ab xml:id="source_block_965">258. ↑ "Nintendo Switch Launch Titles - Nintendo Switch Guide". IGN. January 5, 2017. Retrieved March 9, 2025.</ab>
+        <ab xml:id="source_block_966">259. ↑ White, Sam (May 10, 2023). "The 100 greatest video games of all time, ranked by experts". British GQ. Retrieved March 9, 2025.</ab>
+        <ab xml:id="source_block_974">267. ↑ Ashcraft, Brian (January 10, 2020). "Nintendo's Old Headquarters Will Be Turned Into A Hotel". Kotaku. G/O Media. Archived from the original on July 2, 2020. Retrieved July 2, 2020.</ab>
+        <ab xml:id="source_block_975">268. ↑ Kerr, Chris (June 2, 2021). "Nintendo wants to turn a factory into a museum called the 'Nintendo Gallery'". Gamasutra. Informa. Archived from the original on June 2, 2021. Retrieved June 2, 2021.</ab>
+        <ab xml:id="source_block_976">269. ↑ "Super Nintendo World theme park opens at Universal Studios in Los Angeles - CBS News". www.cbsnews.com. February 17, 2023. Retrieved May 28, 2025.</ab>
+        <ab xml:id="source_block_977">270. ↑ Neely, Samantha. "Mario, Yoshi and Donkey Kong take over Orlando in Universal's biggest new theme park land". USA TODAY. Retrieved May 28, 2025.</ab>
+      </div>
+    </back>
   </text>
 </TEI>
